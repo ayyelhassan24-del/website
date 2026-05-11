@@ -476,6 +476,77 @@
       line-height: 1.65;
     }
 
+    /* ============ FOUNDER BLOCK ============ */
+    .founder-block {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 36px;
+      align-items: start;
+      margin-top: 8px;
+    }
+    .founder-photo {
+      width: 220px;
+      height: 220px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #1F1F1F;
+      box-shadow: 0 12px 40px rgba(201, 169, 97, 0.18), 0 4px 12px rgba(10, 10, 10, 0.12);
+      border: 1px solid rgba(201, 169, 97, 0.3);
+    }
+    .founder-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .founder-text p:first-of-type {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #0A0A0A;
+      line-height: 1.3;
+      margin-bottom: 18px;
+    }
+
+    /* ============ P.S. SIGNATURE ============ */
+    .ps-signature {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(201, 169, 97, 0.3);
+    }
+    .ps-signature-photo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #1F1F1F;
+      flex-shrink: 0;
+      border: 2px solid #C9A961;
+    }
+    .ps-signature-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .ps-signature-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #0A0A0A;
+      line-height: 1.2;
+    }
+    .ps-signature-title {
+      font-size: 14px;
+      color: #6B6B6B;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
     /* ============ P.S. SECTION ============ */
     .ps {
       background: #FFFFFF;
@@ -542,6 +613,11 @@
       .topbar-logo { font-size: 16px; }
       .topbar-cta { padding: 8px 14px; font-size: 13px; }
       .container, .container-wide { padding: 0 18px; }
+      .founder-block { grid-template-columns: 1fr; gap: 20px; text-align: center; }
+      .founder-photo { width: 180px; height: 180px; margin: 0 auto; }
+      .founder-text { text-align: left; }
+      .founder-text p:first-of-type { font-size: 19px; }
+      .ps-signature { flex-direction: row; align-items: center; }
     }
   </style>
 </head>
@@ -625,14 +701,21 @@
     </div>
   </section>
 
-  <!-- ============ AUTHORITY ============ -->
+  <!-- ============ AUTHORITY / FOUNDER ============ -->
   <section>
     <div class="container">
       <h2>Who I Am, and Why You Should Listen</h2>
-      <p>I am Abu Elhassan, founder of The Capital Vault.</p>
-      <p>We work with a network of <strong>over 500 lenders across all 50 states.</strong> In the last 12 months we have placed more than <strong>$10,000,000</strong> of growth capital for operators doing $500,000 to $3,000,000 in annual revenue.</p>
-      <p>The reason we get capital placed when the bank in front of you denied you is not because we know secret lenders. <strong>It is because we structure and certify your file so that when it hits a lender's desk, it gets approved instead of declined.</strong></p>
-      <p>That structure is the entire business.</p>
+      <div class="founder-block">
+        <div class="founder-photo">
+          <img src="brand_assets/abu-headshot.png" alt="Abu Elhassan, Founder of The Capital Vault">
+        </div>
+        <div class="founder-text">
+          <p>I am Abu Elhassan, founder of The Capital Vault.</p>
+          <p>We work with a network of <strong>over 500 lenders across all 50 states.</strong> In the last 12 months we have placed more than <strong>$10,000,000</strong> of growth capital for operators doing $500,000 to $3,000,000 in annual revenue.</p>
+          <p>The reason we get capital placed when the bank in front of you denied you is not because we know secret lenders. <strong>It is because we structure and certify your file so that when it hits a lender's desk, it gets approved instead of declined.</strong></p>
+          <p>That structure is the entire business.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -990,9 +1073,18 @@
   <section>
     <div class="container">
       <div class="ps">
-        <div class="ps-label">P.S.</div>
+        <div class="ps-label">P.S. — A Personal Note From The Founder</div>
         <p>The founder I mentioned was three weeks from losing the largest contract of his career. Multiple banks had denied him. His wife was telling him to take a personal-credit-card loan and "make it work." He found us through a referral, booked the diagnostic call on a Tuesday, and by Day 23 had <strong>$185,000</strong> in his operating account, enough to take the contract, pre-pay the suppliers at a discount, and hire the first crew. By Day 59 he had <strong>$1,300,000</strong> total placed across the 4 rounds. He kept 100% equity. He did not damage his personal credit. He won the contract. The business doubled the next year.</p>
         <p>The 4-Round Stacking System is the same system we will run on YOUR file. <strong>Book the call.</strong></p>
+        <div class="ps-signature">
+          <div class="ps-signature-photo">
+            <img src="brand_assets/abu-headshot.png" alt="Abu Elhassan">
+          </div>
+          <div>
+            <div class="ps-signature-name">Abu Elhassan</div>
+            <div class="ps-signature-title">Founder, The Capital Vault</div>
+          </div>
+        </div>
       </div>
       <div class="cta-center">
         <a href="https://api.leadconnectorhq.com/widget/bookings/cvbusinessfunding" class="cta-button">Book My Diagnostic Call</a>

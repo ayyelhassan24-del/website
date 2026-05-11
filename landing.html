@@ -5,318 +5,389 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Capital Vault | $50K-$500K Working Capital In 23 To 59 Days</title>
   <meta name="description" content="Established business owner doing $500K-$3M and denied by your bank? We place $50K-$500K in capital across our network of 500+ lenders. Zero equity given up.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ============ RESET + BASE ============ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       font-size: 17px;
-      line-height: 1.6;
+      line-height: 1.7;
       color: #1A1A1A;
-      background-color: #FAFAF7;
+      background-color: #F7F4ED;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
     a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
 
-    /* ============ LAYOUT ============ */
     .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
     .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
 
-    /* ============ TOP BAR ============ */
+    /* TOPBAR */
     .topbar {
       position: sticky;
       top: 0;
       z-index: 100;
       background: #0A0A0A;
-      color: #FAFAF7;
+      color: #F7F4ED;
       padding: 14px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
-    .topbar-logo { font-weight: 700; font-size: 18px; letter-spacing: 0.02em; }
+    .topbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.01em;
+    }
+    .topbar-logo img { height: 36px; width: auto; }
+    .topbar-logo .wordmark span { color: #C9A961; }
     .topbar-cta {
-      background: #C8590B;
-      color: #FFFFFF;
-      padding: 10px 18px;
+      background: #C9A961;
+      color: #0A0A0A;
+      padding: 10px 20px;
       border-radius: 4px;
       font-weight: 600;
       font-size: 14px;
-      transition: background 0.2s;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      transition: background 0.2s, transform 0.15s;
       white-space: nowrap;
     }
-    .topbar-cta:hover { background: #A04708; }
+    .topbar-cta:hover { background: #8B6F3D; transform: translateY(-1px); }
 
-    /* ============ HERO ============ */
+    /* HERO */
     .hero {
-      padding: 72px 0 32px;
+      padding: 96px 0 80px;
       text-align: center;
     }
     .pre-headline {
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: #8B2415;
-      margin-bottom: 28px;
+      letter-spacing: 0.14em;
+      color: #8B6F3D;
+      margin-bottom: 32px;
     }
     h1 {
-      font-size: 52px;
-      line-height: 1.1;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 60px;
+      line-height: 1.05;
       font-weight: 800;
       color: #0A0A0A;
-      margin-bottom: 28px;
-      letter-spacing: -0.02em;
+      margin-bottom: 32px;
+      letter-spacing: -0.025em;
     }
-    h1 .highlight {
-      background: linear-gradient(180deg, transparent 60%, #F2D27E 60%);
-      padding: 0 4px;
+    h1 .gold {
+      color: #C9A961;
+      font-style: italic;
     }
     .sub-headline {
       font-size: 22px;
-      line-height: 1.45;
+      line-height: 1.5;
       color: #3A3A3A;
-      max-width: 700px;
-      margin: 0 auto 40px;
+      max-width: 680px;
+      margin: 0 auto 48px;
     }
 
-    /* ============ STAT STRIP ============ */
+    /* STAT STRIP */
     .stat-strip {
       display: flex;
       justify-content: center;
-      gap: 56px;
+      gap: 64px;
       flex-wrap: wrap;
-      margin: 40px 0 48px;
-      padding: 24px 0;
-      border-top: 2px solid #0A0A0A;
-      border-bottom: 2px solid #0A0A0A;
+      margin: 56px 0 56px;
+      padding: 32px 0;
+      border-top: 1px solid rgba(10, 10, 10, 0.15);
+      border-bottom: 1px solid rgba(10, 10, 10, 0.15);
     }
-    .stat {
-      text-align: center;
-    }
+    .stat { text-align: center; }
     .stat-number {
-      font-size: 36px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 42px;
       font-weight: 800;
-      color: #0A0A0A;
+      color: #C9A961;
       line-height: 1;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
     }
     .stat-label {
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #6A6A6A;
-      margin-top: 8px;
+      letter-spacing: 0.14em;
+      color: #6B6B6B;
+      margin-top: 10px;
       font-weight: 600;
     }
 
-    /* ============ CTA BUTTON ============ */
+    /* CTA BUTTON */
     .cta-button {
       display: inline-block;
-      background: #C8590B;
-      color: #FFFFFF;
+      background: #C9A961;
+      color: #0A0A0A;
       padding: 20px 48px;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 19px;
-      letter-spacing: 0.01em;
-      box-shadow: 0 4px 18px rgba(200,89,11,0.3);
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 16px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 24px rgba(201, 169, 97, 0.25);
       transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
-      border: none;
-      cursor: pointer;
     }
     .cta-button:hover {
-      background: #A04708;
+      background: #8B6F3D;
+      color: #F7F4ED;
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(200,89,11,0.4);
+      box-shadow: 0 12px 32px rgba(201, 169, 97, 0.35);
     }
-    .cta-button-secondary {
-      display: inline-block;
-      background: transparent;
-      color: #0A0A0A;
-      padding: 18px 40px;
-      border: 2px solid #0A0A0A;
-      border-radius: 6px;
-      font-weight: 700;
-      font-size: 17px;
-      transition: background 0.2s, color 0.2s;
-    }
-    .cta-button-secondary:hover { background: #0A0A0A; color: #FAFAF7; }
     .cta-sub {
       font-size: 14px;
-      color: #6A6A6A;
-      margin-top: 16px;
-    }
-    .cta-or {
-      font-size: 14px;
-      color: #6A6A6A;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 600;
-      margin: 20px 0;
+      color: #6B6B6B;
+      margin-top: 18px;
     }
 
-    /* ============ 60-SECOND PITCH ============ */
+    /* HOW IT WORKS */
     .pitch {
-      padding: 56px 0;
+      padding: 88px 0;
       background: #FFFFFF;
-      border-top: 1px solid #EAE7E0;
-      border-bottom: 1px solid #EAE7E0;
     }
     .pitch h2 {
-      font-size: 28px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 38px;
       font-weight: 800;
       text-align: center;
-      margin-bottom: 36px;
+      margin-bottom: 56px;
       color: #0A0A0A;
+      letter-spacing: -0.02em;
     }
     .pitch-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 32px;
+      gap: 48px;
       max-width: 880px;
       margin: 0 auto;
     }
-    .pitch-card {
-      text-align: center;
-    }
+    .pitch-card { text-align: center; }
     .pitch-card-num {
-      font-size: 14px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 48px;
       font-weight: 800;
-      color: #C8590B;
-      letter-spacing: 0.12em;
-      margin-bottom: 12px;
+      color: #C9A961;
+      line-height: 1;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
     }
     .pitch-card-title {
-      font-size: 19px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 22px;
       font-weight: 700;
       color: #0A0A0A;
-      margin-bottom: 10px;
-      line-height: 1.3;
+      margin-bottom: 14px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
     }
     .pitch-card-body {
       font-size: 15px;
       color: #4A4A4A;
-      line-height: 1.55;
+      line-height: 1.65;
     }
 
-    /* ============ WHY DIFFERENT ============ */
-    .why {
-      padding: 64px 0;
-    }
+    /* WHY DIFFERENT */
+    .why { padding: 88px 0; }
     .why h2 {
-      font-size: 32px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 38px;
       font-weight: 800;
       text-align: center;
-      margin-bottom: 36px;
+      margin-bottom: 48px;
       color: #0A0A0A;
+      letter-spacing: -0.02em;
     }
     .why-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
     }
-    .why-col {
-      padding: 28px 26px;
-      border-radius: 6px;
-    }
-    .why-bad {
-      background: #FCF6F4;
-      border: 1px solid #E8C8C0;
-    }
+    .why-col { padding: 32px 28px; border-radius: 6px; }
+    .why-bad { background: #FFFFFF; border: 1px solid rgba(166, 61, 61, 0.2); }
     .why-good {
-      background: #F0F7F2;
-      border: 1px solid #B8D8C2;
+      background: #0A0A0A;
+      border: 1px solid #C9A961;
+      color: #F7F4ED;
     }
     .why-header {
-      font-weight: 800;
-      font-size: 17px;
-      margin-bottom: 18px;
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 20px;
+      margin-bottom: 22px;
     }
-    .why-bad .why-header { color: #8B2415; }
-    .why-good .why-header { color: #0F5132; }
+    .why-bad .why-header { color: #A63D3D; }
+    .why-good .why-header { color: #C9A961; }
     .why-col ul { list-style: none; }
     .why-col li {
       font-size: 15px;
-      line-height: 1.5;
-      margin-bottom: 12px;
-      padding-left: 22px;
+      line-height: 1.55;
+      margin-bottom: 14px;
+      padding-left: 26px;
       position: relative;
     }
     .why-bad li::before {
       content: "✕";
       position: absolute;
       left: 0;
-      color: #8B2415;
+      color: #A63D3D;
       font-weight: 700;
     }
     .why-good li::before {
       content: "✓";
       position: absolute;
       left: 0;
-      color: #0F5132;
+      color: #C9A961;
       font-weight: 700;
     }
 
-    /* ============ AUTHORITY ============ */
+    /* AUTHORITY / FOUNDER */
     .authority {
-      padding: 56px 0;
+      padding: 96px 0;
       background: #0A0A0A;
-      color: #FAFAF7;
-      text-align: center;
+      color: #F7F4ED;
     }
-    .authority h2 {
-      font-size: 24px;
+    .founder-block {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 48px;
+      align-items: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .founder-photo {
+      width: 240px;
+      height: 240px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: #1F1F1F;
+      box-shadow: 0 16px 48px rgba(201, 169, 97, 0.2);
+      border: 1px solid rgba(201, 169, 97, 0.4);
+    }
+    .founder-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .founder-text h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px;
       font-weight: 700;
-      margin-bottom: 24px;
-      color: #FAFAF7;
+      color: #F7F4ED;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
     }
-    .authority p {
-      font-size: 18px;
-      line-height: 1.6;
+    .founder-text p {
+      font-size: 17px;
+      line-height: 1.65;
       color: #D8D8D5;
-      max-width: 680px;
-      margin: 0 auto 18px;
+      margin-bottom: 16px;
     }
-    .authority p strong { color: #F2D27E; }
+    .founder-text strong { color: #C9A961; font-weight: 600; }
+    .founder-name {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(201, 169, 97, 0.3);
+    }
+    .founder-name-line {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #C9A961;
+    }
+    .founder-name-title {
+      font-size: 13px;
+      color: #888;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
 
-    /* ============ FINAL CTA ============ */
-    .final-cta {
-      padding: 72px 0;
+    /* BOOKING SECTION */
+    .booking {
+      padding: 88px 0;
       text-align: center;
     }
-    .final-cta h2 {
-      font-size: 36px;
+    .booking h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 42px;
       font-weight: 800;
       color: #0A0A0A;
       margin-bottom: 20px;
-      line-height: 1.18;
-      letter-spacing: -0.01em;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
     }
-    .final-cta p {
-      font-size: 19px;
+    .booking p {
+      font-size: 18px;
       color: #3A3A3A;
       max-width: 640px;
-      margin: 0 auto 36px;
+      margin: 0 auto 16px;
+    }
+    .booking .urgency-line {
+      display: inline-block;
+      margin: 16px 0 8px;
+      padding: 8px 18px;
+      background: rgba(201, 169, 97, 0.12);
+      border: 1px solid rgba(201, 169, 97, 0.4);
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #8B6F3D;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .calendar-embed {
+      margin: 40px auto 8px;
+      max-width: 900px;
+      background: #FFFFFF;
+      border: 1px solid rgba(201, 169, 97, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 8px 32px rgba(201, 169, 97, 0.15), 0 2px 8px rgba(10, 10, 10, 0.08);
+      overflow: hidden;
+    }
+    .calendar-embed iframe {
+      display: block;
+      width: 100%;
+      border-radius: 4px;
+      min-height: 720px;
+      border: none;
     }
 
-    /* ============ FOOTER ============ */
+    /* FOOTER */
     footer {
       background: #0A0A0A;
       color: #888;
-      padding: 32px 0;
+      padding: 40px 0;
       text-align: center;
       font-size: 13px;
     }
     footer p { margin-bottom: 6px; }
-    footer a { color: #FAFAF7; }
+    footer a { color: #C9A961; }
+    footer .full-link {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 6px 14px;
+      border: 1px solid rgba(201, 169, 97, 0.3);
+      border-radius: 4px;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
 
-    /* ============ MOBILE STICKY CTA ============ */
+    /* MOBILE STICKY */
     .mobile-sticky-cta {
       display: none;
       position: fixed;
@@ -325,40 +396,46 @@
       right: 0;
       background: #FFFFFF;
       padding: 12px 16px;
-      box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.1);
       z-index: 99;
-      border-top: 1px solid #EAE7E0;
+      border-top: 1px solid rgba(201, 169, 97, 0.3);
     }
     .mobile-sticky-cta .cta-button {
       width: 100%;
       padding: 16px;
-      font-size: 16px;
+      font-size: 14px;
     }
 
-    /* ============ MOBILE ============ */
+    /* MOBILE */
     @media (max-width: 700px) {
       body { font-size: 16px; padding-bottom: 80px; }
-      h1 { font-size: 34px; line-height: 1.15; }
+      h1 { font-size: 36px; line-height: 1.1; }
       .sub-headline { font-size: 18px; }
-      .hero { padding: 48px 0 24px; }
-      .stat-strip { gap: 28px; padding: 18px 0; margin: 28px 0; }
-      .stat-number { font-size: 26px; }
+      .hero { padding: 56px 0 40px; }
+      .stat-strip { gap: 32px; padding: 22px 0; margin: 32px 0 32px; }
+      .stat-number { font-size: 28px; }
       .stat-label { font-size: 10px; }
-      .cta-button { padding: 18px 32px; font-size: 17px; }
-      .pitch { padding: 40px 0; }
-      .pitch h2 { font-size: 22px; margin-bottom: 24px; }
-      .pitch-grid { grid-template-columns: 1fr; gap: 24px; }
-      .why { padding: 48px 0; }
-      .why h2 { font-size: 24px; }
+      .cta-button { padding: 16px 32px; font-size: 14px; }
+      .pitch { padding: 56px 0; }
+      .pitch h2 { font-size: 26px; margin-bottom: 36px; }
+      .pitch-grid { grid-template-columns: 1fr; gap: 32px; }
+      .pitch-card-num { font-size: 36px; }
+      .pitch-card-title { font-size: 19px; }
+      .why { padding: 56px 0; }
+      .why h2 { font-size: 26px; }
       .why-grid { grid-template-columns: 1fr; gap: 14px; }
-      .authority { padding: 40px 0; }
-      .authority h2 { font-size: 20px; }
-      .authority p { font-size: 16px; }
-      .final-cta { padding: 48px 0; }
-      .final-cta h2 { font-size: 26px; }
-      .final-cta p { font-size: 17px; }
+      .authority { padding: 56px 0; }
+      .founder-block { grid-template-columns: 1fr; gap: 28px; text-align: center; }
+      .founder-photo { width: 200px; height: 200px; margin: 0 auto; }
+      .founder-text { text-align: left; }
+      .founder-text h2 { font-size: 24px; text-align: center; }
+      .booking { padding: 56px 0; }
+      .booking h2 { font-size: 28px; }
+      .booking p { font-size: 16px; }
+      .calendar-embed iframe { min-height: 600px; }
       .topbar { padding: 12px 16px; }
-      .topbar-logo { font-size: 15px; }
+      .topbar-logo { font-size: 16px; }
+      .topbar-logo img { height: 30px; }
       .topbar-cta { display: none; }
       .container, .container-narrow { padding: 0 18px; }
       .mobile-sticky-cta { display: block; }
@@ -367,17 +444,18 @@
 </head>
 <body>
 
-  <!-- ============ TOP BAR ============ -->
   <div class="topbar">
-    <div class="topbar-logo">THE CAPITAL VAULT</div>
-    <a href="#book" class="topbar-cta">Book Free Diagnostic Call</a>
+    <div class="topbar-logo">
+      <img src="brand_assets/ABU%20LOGO.png" alt="The Capital Vault">
+      <span class="wordmark">CAPITAL <span>VAULT</span></span>
+    </div>
+    <a href="#book" class="topbar-cta">Book Diagnostic Call</a>
   </div>
 
-  <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="container">
       <div class="pre-headline">For Operators Doing $500K to $3M Denied by Their Bank</div>
-      <h1>Get <span class="highlight">$185,000 in 23 Days</span> to Scale Right Now.<br>The Full <span class="highlight">$1,300,000 by Day 59.</span></h1>
+      <h1>Get <span class="gold">$185K in 23 days.</span><br>The full <span class="gold">$1.3M by Day 59.</span></h1>
       <div class="sub-headline">We place $50K to $500K of working capital across our network of 500+ lenders in all 50 states. Zero equity given up. No MCA. No personal credit damage.</div>
 
       <div class="stat-strip">
@@ -395,43 +473,41 @@
         </div>
       </div>
 
-      <a href="#book" class="cta-button">Book My Free 15-Minute Diagnostic Call</a>
-      <div class="cta-sub">Find out in 15 minutes whether your business qualifies for the 4-Round system.</div>
+      <a href="#book" class="cta-button">Book My Free Diagnostic Call</a>
+      <div class="cta-sub">15 minutes. Find out if your business qualifies.</div>
     </div>
   </section>
 
-  <!-- ============ 60-SECOND PITCH ============ -->
   <section class="pitch">
     <div class="container">
-      <h2>How The Capital Vault Works</h2>
+      <h2>How It Works</h2>
       <div class="pitch-grid">
 
         <div class="pitch-card">
-          <div class="pitch-card-num">STEP 01</div>
+          <div class="pitch-card-num">01</div>
           <div class="pitch-card-title">Diagnose Your File</div>
           <div class="pitch-card-body">We analyze your business across 14 lender categories and identify exactly why banks are denying you. Most of the time it is a policy issue, not a real problem.</div>
         </div>
 
         <div class="pitch-card">
-          <div class="pitch-card-num">STEP 02</div>
+          <div class="pitch-card-num">02</div>
           <div class="pitch-card-title">Structure & Certify</div>
-          <div class="pitch-card-body">We restructure your application file, optimize the DTI presentation, manage your inquiry footprint, and certify the file before it ever hits a lender's desk.</div>
+          <div class="pitch-card-body">We restructure your application, optimize the DTI presentation, manage your inquiry footprint, and certify the file before it ever hits a lender's desk.</div>
         </div>
 
         <div class="pitch-card">
-          <div class="pitch-card-num">STEP 03</div>
+          <div class="pitch-card-num">03</div>
           <div class="pitch-card-title">Place Across 500+ Lenders</div>
-          <div class="pitch-card-body">We route your file to the specific lenders most likely to fund your exact business profile, across 4 sequenced rounds. Round 1 in 23 days. Full deployment by Day 59.</div>
+          <div class="pitch-card-body">We route your file to the specific lenders most likely to fund your exact profile. Round 1 in 23 days. Full deployment by Day 59.</div>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ============ WHY DIFFERENT ============ -->
   <section class="why">
     <div class="container">
-      <h2>Why Not Just Walk Into Your Bank Yourself?</h2>
+      <h2>Why Not Just Walk Into Your Bank?</h2>
       <div class="why-grid">
 
         <div class="why-col why-bad">
@@ -460,40 +536,57 @@
     </div>
   </section>
 
-  <!-- ============ AUTHORITY ============ -->
   <section class="authority">
-    <div class="container-narrow">
-      <h2>Who Is Running This</h2>
-      <p>I am <strong>Abu Elhassan</strong>, founder of The Capital Vault. We work with a network of over 500 lenders across all 50 states. In the last 12 months we have placed more than <strong>$10 million</strong> of growth capital for operators doing $500K to $3M in revenue.</p>
-      <p>Most recently, we helped one founder get <strong>$185,000 in 23 days</strong> to take a contract he was about to lose, then placed the full <strong>$1,300,000</strong> by Day 59 across the 4-round sequence. Zero equity given up.</p>
+    <div class="container">
+      <div class="founder-block">
+        <div class="founder-photo">
+          <img src="brand_assets/abu-headshot.png" alt="Abu Elhassan, Founder of The Capital Vault">
+        </div>
+        <div class="founder-text">
+          <h2>Who Is Running This</h2>
+          <p>I am <strong>Abu Elhassan</strong>, founder of The Capital Vault. We work with a network of <strong>over 500 lenders across all 50 states.</strong> In the last 12 months we have placed more than <strong>$10 million</strong> of growth capital for operators doing $500K to $3M in revenue.</p>
+          <p>Most recently, we helped one founder get <strong>$185,000 in 23 days</strong> to take a contract he was about to lose, then placed the full <strong>$1,300,000</strong> by Day 59 across the 4-round sequence. Zero equity given up.</p>
+          <div class="founder-name">
+            <div class="founder-name-line">Abu Elhassan</div>
+            <div class="founder-name-title">Founder, The Capital Vault</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- ============ FINAL CTA ============ -->
-  <section class="final-cta" id="book">
-    <div class="container-narrow">
-      <h2>Book Your Free 15-Minute Capital Diagnostic Call</h2>
-      <p>On the call we tell you whether your business qualifies for the 4-Round Stacking System and what your realistic capital range is. If it does not qualify today, we tell you exactly what would need to change.</p>
-      <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Book My Diagnostic Call</a>
+  <section class="booking" id="book">
+    <div class="container">
+      <h2>Book Your Free 15-Minute Diagnostic Call</h2>
+      <p>We tell you whether your business qualifies for the 4-Round Stacking System and what your realistic capital range is. If it does not qualify today, we tell you exactly what would need to change.</p>
+      <div class="urgency-line">Only 5 slots remain this month</div>
+
+      <div class="calendar-embed">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/bookings/cvbusinessfunding"
+          scrolling="no"
+          id="cvbusinessfunding_iframe">
+        </iframe>
+      </div>
+
       <div class="cta-sub">15 minutes. No pitch. No pressure. Just clarity on your file.</div>
-      <div class="cta-or">— OR —</div>
-      <a href="index.html" class="cta-button-secondary">Read the Full Case Study First</a>
     </div>
   </section>
 
-  <!-- ============ FOOTER ============ -->
   <footer>
     <div class="container">
-      <p><strong>THE CAPITAL VAULT</strong></p>
+      <p><strong style="color: #F7F4ED;">THE CAPITAL VAULT</strong></p>
       <p>The funding authority business owners go to when banks say no.</p>
-      <p style="margin-top: 14px; font-size: 11px; color: #555;">© 2026 The Capital Vault. Capital placement subject to lender approval. Results vary by business profile, credit, and market conditions.</p>
+      <a href="index.html" class="full-link">Read The Full Case Study</a>
+      <p style="margin-top: 18px; font-size: 11px; color: #555;">© 2026 The Capital Vault. Capital placement subject to lender approval. Results vary by business profile, credit, and market conditions.</p>
     </div>
   </footer>
 
-  <!-- ============ MOBILE STICKY CTA ============ -->
   <div class="mobile-sticky-cta">
-    <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Book My Free Diagnostic Call</a>
+    <a href="#book" class="cta-button">Book My Free Diagnostic Call</a>
   </div>
+
+  <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 
 </body>
 </html>
