@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Capital Vault | $50K-$500K Working Capital In 23 To 59 Days</title>
+  <meta name="description" content="We help established business owners doing $500K-$3M in annual revenue place $50,000 to $500,000 in working capital across our network of 500+ lenders. Zero equity given up.">
+  <style>
+    /* ============ RESET + BASE ============ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      color: #1A1A1A;
+      background-color: #FAFAF7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; }
+
+    /* ============ LAYOUT ============ */
+    .container { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+    .container-wide { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 56px 0; }
+    section + section { border-top: 1px solid #EAE7E0; }
+
+    /* ============ TOP BAR ============ */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0A0A0A;
+      color: #FAFAF7;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .topbar-logo { font-weight: 700; font-size: 18px; letter-spacing: 0.02em; }
+    .topbar-cta {
+      background: #C8590B;
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .topbar-cta:hover { background: #A04708; }
+
+    /* ============ HERO ============ */
+    .hero {
+      background: #FAFAF7;
+      padding: 64px 0 56px;
+      text-align: center;
+    }
+    .pre-headline {
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #8B2415;
+      margin-bottom: 24px;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h1 {
+      font-size: 44px;
+      line-height: 1.18;
+      font-weight: 800;
+      color: #0A0A0A;
+      margin-bottom: 28px;
+      letter-spacing: -0.01em;
+    }
+    h1 .highlight {
+      background: linear-gradient(180deg, transparent 60%, #F2D27E 60%);
+      padding: 0 2px;
+    }
+    .sub-headline {
+      font-size: 21px;
+      line-height: 1.55;
+      color: #3A3A3A;
+      max-width: 680px;
+      margin: 0 auto 36px;
+      font-style: italic;
+    }
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin: 32px 0;
+      padding: 20px 0;
+      border-top: 2px solid #1A1A1A;
+      border-bottom: 2px solid #1A1A1A;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .hero-stat {
+      text-align: center;
+    }
+    .hero-stat-number {
+      font-size: 28px;
+      font-weight: 800;
+      color: #0A0A0A;
+      line-height: 1;
+    }
+    .hero-stat-label {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6A6A6A;
+      margin-top: 6px;
+    }
+
+    /* ============ CTA BUTTON ============ */
+    .cta-button {
+      display: inline-block;
+      background: #C8590B;
+      color: #FFFFFF;
+      padding: 18px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      box-shadow: 0 4px 14px rgba(200,89,11,0.25);
+      transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .cta-button:hover {
+      background: #A04708;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(200,89,11,0.35);
+    }
+    .cta-sub {
+      font-size: 14px;
+      color: #6A6A6A;
+      margin-top: 14px;
+    }
+    .cta-center { text-align: center; margin: 24px 0; }
+
+    /* ============ HEADINGS ============ */
+    h2 {
+      font-size: 32px;
+      line-height: 1.22;
+      font-weight: 800;
+      color: #0A0A0A;
+      margin-bottom: 20px;
+      letter-spacing: -0.005em;
+    }
+    h3 {
+      font-size: 22px;
+      line-height: 1.3;
+      font-weight: 700;
+      color: #0A0A0A;
+      margin-bottom: 12px;
+      margin-top: 28px;
+    }
+    p { margin-bottom: 18px; }
+    p strong { color: #0A0A0A; font-weight: 700; }
+    em { font-style: italic; }
+
+    /* ============ CALLOUT BOXES ============ */
+    .callout {
+      background: #FFFFFF;
+      border-left: 4px solid #C8590B;
+      padding: 24px 28px;
+      margin: 32px 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .callout-dark {
+      background: #0A0A0A;
+      color: #FAFAF7;
+      padding: 32px 32px;
+      margin: 36px 0;
+      border-radius: 6px;
+    }
+    .callout-dark h3 { color: #FAFAF7; }
+    .callout-dark p { color: #D8D8D5; }
+    .callout-dark strong { color: #FAFAF7; }
+
+    /* ============ WHO THIS IS FOR LIST ============ */
+    .checklist {
+      list-style: none;
+      margin: 24px 0;
+    }
+    .checklist li {
+      position: relative;
+      padding-left: 32px;
+      margin-bottom: 14px;
+      font-size: 17px;
+    }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #0F5132;
+      font-weight: 700;
+      font-size: 20px;
+    }
+    .checklist-no li::before {
+      content: "✕";
+      color: #8B2415;
+    }
+
+    /* ============ OPTION CARDS ============ */
+    .option-card {
+      background: #FFFFFF;
+      border: 1px solid #EAE7E0;
+      border-radius: 6px;
+      padding: 24px;
+      margin-bottom: 18px;
+    }
+    .option-card-title {
+      font-weight: 700;
+      font-size: 18px;
+      color: #8B2415;
+      margin-bottom: 8px;
+    }
+    .option-card-body {
+      color: #3A3A3A;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* ============ COMPARISON GRID ============ */
+    .compare-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 32px 0;
+    }
+    .compare-col {
+      padding: 28px 24px;
+      border-radius: 6px;
+    }
+    .compare-bad {
+      background: #FCF6F4;
+      border: 1px solid #E8C8C0;
+    }
+    .compare-good {
+      background: #F0F7F2;
+      border: 1px solid #B8D8C2;
+    }
+    .compare-header {
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .compare-bad .compare-header { color: #8B2415; }
+    .compare-good .compare-header { color: #0F5132; }
+    .compare-col p { margin-bottom: 10px; font-size: 15px; line-height: 1.55; }
+    .compare-col p:last-child { margin-bottom: 0; }
+
+    /* ============ TIMELINE ============ */
+    .timeline {
+      margin: 32px 0;
+      padding-left: 20px;
+      border-left: 3px solid #1A1A1A;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 28px;
+      padding-bottom: 24px;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -29px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background: #C8590B;
+      border-radius: 50%;
+      border: 3px solid #FAFAF7;
+      box-shadow: 0 0 0 2px #1A1A1A;
+    }
+    .timeline-day {
+      font-weight: 800;
+      font-size: 18px;
+      color: #0A0A0A;
+      margin-bottom: 4px;
+    }
+    .timeline-body {
+      font-size: 16px;
+      color: #3A3A3A;
+      line-height: 1.55;
+    }
+
+    /* ============ INTEREST MATH ============ */
+    .math-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 28px 0;
+      background: #FFFFFF;
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    }
+    .math-table th, .math-table td {
+      padding: 16px 20px;
+      text-align: left;
+      border-bottom: 1px solid #EAE7E0;
+    }
+    .math-table th {
+      background: #0A0A0A;
+      color: #FAFAF7;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .math-table td.amount {
+      font-weight: 700;
+      font-size: 18px;
+      color: #0A0A0A;
+    }
+    .math-table tr:last-child td { border-bottom: none; }
+    .math-table tr.highlight td {
+      background: #FFF8E8;
+      font-weight: 700;
+      color: #B8860B;
+    }
+
+    /* ============ VALUE STACK ============ */
+    .value-stack {
+      margin: 36px 0;
+    }
+    .value-item {
+      background: #FFFFFF;
+      border-left: 4px solid #1A1A1A;
+      padding: 22px 26px;
+      margin-bottom: 14px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: start;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    }
+    .value-item.bonus { border-left-color: #C8590B; background: #FFF8F2; }
+    .value-item-title {
+      font-weight: 700;
+      font-size: 17px;
+      margin-bottom: 8px;
+      color: #0A0A0A;
+    }
+    .value-item-body {
+      font-size: 15px;
+      color: #3A3A3A;
+      line-height: 1.55;
+      margin-bottom: 0;
+    }
+    .value-item-price {
+      font-weight: 800;
+      font-size: 20px;
+      color: #B8860B;
+      white-space: nowrap;
+      align-self: center;
+    }
+    .value-total {
+      background: #0A0A0A;
+      color: #FAFAF7;
+      padding: 28px 32px;
+      border-radius: 6px;
+      margin: 24px 0;
+      text-align: center;
+    }
+    .value-total-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      font-size: 18px;
+    }
+    .value-total-line strong { font-size: 22px; }
+    .value-total-divider {
+      border-top: 1px solid #444;
+      margin: 12px 0;
+    }
+    .value-total-final {
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .value-total-final .price { color: #F2D27E; }
+
+    /* ============ GUARANTEE BOX ============ */
+    .guarantee {
+      background: #F0F7F2;
+      border: 2px solid #0F5132;
+      border-radius: 8px;
+      padding: 36px 32px;
+      margin: 36px 0;
+      text-align: center;
+    }
+    .guarantee h3 {
+      color: #0F5132;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+    .guarantee p { font-size: 17px; color: #1A3A2A; }
+
+    /* ============ URGENCY ============ */
+    .urgency {
+      background: #FFF8E8;
+      border: 2px solid #B8860B;
+      border-radius: 6px;
+      padding: 28px 28px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .urgency h3 {
+      color: #8B2415;
+      margin-top: 0;
+      font-size: 22px;
+    }
+    .urgency p { font-size: 17px; color: #3A3A3A; }
+    .urgency .slots {
+      font-size: 28px;
+      font-weight: 800;
+      color: #8B2415;
+      display: block;
+      margin: 12px 0;
+    }
+
+    /* ============ FAQ / FEARS ============ */
+    .fear {
+      border-bottom: 1px solid #EAE7E0;
+      padding: 24px 0;
+    }
+    .fear-q {
+      font-weight: 700;
+      font-size: 19px;
+      color: #0A0A0A;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .fear-a {
+      font-size: 16px;
+      color: #3A3A3A;
+      line-height: 1.65;
+    }
+
+    /* ============ P.S. SECTION ============ */
+    .ps {
+      background: #FFFFFF;
+      border-left: 4px solid #C8590B;
+      padding: 32px 32px;
+      margin: 32px 0;
+    }
+    .ps-label {
+      font-weight: 800;
+      font-size: 16px;
+      color: #C8590B;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: #0A0A0A;
+      color: #888;
+      padding: 40px 0;
+      text-align: center;
+      font-size: 14px;
+    }
+    footer a { color: #FAFAF7; text-decoration: none; }
+    footer p { margin-bottom: 8px; }
+
+    /* ============ MOBILE ============ */
+    @media (max-width: 700px) {
+      body { font-size: 16px; }
+      h1 { font-size: 30px; line-height: 1.22; }
+      h2 { font-size: 24px; }
+      h3 { font-size: 19px; }
+      .sub-headline { font-size: 18px; }
+      .hero { padding: 40px 0 36px; }
+      section { padding: 40px 0; }
+      .hero-stats { gap: 24px; padding: 16px 0; }
+      .hero-stat-number { font-size: 22px; }
+      .hero-stat-label { font-size: 11px; }
+      .cta-button { padding: 16px 28px; font-size: 16px; }
+      .compare-grid { grid-template-columns: 1fr; gap: 14px; }
+      .value-item { grid-template-columns: 1fr; gap: 12px; }
+      .value-item-price { font-size: 22px; }
+      .value-total-line { flex-direction: column; gap: 4px; padding: 6px 0; }
+      .math-table th, .math-table td { padding: 12px 14px; font-size: 14px; }
+      .math-table td.amount { font-size: 16px; }
+      .topbar { padding: 12px 16px; }
+      .topbar-logo { font-size: 16px; }
+      .topbar-cta { padding: 8px 14px; font-size: 13px; }
+      .container, .container-wide { padding: 0 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="topbar-logo">THE CAPITAL VAULT</div>
+    <a href="#book" class="topbar-cta">Book Free Diagnostic Call</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <div class="pre-headline">Attention Established Business Owners Doing $500K to $3M in Annual Revenue Who Have Been Denied by at Least One Bank in the Last 90 Days...</div>
+      <h1>How We Helped One Founder Get <span class="highlight">$185,000 in 23 Days</span> to Scale His Business Immediately, While the Bigger <span class="highlight">$1,300,000 Came Through by Day 59.</span></h1>
+      <div class="sub-headline">Across our network of 500+ lenders in all 50 states. Zero equity given up. No personal credit damage. No merchant cash advance trap.</div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="hero-stat-number">$10M+</div>
+          <div class="hero-stat-label">Placed in 12 Months</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">500+</div>
+          <div class="hero-stat-label">Lender Network</div>
+        </div>
+        <div class="hero-stat">
+          <div class="hero-stat-number">All 50</div>
+          <div class="hero-stat-label">States Covered</div>
+        </div>
+      </div>
+      <div class="cta-center">
+        <a href="#book" class="cta-button">Book My Free 15-Minute Diagnostic Call</a>
+        <div class="cta-sub">Find out in 15 minutes whether your business qualifies for the 4-Round system.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPENING ============ -->
+  <section>
+    <div class="container">
+      <p>I am going to show you something most funding brokers will not tell you.</p>
+      <p>Banks deny operators like you every single day. Almost none of those operators ever find out <strong>WHY.</strong></p>
+      <p>The bank hands you a generic decline letter. They send you on your way. You walk out angry, scared, or both. You start considering options that will damage your business for the next 10 years just to get through the next 90 days.</p>
+      <p>There is a better way. And it has nothing to do with knowing "secret banks" or having "special connections."</p>
+      <p><strong>It has everything to do with how your file is structured before it ever hits a lender's desk.</strong></p>
+    </div>
+  </section>
+
+  <!-- ============ WHO THIS IS FOR ============ -->
+  <section>
+    <div class="container">
+      <h2>Who This Is For</h2>
+      <p>This page is for you if:</p>
+      <ul class="checklist">
+        <li>You own a business doing $500,000 to $3,000,000 in annual revenue.</li>
+        <li>You have been in business 24 months or longer.</li>
+        <li>You are profitable, or close to profitable.</li>
+        <li>You need $50,000 to $500,000 in working capital to fund a contract, hire a crew, buy equipment, pre-pay a supplier, or take advantage of an opportunity that will not wait 6 months.</li>
+        <li>You have been denied by at least one bank in the last 90 days, or you know you are about to apply and you are dreading the result.</li>
+        <li>You do not want to give up equity to an investor who did not build what you built.</li>
+      </ul>
+      <p>If that is you, keep reading.</p>
+      <p>If you are VC-backed, pre-revenue, doing under $500,000 in revenue, or looking for personal credit help, <strong>this is not for you.</strong> Close the tab and we will not waste each other's time.</p>
+    </div>
+  </section>
+
+  <!-- ============ THE REAL FRUSTRATION ============ -->
+  <section>
+    <div class="container">
+      <h2>The Real Frustration</h2>
+      <p>You are watching competitors win bids you cannot fund.</p>
+      <p>You are watching suppliers raise prices because you cannot pre-pay.</p>
+      <p>You are watching the contract of the year sitting in your inbox, and the only thing standing between you and signing it is $185,000 of working capital your bank will not give you.</p>
+      <p>You are wondering if you should give up 25% of the business to an investor just to stay alive. And in the back of your head, you know that giving up that 25% now will cost you 10 times that amount in 5 years when the business actually compounds.</p>
+      <p>You are wondering if you should take a merchant cash advance. And in the back of your head, you know operators who took one and were out of business within 18 months.</p>
+      <p>You are wondering if <em>you</em> are the problem. <strong>You are not.</strong> Your file is the problem. And your file is fixable.</p>
+    </div>
+  </section>
+
+  <!-- ============ AUTHORITY ============ -->
+  <section>
+    <div class="container">
+      <h2>Who I Am, and Why You Should Listen</h2>
+      <p>I am Abu Elhassan, founder of The Capital Vault.</p>
+      <p>We work with a network of <strong>over 500 lenders across all 50 states.</strong> In the last 12 months we have placed more than <strong>$10,000,000</strong> of growth capital for operators doing $500,000 to $3,000,000 in annual revenue.</p>
+      <p>The reason we get capital placed when the bank in front of you denied you is not because we know secret lenders. <strong>It is because we structure and certify your file so that when it hits a lender's desk, it gets approved instead of declined.</strong></p>
+      <p>That structure is the entire business.</p>
+    </div>
+  </section>
+
+  <!-- ============ 5 OPTIONS THAT FAIL ============ -->
+  <section>
+    <div class="container">
+      <h2>Why The 5 Options You Are Considering All Fail</h2>
+      <p>Right now you are probably weighing 5 options. Let me tell you why each one fails before you make the wrong move.</p>
+
+      <div class="option-card">
+        <div class="option-card-title">Option 1: Apply to more banks.</div>
+        <div class="option-card-body">Banks deny on POLICY reasons (your structure, your DTI, your recent inquiries, your industry) that will not change just because you walk into a different branch. Reapplying without restructuring your file produces more denials and adds more inquiries to your credit, which makes the next application even harder. The fix is not more applications. The fix is restructuring the file.</div>
+      </div>
+
+      <div class="option-card">
+        <div class="option-card-title">Option 2: Take a merchant cash advance.</div>
+        <div class="option-card-body">A $100,000 MCA at typical terms costs roughly $138,000 back over 9 to 12 months. That is a 40 to 80% effective APR. The daily ACH debits choke operational cash flow, which forces another MCA, which is the death spiral that ends most operator businesses within 18 months. We will tell you when an MCA is the wrong tool, even when we could earn a commission on placing one.</div>
+      </div>
+
+      <div class="option-card">
+        <div class="option-card-title">Option 3: Give up equity to an investor.</div>
+        <div class="option-card-body">Taking $200,000 from an investor for 25% equity at an $800,000 post-money valuation seems cheap. It is not. If your business grows to $5,000,000 in revenue at a 3x multiple, that 25% is worth $3,750,000. The "cheap money" cost you $3,550,000 in dilution. <strong>Capital costs you interest. Equity costs you the future.</strong></div>
+      </div>
+
+      <div class="option-card">
+        <div class="option-card-title">Option 4: Max out personal credit cards.</div>
+        <div class="option-card-body">Personal cards damage your personal FICO, do not scale past $50,000 to $75,000 total, and create cross-contamination between your personal and business finances that hurts every future bank application. It is a 90-day patch with a 5-year cost.</div>
+      </div>
+
+      <div class="option-card">
+        <div class="option-card-title">Option 5: Turn down the contract or delay the hire.</div>
+        <div class="option-card-body">You lose the opportunity. You lose the revenue. You lose the growth. Your competitor wins it. And next year you are still the same size, still applying to the same banks, still getting the same denials.</div>
+      </div>
+
+      <p style="margin-top: 28px; font-size: 19px; font-weight: 700;">There is a sixth option. Keep reading.</p>
+    </div>
+  </section>
+
+  <!-- ============ TRANSFORMATION TIMELINE ============ -->
+  <section>
+    <div class="container">
+      <h2>The New Reality</h2>
+      <p>Here is what the next 60 days look like once you book the diagnostic call.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-day">Day 1</div>
+          <div class="timeline-body">You submit your file through our intake. We run the 14-category diagnostic.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">Day 7</div>
+          <div class="timeline-body">Your dedicated funding strategist texts you: <em>"Round 1 approved, $85,000, funding next Tuesday."</em></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">Day 23</div>
+          <div class="timeline-body"><strong>Round 1 is funded. $185,000 sitting in your operating account.</strong> You take the contract. You pre-pay the supplier and get the 12% volume discount. You hire the first crew.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">Day 30</div>
+          <div class="timeline-body">Round 2 closes. Another $120,000 in.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">Day 45</div>
+          <div class="timeline-body">Round 3 closes. Another $400,000 working capital line.</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-day">Day 59</div>
+          <div class="timeline-body"><strong>Round 4 closes. $1,300,000 total placed across multiple facilities, manageable terms, zero equity given up, no personal credit damage.</strong> The contract is signed. The crews are hired. The business is compounding.</div>
+        </div>
+      </div>
+      <p>That is the new reality. And it is exactly what happened to the founder in our case study.</p>
+    </div>
+  </section>
+
+  <!-- ============ REAL QUESTION ============ -->
+  <section>
+    <div class="container">
+      <h2>The Real Question You Are Asking Right Now</h2>
+      <p style="font-style: italic; font-size: 20px;">"Why should I pay you when I could just walk into a bank myself?"</p>
+      <p>Honest answer. Two reasons.</p>
+
+      <h3>Reason 1: One bank vs 500+ lenders.</h3>
+      <div class="compare-grid">
+        <div class="compare-col compare-bad">
+          <div class="compare-header">Walking In Yourself</div>
+          <p>Access to ONE lender's underwriting policy at a time.</p>
+          <p>When they say no, you walk out without a reason.</p>
+          <p>No next step. No alternative route.</p>
+          <p>Application damages your credit with an inquiry.</p>
+          <p>You start over at the next branch with the same file.</p>
+        </div>
+        <div class="compare-col compare-good">
+          <div class="compare-header">The Capital Vault</div>
+          <p>Access to 500+ lenders across all 50 states.</p>
+          <p>When Round 1 lender says no, we already know why.</p>
+          <p>Route to Round 2 lender with adjusted file.</p>
+          <p>Inquiries managed across the sequence.</p>
+          <p>Your file improves with each round. Not worse.</p>
+        </div>
+      </div>
+
+      <h3>Reason 2: Banks will not tell you why you got denied.</h3>
+      <p>When a bank declines your application, they hand you a generic letter and send you on your way. They will not tell you <strong>WHY.</strong> They will not tell you that your DTI is over their threshold by 3%. They will not tell you that two recent inquiries on your credit triggered an automatic decline. They will not tell you that your business structure does not match their policy for your industry.</p>
+      <p>We tell you. We diagnose your file first, identify the exact reasons your applications are getting declined, fix those reasons, and certify your file before the next submission.</p>
+      <p>The result: <strong>you walk into any lender confident you are going to get approved.</strong> Not scared. Not desperate. Not about to take a worse option because you ran out of time.</p>
+      <p>That is the difference. And it is the entire difference.</p>
+    </div>
+  </section>
+
+  <!-- ============ INTEREST RATE MATH ============ -->
+  <section>
+    <div class="container">
+      <h2>Let's Talk About the Interest Rate</h2>
+      <p>Here is something the bank will not tell you. It might be the most expensive thing in this entire conversation.</p>
+      <p>If you walk into your local branch with an unoptimized file, you might get approved at <strong>18 to 22% APR.</strong> That is not unusual for operators in the $500K to $3M range. Banks price for risk, and an unoptimized file looks risky on their screen.</p>
+      <p>The same business, structured correctly and routed through the right lender in our network, can land at <strong>8 to 12% APR.</strong></p>
+
+      <table class="math-table">
+        <thead>
+          <tr><th>Facility Size</th><th>5-Year Interest Saved</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>$250,000 facility</td><td class="amount">~$125,000</td></tr>
+          <tr><td>$500,000 facility</td><td class="amount">~$250,000</td></tr>
+          <tr class="highlight"><td>Our Fee</td><td class="amount">$7,500</td></tr>
+        </tbody>
+      </table>
+
+      <div class="callout-dark">
+        <p style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #FAFAF7;">That is a 16 to 33 times return on the fee from interest savings alone.</p>
+        <p>Before you count the additional capital we place beyond Round 1. Before you count the equity you do not give up. Before you count the contracts you do not have to turn down because you finally have working capital.</p>
+      </div>
+
+      <p>When you are asking whether the fee is worth it, ask the right question. Not "is $7,500 a lot?" Ask: <strong>"is $7,500 worth the $125,000 to $250,000 in interest I am about to overpay if I keep applying to the wrong lender at the wrong rate?"</strong></p>
+    </div>
+  </section>
+
+  <!-- ============ THE OFFER ============ -->
+  <section id="offer">
+    <div class="container">
+      <h2>Introducing: The Capital Vault 4-Round Stacking System</h2>
+      <p>The same system that placed $185,000 in 23 days and $1,300,000 total in 59 days for the founder in our case study. Here is exactly what is included.</p>
+
+      <div class="value-stack">
+
+        <div class="value-item">
+          <div>
+            <div class="value-item-title">1. 14-Category Lender Diagnostic</div>
+            <div class="value-item-body">We analyze your business across 14 different lender categories (term loans, asset-based, equipment financing, SBA, working capital lines, etc.) to identify exactly which facilities you qualify for today.</div>
+          </div>
+          <div class="value-item-price">$5,000</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <div class="value-item-title">2. File Structuring & Certification</div>
+            <div class="value-item-body">We restructure your application file, optimize how your DTI is presented, manage your inquiry footprint, and certify the file before submission so it gets APPROVED instead of declined. Banks deny on POLICY reasons. We fix the policy issues.</div>
+          </div>
+          <div class="value-item-price">$7,500</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <div class="value-item-title">3. Direct Network Placement Across 500+ Lenders</div>
+            <div class="value-item-body">We route your structured file directly to the specific lenders most likely to fund your exact business profile. No aggregator marketplaces. No 90-day SBA timelines. No shotgun applications damaging your credit.</div>
+          </div>
+          <div class="value-item-price">$15,000</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <div class="value-item-title">4. The 4-Round Stacking Sequence</div>
+            <div class="value-item-body">We structure your funding across 4 sequenced rounds in the correct order so you maximize total approved capital without triggering DTI thresholds, recent-inquiry penalties, or covenant conflicts in subsequent rounds.</div>
+          </div>
+          <div class="value-item-price">$7,500</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <div class="value-item-title">5. Interest Rate Optimization</div>
+            <div class="value-item-body">We route to the lenders pricing at the favorable end of the market for your specific profile, getting you in the 8-12% APR range instead of the 18-22% range. On a $250K facility over 5 years, saves you roughly $125,000.</div>
+          </div>
+          <div class="value-item-price">$25,000</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <div class="value-item-title">6. Speed-to-Capital</div>
+            <div class="value-item-body">First round of capital in your operating account within 23 days. Full 4-round deployment by Day 59. Vs the 90 to 180 day timeline through SBA or going direct to a bank.</div>
+          </div>
+          <div class="value-item-price">$10,000</div>
+        </div>
+
+        <div class="value-item">
+          <div>
+            <div class="value-item-title">7. The Capital Placement Guarantee</div>
+            <div class="value-item-body">If we do not place at least $50,000 in approved capital for you within 90 days of intake, you do not pay the placement fee. Diagnostic fee refunded if requested.</div>
+          </div>
+          <div class="value-item-price">$5,000</div>
+        </div>
+
+        <div class="value-item bonus">
+          <div>
+            <div class="value-item-title">BONUS #1 (free for the next 30 days): The Vault Method Playbook</div>
+            <div class="value-item-body">PDF + 90-minute case study deconstruction video. The exact 4-round sequence used in the $185K-in-23-days, $1.3M-in-59-days placement, broken down round by round.</div>
+          </div>
+          <div class="value-item-price">$497</div>
+        </div>
+
+        <div class="value-item bonus">
+          <div>
+            <div class="value-item-title">BONUS #2 (free for the next 30 days): 6 Months of Vault Method Insider</div>
+            <div class="value-item-body">Monthly intelligence update on lender market shifts, rate changes, policy adjustments, and which lenders are funding which industries right now.</div>
+          </div>
+          <div class="value-item-price">$497</div>
+        </div>
+
+      </div>
+
+      <div class="value-total">
+        <div class="value-total-line"><span>Total Stated Value:</span> <strong>$75,994</strong></div>
+        <div class="value-total-divider"></div>
+        <div class="value-total-final">Your Investment: <span class="price">$7,500</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHAT YOU ARE ACTUALLY GETTING ============ -->
+  <section>
+    <div class="container">
+      <h2>And Here Is What You Are Actually Getting</h2>
+      <p>The numbers above are what you would pay for each piece if you hired them separately. The real value is bigger than the line items.</p>
+      <p>What you are actually getting:</p>
+      <ul class="checklist">
+        <li><strong>The contracts you do not lose</strong> because capital arrives in 23 days instead of 90.</li>
+        <li><strong>The hires you can make immediately</strong> instead of deferring six months until cash flow catches up.</li>
+        <li><strong>The suppliers you can pre-pay</strong> at a 10 to 15% volume discount because you have cash on hand for the first time.</li>
+        <li><strong>The equity you do not give up</strong> to an investor. Over 5 years that could cost you $500,000 to $3,000,000 in dilution alone.</li>
+        <li><strong>The personal credit you do not damage</strong> from multiple bank inquiries on a file that was never going to get approved as it was.</li>
+        <li><strong>The 40 to 80 hours of your life</strong> you do not waste reapplying to banks that will deny you on the same policy reasons over and over.</li>
+      </ul>
+      <p>That is what $7,500 actually buys. Not a service. A 5-year compound effect on your business that no spreadsheet on this page can fully capture.</p>
+    </div>
+  </section>
+
+  <!-- ============ GUARANTEE ============ -->
+  <section>
+    <div class="container">
+      <div class="guarantee">
+        <h3>The Capital Placement Guarantee</h3>
+        <p>If we do not place at least <strong>$50,000 in approved capital</strong> for you within 90 days of your intake, you do not pay the placement fee. You pay only the diagnostic fee, which we will refund to your bank if you request it within 30 days of the placement window ending.</p>
+        <p style="margin-top: 16px;"><strong>The risk is on us. Not on you.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRIMARY CTA ============ -->
+  <section id="book">
+    <div class="container">
+      <h2 style="text-align: center;">Book Your Free 15-Minute Capital Diagnostic Call</h2>
+      <p style="text-align: center; font-size: 18px;">On the call we will tell you whether your business qualifies for the 4-Round Stacking System. If it does, we outline the round sequence and the realistic capital range. If it does not, we tell you exactly what would need to change before we could help you.</p>
+      <p style="text-align: center; font-size: 18px;"><strong>Either way, you walk away with clarity instead of another generic decline letter.</strong></p>
+      <div class="cta-center" style="margin-top: 32px;">
+        <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Book My Diagnostic Call</a>
+        <div class="cta-sub">15 minutes. No pitch. No pressure. Just clarity on your file.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ URGENCY ============ -->
+  <section>
+    <div class="container">
+      <div class="urgency">
+        <h3>Limited Intake This Month</h3>
+        <p>We accept a maximum of <strong>5 new client files per month</strong> so our direct lender relationships do not get oversaturated and our placement timelines stay tight.</p>
+        <span class="slots">3 of 5 slots remain this month</span>
+        <p>Slots are filled first-come, first-qualified. The earlier in the month you book, the faster your placement timeline.</p>
+      </div>
+      <div class="cta-center">
+        <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Claim My Slot</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEARS ============ -->
+  <section>
+    <div class="container">
+      <h2>What You Might Be Worried About</h2>
+      <p>I have done a lot of these calls. The same concerns come up. Here are the most common ones, and the honest answer to each.</p>
+
+      <div class="fear">
+        <div class="fear-q">"I have worked with a funding broker before who just sent my application to 6 banks and called it a strategy. Same denials, more inquiries on my credit, no actual capital placed."</div>
+        <div class="fear-a">We do not aggregate. We do not shotgun. We diagnose your file first, then place with the specific direct lender most likely to fund based on your exact structure. The diagnostic IS the difference. Aggregators submit your file blind. We route with intent.</div>
+      </div>
+
+      <div class="fear">
+        <div class="fear-q">"This sounds like another MCA broker who will sell me a $50K cash advance at 80% APR that will bury my cash flow in 6 months."</div>
+        <div class="fear-a">Our 4-round stacking system uses bank-grade facilities: term loans, lines of credit, equipment financing, SBA where appropriate. MCAs are a last resort, and we tell clients when an MCA is the wrong tool, even when we could earn a commission on placing one. If your situation does not support bank-grade funding, we tell you so on the diagnostic call. We do not push products that hurt you.</div>
+      </div>
+
+      <div class="fear">
+        <div class="fear-q">"You will require me to give up equity, or sign personal guarantees on facilities I cannot survive."</div>
+        <div class="fear-a">Zero equity given up, ever. Personal guarantees are standard for SMB credit, but we structure your stack so the PG exposure is bounded and manageable. You will know the exact PG exposure on every facility BEFORE any document gets signed. No surprises.</div>
+      </div>
+
+      <div class="fear">
+        <div class="fear-q">"This is too good to be true. Nobody can place $185,000 in 23 days, much less $1.3 million in 59 days."</div>
+        <div class="fear-a">It sounds too good if you have only ever worked with an unstructured file submitted to one bank at a time. Our network of 500+ lenders did not say no to YOU. They said no to your file as it was presented. We restructure, certify, and route. The founder in our case study was denied by multiple banks before he found us. 23 days later he had $185,000 in his operating account. 59 days later he had $1,300,000 total placed. The system is not magic. It is structure and routing.</div>
+      </div>
+
+      <div class="fear">
+        <div class="fear-q">"My credit is not good enough or my business structure is wrong."</div>
+        <div class="fear-a">If your personal FICO is 650+ and your business has been operational for 24+ months with $500K+ in trailing revenue, you almost certainly qualify for at least Round 1. The diagnostic call tells you in 15 minutes whether you qualify and what your realistic capital range looks like. If you do not qualify today, we tell you what would need to change so you can qualify in 30 to 90 days.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ P.S. ============ -->
+  <section>
+    <div class="container">
+      <div class="ps">
+        <div class="ps-label">P.S.</div>
+        <p>The founder I mentioned was three weeks from losing the largest contract of his career. Multiple banks had denied him. His wife was telling him to take a personal-credit-card loan and "make it work." He found us through a referral, booked the diagnostic call on a Tuesday, and by Day 23 had <strong>$185,000</strong> in his operating account, enough to take the contract, pre-pay the suppliers at a discount, and hire the first crew. By Day 59 he had <strong>$1,300,000</strong> total placed across the 4 rounds. He kept 100% equity. He did not damage his personal credit. He won the contract. The business doubled the next year.</p>
+        <p>The 4-Round Stacking System is the same system we will run on YOUR file. <strong>Book the call.</strong></p>
+      </div>
+      <div class="cta-center">
+        <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Book My Diagnostic Call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <p><strong>THE CAPITAL VAULT</strong></p>
+      <p>The funding authority business owners go to when banks say no.</p>
+      <p style="margin-top: 16px; font-size: 12px; color: #555;">© 2026 The Capital Vault. All rights reserved.</p>
+      <p style="font-size: 12px; color: #555;">Capital placement subject to lender approval. Individual results vary based on business profile, credit, and market conditions.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

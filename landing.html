@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Capital Vault | $50K-$500K Working Capital In 23 To 59 Days</title>
+  <meta name="description" content="Established business owner doing $500K-$3M and denied by your bank? We place $50K-$500K in capital across our network of 500+ lenders. Zero equity given up.">
+  <style>
+    /* ============ RESET + BASE ============ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      color: #1A1A1A;
+      background-color: #FAFAF7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: inherit; text-decoration: none; }
+
+    /* ============ LAYOUT ============ */
+    .container { max-width: 880px; margin: 0 auto; padding: 0 24px; }
+    .container-narrow { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+
+    /* ============ TOP BAR ============ */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #0A0A0A;
+      color: #FAFAF7;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .topbar-logo { font-weight: 700; font-size: 18px; letter-spacing: 0.02em; }
+    .topbar-cta {
+      background: #C8590B;
+      color: #FFFFFF;
+      padding: 10px 18px;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: background 0.2s;
+      white-space: nowrap;
+    }
+    .topbar-cta:hover { background: #A04708; }
+
+    /* ============ HERO ============ */
+    .hero {
+      padding: 72px 0 32px;
+      text-align: center;
+    }
+    .pre-headline {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #8B2415;
+      margin-bottom: 28px;
+    }
+    h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      font-weight: 800;
+      color: #0A0A0A;
+      margin-bottom: 28px;
+      letter-spacing: -0.02em;
+    }
+    h1 .highlight {
+      background: linear-gradient(180deg, transparent 60%, #F2D27E 60%);
+      padding: 0 4px;
+    }
+    .sub-headline {
+      font-size: 22px;
+      line-height: 1.45;
+      color: #3A3A3A;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    /* ============ STAT STRIP ============ */
+    .stat-strip {
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+      flex-wrap: wrap;
+      margin: 40px 0 48px;
+      padding: 24px 0;
+      border-top: 2px solid #0A0A0A;
+      border-bottom: 2px solid #0A0A0A;
+    }
+    .stat {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 36px;
+      font-weight: 800;
+      color: #0A0A0A;
+      line-height: 1;
+      letter-spacing: -0.01em;
+    }
+    .stat-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #6A6A6A;
+      margin-top: 8px;
+      font-weight: 600;
+    }
+
+    /* ============ CTA BUTTON ============ */
+    .cta-button {
+      display: inline-block;
+      background: #C8590B;
+      color: #FFFFFF;
+      padding: 20px 48px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 19px;
+      letter-spacing: 0.01em;
+      box-shadow: 0 4px 18px rgba(200,89,11,0.3);
+      transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+      border: none;
+      cursor: pointer;
+    }
+    .cta-button:hover {
+      background: #A04708;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(200,89,11,0.4);
+    }
+    .cta-button-secondary {
+      display: inline-block;
+      background: transparent;
+      color: #0A0A0A;
+      padding: 18px 40px;
+      border: 2px solid #0A0A0A;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 17px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .cta-button-secondary:hover { background: #0A0A0A; color: #FAFAF7; }
+    .cta-sub {
+      font-size: 14px;
+      color: #6A6A6A;
+      margin-top: 16px;
+    }
+    .cta-or {
+      font-size: 14px;
+      color: #6A6A6A;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      margin: 20px 0;
+    }
+
+    /* ============ 60-SECOND PITCH ============ */
+    .pitch {
+      padding: 56px 0;
+      background: #FFFFFF;
+      border-top: 1px solid #EAE7E0;
+      border-bottom: 1px solid #EAE7E0;
+    }
+    .pitch h2 {
+      font-size: 28px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 36px;
+      color: #0A0A0A;
+    }
+    .pitch-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .pitch-card {
+      text-align: center;
+    }
+    .pitch-card-num {
+      font-size: 14px;
+      font-weight: 800;
+      color: #C8590B;
+      letter-spacing: 0.12em;
+      margin-bottom: 12px;
+    }
+    .pitch-card-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #0A0A0A;
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+    .pitch-card-body {
+      font-size: 15px;
+      color: #4A4A4A;
+      line-height: 1.55;
+    }
+
+    /* ============ WHY DIFFERENT ============ */
+    .why {
+      padding: 64px 0;
+    }
+    .why h2 {
+      font-size: 32px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 36px;
+      color: #0A0A0A;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .why-col {
+      padding: 28px 26px;
+      border-radius: 6px;
+    }
+    .why-bad {
+      background: #FCF6F4;
+      border: 1px solid #E8C8C0;
+    }
+    .why-good {
+      background: #F0F7F2;
+      border: 1px solid #B8D8C2;
+    }
+    .why-header {
+      font-weight: 800;
+      font-size: 17px;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .why-bad .why-header { color: #8B2415; }
+    .why-good .why-header { color: #0F5132; }
+    .why-col ul { list-style: none; }
+    .why-col li {
+      font-size: 15px;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      padding-left: 22px;
+      position: relative;
+    }
+    .why-bad li::before {
+      content: "✕";
+      position: absolute;
+      left: 0;
+      color: #8B2415;
+      font-weight: 700;
+    }
+    .why-good li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #0F5132;
+      font-weight: 700;
+    }
+
+    /* ============ AUTHORITY ============ */
+    .authority {
+      padding: 56px 0;
+      background: #0A0A0A;
+      color: #FAFAF7;
+      text-align: center;
+    }
+    .authority h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 24px;
+      color: #FAFAF7;
+    }
+    .authority p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #D8D8D5;
+      max-width: 680px;
+      margin: 0 auto 18px;
+    }
+    .authority p strong { color: #F2D27E; }
+
+    /* ============ FINAL CTA ============ */
+    .final-cta {
+      padding: 72px 0;
+      text-align: center;
+    }
+    .final-cta h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: #0A0A0A;
+      margin-bottom: 20px;
+      line-height: 1.18;
+      letter-spacing: -0.01em;
+    }
+    .final-cta p {
+      font-size: 19px;
+      color: #3A3A3A;
+      max-width: 640px;
+      margin: 0 auto 36px;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: #0A0A0A;
+      color: #888;
+      padding: 32px 0;
+      text-align: center;
+      font-size: 13px;
+    }
+    footer p { margin-bottom: 6px; }
+    footer a { color: #FAFAF7; }
+
+    /* ============ MOBILE STICKY CTA ============ */
+    .mobile-sticky-cta {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #FFFFFF;
+      padding: 12px 16px;
+      box-shadow: 0 -4px 16px rgba(0,0,0,0.1);
+      z-index: 99;
+      border-top: 1px solid #EAE7E0;
+    }
+    .mobile-sticky-cta .cta-button {
+      width: 100%;
+      padding: 16px;
+      font-size: 16px;
+    }
+
+    /* ============ MOBILE ============ */
+    @media (max-width: 700px) {
+      body { font-size: 16px; padding-bottom: 80px; }
+      h1 { font-size: 34px; line-height: 1.15; }
+      .sub-headline { font-size: 18px; }
+      .hero { padding: 48px 0 24px; }
+      .stat-strip { gap: 28px; padding: 18px 0; margin: 28px 0; }
+      .stat-number { font-size: 26px; }
+      .stat-label { font-size: 10px; }
+      .cta-button { padding: 18px 32px; font-size: 17px; }
+      .pitch { padding: 40px 0; }
+      .pitch h2 { font-size: 22px; margin-bottom: 24px; }
+      .pitch-grid { grid-template-columns: 1fr; gap: 24px; }
+      .why { padding: 48px 0; }
+      .why h2 { font-size: 24px; }
+      .why-grid { grid-template-columns: 1fr; gap: 14px; }
+      .authority { padding: 40px 0; }
+      .authority h2 { font-size: 20px; }
+      .authority p { font-size: 16px; }
+      .final-cta { padding: 48px 0; }
+      .final-cta h2 { font-size: 26px; }
+      .final-cta p { font-size: 17px; }
+      .topbar { padding: 12px 16px; }
+      .topbar-logo { font-size: 15px; }
+      .topbar-cta { display: none; }
+      .container, .container-narrow { padding: 0 18px; }
+      .mobile-sticky-cta { display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="topbar">
+    <div class="topbar-logo">THE CAPITAL VAULT</div>
+    <a href="#book" class="topbar-cta">Book Free Diagnostic Call</a>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="container">
+      <div class="pre-headline">For Operators Doing $500K to $3M Denied by Their Bank</div>
+      <h1>Get <span class="highlight">$185,000 in 23 Days</span> to Scale Right Now.<br>The Full <span class="highlight">$1,300,000 by Day 59.</span></h1>
+      <div class="sub-headline">We place $50K to $500K of working capital across our network of 500+ lenders in all 50 states. Zero equity given up. No MCA. No personal credit damage.</div>
+
+      <div class="stat-strip">
+        <div class="stat">
+          <div class="stat-number">$10M+</div>
+          <div class="stat-label">Placed in 12 Months</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Lender Network</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">All 50</div>
+          <div class="stat-label">States Covered</div>
+        </div>
+      </div>
+
+      <a href="#book" class="cta-button">Book My Free 15-Minute Diagnostic Call</a>
+      <div class="cta-sub">Find out in 15 minutes whether your business qualifies for the 4-Round system.</div>
+    </div>
+  </section>
+
+  <!-- ============ 60-SECOND PITCH ============ -->
+  <section class="pitch">
+    <div class="container">
+      <h2>How The Capital Vault Works</h2>
+      <div class="pitch-grid">
+
+        <div class="pitch-card">
+          <div class="pitch-card-num">STEP 01</div>
+          <div class="pitch-card-title">Diagnose Your File</div>
+          <div class="pitch-card-body">We analyze your business across 14 lender categories and identify exactly why banks are denying you. Most of the time it is a policy issue, not a real problem.</div>
+        </div>
+
+        <div class="pitch-card">
+          <div class="pitch-card-num">STEP 02</div>
+          <div class="pitch-card-title">Structure & Certify</div>
+          <div class="pitch-card-body">We restructure your application file, optimize the DTI presentation, manage your inquiry footprint, and certify the file before it ever hits a lender's desk.</div>
+        </div>
+
+        <div class="pitch-card">
+          <div class="pitch-card-num">STEP 03</div>
+          <div class="pitch-card-title">Place Across 500+ Lenders</div>
+          <div class="pitch-card-body">We route your file to the specific lenders most likely to fund your exact business profile, across 4 sequenced rounds. Round 1 in 23 days. Full deployment by Day 59.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WHY DIFFERENT ============ -->
+  <section class="why">
+    <div class="container">
+      <h2>Why Not Just Walk Into Your Bank Yourself?</h2>
+      <div class="why-grid">
+
+        <div class="why-col why-bad">
+          <div class="why-header">Walking In Yourself</div>
+          <ul>
+            <li>Access to ONE lender's underwriting policy</li>
+            <li>They deny you without telling you why</li>
+            <li>Inquiry damages your credit for nothing</li>
+            <li>18 to 22% APR if they do approve</li>
+            <li>No next step. Start over at the next branch.</li>
+          </ul>
+        </div>
+
+        <div class="why-col why-good">
+          <div class="why-header">The Capital Vault</div>
+          <ul>
+            <li>Access to 500+ lenders, all 50 states</li>
+            <li>We diagnose your file FIRST</li>
+            <li>Inquiries managed across the sequence</li>
+            <li>8 to 12% APR routing (saves ~$125K per $250K)</li>
+            <li>4-Round stacking gets you up to $1M+ deployed</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTHORITY ============ -->
+  <section class="authority">
+    <div class="container-narrow">
+      <h2>Who Is Running This</h2>
+      <p>I am <strong>Abu Elhassan</strong>, founder of The Capital Vault. We work with a network of over 500 lenders across all 50 states. In the last 12 months we have placed more than <strong>$10 million</strong> of growth capital for operators doing $500K to $3M in revenue.</p>
+      <p>Most recently, we helped one founder get <strong>$185,000 in 23 days</strong> to take a contract he was about to lose, then placed the full <strong>$1,300,000</strong> by Day 59 across the 4-round sequence. Zero equity given up.</p>
+    </div>
+  </section>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final-cta" id="book">
+    <div class="container-narrow">
+      <h2>Book Your Free 15-Minute Capital Diagnostic Call</h2>
+      <p>On the call we tell you whether your business qualifies for the 4-Round Stacking System and what your realistic capital range is. If it does not qualify today, we tell you exactly what would need to change.</p>
+      <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Book My Diagnostic Call</a>
+      <div class="cta-sub">15 minutes. No pitch. No pressure. Just clarity on your file.</div>
+      <div class="cta-or">— OR —</div>
+      <a href="index.html" class="cta-button-secondary">Read the Full Case Study First</a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="container">
+      <p><strong>THE CAPITAL VAULT</strong></p>
+      <p>The funding authority business owners go to when banks say no.</p>
+      <p style="margin-top: 14px; font-size: 11px; color: #555;">© 2026 The Capital Vault. Capital placement subject to lender approval. Results vary by business profile, credit, and market conditions.</p>
+    </div>
+  </footer>
+
+  <!-- ============ MOBILE STICKY CTA ============ -->
+  <div class="mobile-sticky-cta">
+    <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Book My Free Diagnostic Call</a>
+  </div>
+
+</body>
+</html>
