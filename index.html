@@ -5,16 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Capital Vault | $50K-$500K Working Capital In 23 To 59 Days</title>
   <meta name="description" content="We help established business owners doing $500K-$3M in annual revenue place $50,000 to $500,000 in working capital across our network of 500+ lenders. Zero equity given up.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     /* ============ RESET + BASE ============ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       font-size: 17px;
-      line-height: 1.65;
+      line-height: 1.7;
       color: #1A1A1A;
-      background-color: #FAFAF7;
+      background-color: #F7F4ED;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
@@ -33,16 +36,30 @@
       top: 0;
       z-index: 100;
       background: #0A0A0A;
-      color: #FAFAF7;
+      color: #F7F4ED;
       padding: 14px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
-    .topbar-logo { font-weight: 700; font-size: 18px; letter-spacing: 0.02em; }
+    .topbar-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.01em;
+    }
+    .topbar-logo img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+    .topbar-logo .wordmark span { color: #C9A961; }
     .topbar-cta {
-      background: #C8590B;
+      background: #C9A961;
       color: #FFFFFF;
       padding: 10px 18px;
       border-radius: 4px;
@@ -52,11 +69,11 @@
       transition: background 0.2s;
       white-space: nowrap;
     }
-    .topbar-cta:hover { background: #A04708; }
+    .topbar-cta:hover { background: #8B6F3D; }
 
     /* ============ HERO ============ */
     .hero {
-      background: #FAFAF7;
+      background: #F7F4ED;
       padding: 64px 0 56px;
       text-align: center;
     }
@@ -65,22 +82,23 @@
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      color: #8B2415;
+      color: #A63D3D;
       margin-bottom: 24px;
       max-width: 720px;
       margin-left: auto;
       margin-right: auto;
     }
     h1 {
-      font-size: 44px;
-      line-height: 1.18;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 52px;
+      line-height: 1.1;
       font-weight: 800;
       color: #0A0A0A;
       margin-bottom: 28px;
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
     }
     h1 .highlight {
-      background: linear-gradient(180deg, transparent 60%, #F2D27E 60%);
+      background: linear-gradient(180deg, transparent 60%, #C9A961 60%);
       padding: 0 2px;
     }
     .sub-headline {
@@ -124,7 +142,7 @@
     /* ============ CTA BUTTON ============ */
     .cta-button {
       display: inline-block;
-      background: #C8590B;
+      background: #C9A961;
       color: #FFFFFF;
       padding: 18px 40px;
       border-radius: 6px;
@@ -138,7 +156,7 @@
       cursor: pointer;
     }
     .cta-button:hover {
-      background: #A04708;
+      background: #8B6F3D;
       transform: translateY(-1px);
       box-shadow: 0 6px 20px rgba(200,89,11,0.35);
     }
@@ -151,20 +169,23 @@
 
     /* ============ HEADINGS ============ */
     h2 {
-      font-size: 32px;
-      line-height: 1.22;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 38px;
+      line-height: 1.15;
       font-weight: 800;
       color: #0A0A0A;
       margin-bottom: 20px;
-      letter-spacing: -0.005em;
+      letter-spacing: -0.02em;
     }
     h3 {
-      font-size: 22px;
-      line-height: 1.3;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 24px;
+      line-height: 1.25;
       font-weight: 700;
       color: #0A0A0A;
       margin-bottom: 12px;
       margin-top: 28px;
+      letter-spacing: -0.01em;
     }
     p { margin-bottom: 18px; }
     p strong { color: #0A0A0A; font-weight: 700; }
@@ -173,21 +194,21 @@
     /* ============ CALLOUT BOXES ============ */
     .callout {
       background: #FFFFFF;
-      border-left: 4px solid #C8590B;
+      border-left: 4px solid #C9A961;
       padding: 24px 28px;
       margin: 32px 0;
       box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
     .callout-dark {
       background: #0A0A0A;
-      color: #FAFAF7;
+      color: #F7F4ED;
       padding: 32px 32px;
       margin: 36px 0;
       border-radius: 6px;
     }
-    .callout-dark h3 { color: #FAFAF7; }
+    .callout-dark h3 { color: #F7F4ED; }
     .callout-dark p { color: #D8D8D5; }
-    .callout-dark strong { color: #FAFAF7; }
+    .callout-dark strong { color: #F7F4ED; }
 
     /* ============ WHO THIS IS FOR LIST ============ */
     .checklist {
@@ -205,13 +226,13 @@
       position: absolute;
       left: 0;
       top: 0;
-      color: #0F5132;
+      color: #3F7A57;
       font-weight: 700;
       font-size: 20px;
     }
     .checklist-no li::before {
       content: "✕";
-      color: #8B2415;
+      color: #A63D3D;
     }
 
     /* ============ OPTION CARDS ============ */
@@ -225,7 +246,7 @@
     .option-card-title {
       font-weight: 700;
       font-size: 18px;
-      color: #8B2415;
+      color: #A63D3D;
       margin-bottom: 8px;
     }
     .option-card-body {
@@ -261,8 +282,8 @@
       text-transform: uppercase;
       letter-spacing: 0.03em;
     }
-    .compare-bad .compare-header { color: #8B2415; }
-    .compare-good .compare-header { color: #0F5132; }
+    .compare-bad .compare-header { color: #A63D3D; }
+    .compare-good .compare-header { color: #3F7A57; }
     .compare-col p { margin-bottom: 10px; font-size: 15px; line-height: 1.55; }
     .compare-col p:last-child { margin-bottom: 0; }
 
@@ -284,9 +305,9 @@
       top: 6px;
       width: 14px;
       height: 14px;
-      background: #C8590B;
+      background: #C9A961;
       border-radius: 50%;
-      border: 3px solid #FAFAF7;
+      border: 3px solid #F7F4ED;
       box-shadow: 0 0 0 2px #1A1A1A;
     }
     .timeline-day {
@@ -318,7 +339,7 @@
     }
     .math-table th {
       background: #0A0A0A;
-      color: #FAFAF7;
+      color: #F7F4ED;
       font-weight: 700;
       font-size: 14px;
       text-transform: uppercase;
@@ -333,7 +354,7 @@
     .math-table tr.highlight td {
       background: #FFF8E8;
       font-weight: 700;
-      color: #B8860B;
+      color: #8B6F3D;
     }
 
     /* ============ VALUE STACK ============ */
@@ -351,7 +372,7 @@
       align-items: start;
       box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
-    .value-item.bonus { border-left-color: #C8590B; background: #FFF8F2; }
+    .value-item.bonus { border-left-color: #C9A961; background: #FFF8F2; }
     .value-item-title {
       font-weight: 700;
       font-size: 17px;
@@ -367,13 +388,13 @@
     .value-item-price {
       font-weight: 800;
       font-size: 20px;
-      color: #B8860B;
+      color: #8B6F3D;
       white-space: nowrap;
       align-self: center;
     }
     .value-total {
       background: #0A0A0A;
-      color: #FAFAF7;
+      color: #F7F4ED;
       padding: 28px 32px;
       border-radius: 6px;
       margin: 24px 0;
@@ -395,19 +416,19 @@
       font-size: 28px;
       font-weight: 800;
     }
-    .value-total-final .price { color: #F2D27E; }
+    .value-total-final .price { color: #C9A961; }
 
     /* ============ GUARANTEE BOX ============ */
     .guarantee {
       background: #F0F7F2;
-      border: 2px solid #0F5132;
+      border: 2px solid #3F7A57;
       border-radius: 8px;
       padding: 36px 32px;
       margin: 36px 0;
       text-align: center;
     }
     .guarantee h3 {
-      color: #0F5132;
+      color: #3F7A57;
       font-size: 24px;
       margin-top: 0;
       margin-bottom: 16px;
@@ -417,14 +438,14 @@
     /* ============ URGENCY ============ */
     .urgency {
       background: #FFF8E8;
-      border: 2px solid #B8860B;
+      border: 2px solid #8B6F3D;
       border-radius: 6px;
       padding: 28px 28px;
       margin: 32px 0;
       text-align: center;
     }
     .urgency h3 {
-      color: #8B2415;
+      color: #A63D3D;
       margin-top: 0;
       font-size: 22px;
     }
@@ -432,7 +453,7 @@
     .urgency .slots {
       font-size: 28px;
       font-weight: 800;
-      color: #8B2415;
+      color: #A63D3D;
       display: block;
       margin: 12px 0;
     }
@@ -458,16 +479,33 @@
     /* ============ P.S. SECTION ============ */
     .ps {
       background: #FFFFFF;
-      border-left: 4px solid #C8590B;
+      border-left: 4px solid #C9A961;
       padding: 32px 32px;
       margin: 32px 0;
     }
     .ps-label {
       font-weight: 800;
       font-size: 16px;
-      color: #C8590B;
+      color: #C9A961;
       letter-spacing: 0.06em;
       margin-bottom: 12px;
+    }
+
+    /* ============ CALENDAR EMBED ============ */
+    .calendar-embed {
+      margin: 32px auto 8px;
+      max-width: 900px;
+      background: #FFFFFF;
+      border: 1px solid rgba(201, 169, 97, 0.3);
+      border-radius: 8px;
+      padding: 8px;
+      box-shadow: 0 8px 32px rgba(201, 169, 97, 0.15), 0 2px 8px rgba(10, 10, 10, 0.08);
+      overflow: hidden;
+    }
+    .calendar-embed iframe {
+      display: block;
+      width: 100%;
+      border-radius: 4px;
     }
 
     /* ============ FOOTER ============ */
@@ -478,7 +516,7 @@
       text-align: center;
       font-size: 14px;
     }
-    footer a { color: #FAFAF7; text-decoration: none; }
+    footer a { color: #F7F4ED; text-decoration: none; }
     footer p { margin-bottom: 8px; }
 
     /* ============ MOBILE ============ */
@@ -511,7 +549,10 @@
 
   <!-- ============ TOP BAR ============ -->
   <div class="topbar">
-    <div class="topbar-logo">THE CAPITAL VAULT</div>
+    <div class="topbar-logo">
+      <img src="brand_assets/ABU%20LOGO.png" alt="The Capital Vault">
+      <span class="wordmark">CAPITAL <span>VAULT</span></span>
+    </div>
     <a href="#book" class="topbar-cta">Book Free Diagnostic Call</a>
   </div>
 
@@ -595,6 +636,25 @@
     </div>
   </section>
 
+  <!-- ============ WHAT YOU ACTUALLY WANT ============ -->
+  <section>
+    <div class="container">
+      <h2>What You Actually Want</h2>
+      <p>You do not want a "funding broker."</p>
+      <p>You want a direct line to lenders who understand business cash flow. You want capital that arrives when your business needs it, not 90 days after the contract has gone to a competitor. You want terms that do not choke your monthly nut. You want zero equity given up to investors who did not build what you built. You want a strategist who already knows which lender to approach with your exact file, and who handles the entire process so you can stay focused on running the business.</p>
+      <p><strong>That is what we do.</strong></p>
+    </div>
+  </section>
+
+  <!-- ============ LANGUAGE OF SERIOUS FUNDING ============ -->
+  <section>
+    <div class="container">
+      <h2>The Language of Serious Funding</h2>
+      <p>DSCR. Asset-based lending. SBA 7(a). Working capital line vs equipment financing. Bank covenants. Personal guarantee structuring. Stacking strategy across 4 rounds. Policy decline vs underwriting decline. TIB. DTI. Recent inquiry windows.</p>
+      <p>If those terms mean something to you, you are in the right place. If they do not, that is fine. We will explain every one on the diagnostic call. <strong>The point is: this is the level we operate at. Your local branch is not having this conversation with you. We are.</strong></p>
+    </div>
+  </section>
+
   <!-- ============ 5 OPTIONS THAT FAIL ============ -->
   <section>
     <div class="container">
@@ -627,6 +687,17 @@
       </div>
 
       <p style="margin-top: 28px; font-size: 19px; font-weight: 700;">There is a sixth option. Keep reading.</p>
+    </div>
+  </section>
+
+  <!-- ============ WHO THIS IS FOR (REINFORCEMENT) ============ -->
+  <section>
+    <div class="container">
+      <div class="callout callout-dark">
+        <h3>Who This Is For (Reinforcement)</h3>
+        <p>If you are a profitable operator doing $500K to $3M in revenue and you have been denied by at least one bank in the last 90 days, <strong>this is for you.</strong></p>
+        <p>If you are VC-backed, raising priced equity, doing under $500K, or pre-revenue, this is not for you and we are not the right fit. <strong>Honest answer first, always.</strong></p>
+      </div>
     </div>
   </section>
 
@@ -720,7 +791,7 @@
       </table>
 
       <div class="callout-dark">
-        <p style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #FAFAF7;">That is a 16 to 33 times return on the fee from interest savings alone.</p>
+        <p style="font-size: 22px; font-weight: 700; margin-bottom: 12px; color: #F7F4ED;">That is a 16 to 33 times return on the fee from interest savings alone.</p>
         <p>Before you count the additional capital we place beyond Round 1. Before you count the equity you do not give up. Before you count the contracts you do not have to turn down because you finally have working capital.</p>
       </div>
 
@@ -853,10 +924,17 @@
       <h2 style="text-align: center;">Book Your Free 15-Minute Capital Diagnostic Call</h2>
       <p style="text-align: center; font-size: 18px;">On the call we will tell you whether your business qualifies for the 4-Round Stacking System. If it does, we outline the round sequence and the realistic capital range. If it does not, we tell you exactly what would need to change before we could help you.</p>
       <p style="text-align: center; font-size: 18px;"><strong>Either way, you walk away with clarity instead of another generic decline letter.</strong></p>
-      <div class="cta-center" style="margin-top: 32px;">
-        <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Book My Diagnostic Call</a>
-        <div class="cta-sub">15 minutes. No pitch. No pressure. Just clarity on your file.</div>
+
+      <div class="calendar-embed">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/bookings/cvbusinessfunding"
+          style="width: 100%; border: none; overflow: hidden; min-height: 720px;"
+          scrolling="no"
+          id="cvbusinessfunding_iframe">
+        </iframe>
       </div>
+
+      <div class="cta-sub" style="text-align: center; margin-top: 16px;">15 minutes. No pitch. No pressure. Just clarity on your file.</div>
     </div>
   </section>
 
@@ -865,12 +943,12 @@
     <div class="container">
       <div class="urgency">
         <h3>Limited Intake This Month</h3>
-        <p>We accept a maximum of <strong>5 new client files per month</strong> so our direct lender relationships do not get oversaturated and our placement timelines stay tight.</p>
-        <span class="slots">3 of 5 slots remain this month</span>
+        <p>We accept a maximum of <strong>20 new client files per month</strong> so our direct lender relationships do not get oversaturated and our placement timelines stay tight.</p>
+        <span class="slots">Only 5 slots remain this month</span>
         <p>Slots are filled first-come, first-qualified. The earlier in the month you book, the faster your placement timeline.</p>
       </div>
       <div class="cta-center">
-        <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Claim My Slot</a>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/cvbusinessfunding" class="cta-button">Claim My Slot</a>
       </div>
     </div>
   </section>
@@ -917,7 +995,7 @@
         <p>The 4-Round Stacking System is the same system we will run on YOUR file. <strong>Book the call.</strong></p>
       </div>
       <div class="cta-center">
-        <a href="https://calendly.com/the-capital-vault/diagnostic" class="cta-button">Book My Diagnostic Call</a>
+        <a href="https://api.leadconnectorhq.com/widget/bookings/cvbusinessfunding" class="cta-button">Book My Diagnostic Call</a>
       </div>
     </div>
   </section>
@@ -931,6 +1009,8 @@
       <p style="font-size: 12px; color: #555;">Capital placement subject to lender approval. Individual results vary based on business profile, credit, and market conditions.</p>
     </div>
   </footer>
+
+  <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
 
 </body>
 </html>
