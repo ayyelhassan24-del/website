@@ -31,8 +31,15 @@ export default async function handler(req, res) {
     if (response.ok) {
       return res.status(200).json({ success: true });
     } else {
-      const error = await response.json();
-      return res.status(response.status).json({ error: error.message || 'Failed to create contact' });
+      let errorMsg = 'Failed to create contact';
+      try {
+        const errorData = await response.json();
+        errorMsg = errorData.message || errorData.error || JSON.stringify(errorData);
+      } catch (e) {
+        errorMsg = await response.text();
+      }
+      console.error('GHL Error:', response.status, errorMsg);
+      return res.status(response.status).json({ error: errorMsg });
     }
   } catch (err) {
     console.error('GHL API error:', err);
