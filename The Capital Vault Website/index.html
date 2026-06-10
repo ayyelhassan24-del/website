@@ -141,6 +141,10 @@
     display: grid; place-items: center;
   }
   .brand-mark::after { content: ""; width: 12px; height: 12px; background: var(--gold); }
+  .brand-logo {
+    width: 50px; height: 50px; flex-shrink: 0;
+    object-fit: contain;
+  }
   .brand-name { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 24px; letter-spacing: 0.02em; }
   .brand-name span { color: var(--gold); }
   .nav-links { display: flex; align-items: center; gap: 38px; }
@@ -431,7 +435,7 @@
   <header id="header">
     <div class="wrap nav">
       <a href="#top" class="brand" aria-label="The Capital Vault home">
-        <span class="brand-mark"></span>
+        <img src="uploads/capital-vault-logo.png" alt="Capital Vault" class="brand-logo" />
         <span class="brand-name">The Capital <span>Vault</span></span>
       </a>
       <nav class="nav-links">
