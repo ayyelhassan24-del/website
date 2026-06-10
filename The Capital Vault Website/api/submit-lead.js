@@ -5,8 +5,12 @@ export default async function handler(req, res) {
 
   const { firstName, lastName, email, phone, revenue, message } = req.body;
 
-  const GHL_API_TOKEN = 'pit-cc259dd7-7a18-4c6a-8c41-c7d2a89c10a0';
-  const GHL_LOCATION_ID = 'rDTLsvkHq9OuSN0o4j2Y';
+  const GHL_API_TOKEN = process.env.GHL_API_TOKEN;
+  const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
+
+  if (!GHL_API_TOKEN || !GHL_LOCATION_ID) {
+    return res.status(500).json({ error: 'GHL credentials not configured. Please add GHL_API_TOKEN and GHL_LOCATION_ID to environment.' });
+  }
 
   try {
     const response = await fetch('https://rest.gohighlevel.com/v1/contacts/', {
