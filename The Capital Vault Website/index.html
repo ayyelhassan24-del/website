@@ -409,23 +409,72 @@
     .stat:nth-child(3)::before, .stat:nth-child(odd)::before { display: none; }
     .why-banner { flex-direction: column; align-items: flex-start; }
   }
-  @media (max-width: 720px) {
+  @media (max-width: 768px) {
+    .nav { height: 72px; padding: 0 24px; }
+    .brand-name { font-size: 18px; }
+    .brand-logo { width: 44px; height: 44px; }
+    .hero h1 { font-size: clamp(38px, 8vw, 56px); margin: 24px 0 20px; }
+    .hero p.lede { font-size: 16px; }
+    section.band { padding: 80px 0; }
     .wrap { padding: 0 24px; }
+  }
+  @media (max-width: 720px) {
+    html { font-size: 15px; }
+    .wrap { padding: 0 20px; }
     .nav-links { display: none; }
     .hamburger { display: block; }
-    .hero { padding: 150px 0 80px; }
-    section.band { padding: 88px 0; }
+    .hero { padding: 120px 0 60px; }
+    .hero h1 { font-size: clamp(32px, 7vw, 48px); margin: 20px 0 16px; }
+    .hero p.lede { font-size: 15px; line-height: 1.6; }
+    .btn { font-size: 12px; padding: 16px 28px; }
+    .btn-gold, .btn-ghost, .btn-dark { min-height: 48px; }
+    section.band { padding: 60px 0; }
+    .section-head { max-width: 100%; }
+    .section-head h2 { font-size: clamp(28px, 6vw, 42px); margin-top: 16px; }
+    .section-head p { font-size: 15px; margin-top: 16px; }
+    .kicker { font-size: 11px; }
     .stats-grid { grid-template-columns: 1fr; gap: 0; }
-    .stat { padding: 30px 0; border-top: 1px solid var(--hairline-soft); }
+    .stat { padding: 28px 0; border-top: 1px solid var(--hairline-soft); }
+    .stat .num { font-size: clamp(28px, 5vw, 38px); }
+    .stat .lbl { font-size: 12px; margin-top: 10px; }
     .stat + .stat::before { display: none; }
     .stat:first-child { border-top: none; }
-    .lead-form .frow { grid-template-columns: 1fr; }
-    .fund-row { grid-template-columns: 1fr; gap: 22px; }
-    .fund-speed { gap: 18px; padding: 20px 22px; }
-    .fund-speed .fs-badge { font-size: 38px; }
+    .founder-content h2 { font-size: clamp(26px, 5.5vw, 36px); }
+    .founder-image { margin-bottom: 24px; }
+    .founder-label { padding: 10px 14px; font-size: 10px; }
+    .lead-form .frow { grid-template-columns: 1fr; gap: 14px; margin-bottom: 14px; }
+    .lead-form { padding: 24px; }
+    .field label { font-size: 10px; margin-bottom: 7px; }
+    .field input, .field select, .field textarea { font-size: 15px; padding: 12px 14px; }
+    .fund-row { grid-template-columns: 1fr; gap: 18px; padding: 28px 0; }
+    .fund-main h3 { font-size: 17px; margin-bottom: 10px; }
+    .fund-main p { font-size: 14px; }
+    .fund-specs { grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    .spec .sk { font-size: 10px; }
+    .spec .sv { font-size: 14px; }
+    .fund-speed { gap: 16px; padding: 18px 20px; }
+    .fund-speed .fs-badge { font-size: 32px; }
     .fund-actions { flex-direction: column; align-items: stretch; }
+    .fund-actions .btn { width: 100%; }
+    .case-grid { gap: 32px; }
     .case-row { grid-template-columns: 1fr; gap: 8px; }
-    .lead-form { padding: 28px; }
+    .case-visual image-slot, .case-visual img { height: 320px; }
+    .why-grid, .steps { grid-template-columns: 1fr; gap: 20px; }
+    .why-card { padding: 28px 22px; }
+    .why-card h3 { font-size: 19px; }
+    .why-card p { font-size: 14px; }
+    .why-banner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 32px 24px; }
+    .why-banner h3 { font-size: 20px; }
+    .why-banner p { font-size: 14px; }
+    .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+    .faq-q { padding: 24px 0; }
+    .faq-q span.t { font-size: 17px; }
+    .step h3 { font-size: 20px; }
+    .step p { font-size: 14px; }
+    .cta h2 { font-size: clamp(28px, 6vw, 48px); }
+    .cta p { font-size: 15px; }
+    .form-aside h2 { font-size: clamp(26px, 5.5vw, 36px); }
+    .form-aside p { font-size: 15px; }
   }
 </style>
 </head>
