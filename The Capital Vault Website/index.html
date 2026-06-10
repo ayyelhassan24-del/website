@@ -968,9 +968,6 @@
     });
 
     // GHL Integration
-    const GHL_API_TOKEN = 'pit-cc259dd7-7a18-4c6a-8c41-c7d2a89c10a0';
-    const GHL_LOCATION_ID = 'rDTLsvkHq9OuSN0o4j2Y';
-
     const leadForm = document.getElementById('leadForm');
     const formSuccess = document.getElementById('formSuccess');
 
@@ -988,29 +985,20 @@
         };
 
         try {
-          const response = await fetch(`https://rest.gohighlevel.com/v1/contacts/`, {
+          const response = await fetch('/api/submit-lead', {
             method: 'POST',
             headers: {
-              'Authorization': `Bearer ${GHL_API_TOKEN}`,
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-              firstName: formData.firstName,
-              lastName: formData.lastName,
-              email: formData.email,
-              phone: formData.phone,
-              locationId: GHL_LOCATION_ID,
-              customFields: {
-                'annual_revenue': formData.revenue,
-                'capital_needs': formData.message,
-              }
-            }),
+            body: JSON.stringify(formData),
           });
 
           if (response.ok) {
             leadForm.style.display = 'none';
             formSuccess.classList.add('show');
           } else {
+            const error = await response.json();
+            console.error('Server error:', error);
             alert('Error submitting form. Please try again.');
           }
         } catch (err) {
