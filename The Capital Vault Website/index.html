@@ -566,6 +566,23 @@ section.block { padding: clamp(72px, 9vw, 120px) 0; }
 }
 .form-success h3 { font-size: 28px; margin-bottom: 10px; }
 .form-success p { max-width: 26em; margin: 0 auto; }
+.booking-embed { margin-top: 28px; }
+.booking-embed iframe {
+  width: 100%;
+  height: 740px;
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-card);
+  background: var(--surface);
+}
+.form-success .alt {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 14px;
+}
+.form-success .alt a { color: var(--gold-deep); font-weight: 700; }
+@media (max-width: 640px) {
+  .booking-embed iframe { height: 640px; }
+}
 
 /* ---------- Dark close ---------- */
 .close-block {
@@ -996,8 +1013,12 @@ section.block { padding: clamp(72px, 9vw, 120px) 0; }
           </form>
           <div class="form-success" id="formSuccess">
             <div class="mark" aria-hidden="true"></div>
-            <h3>Your consultation is reserved.</h3>
-            <p>A member of the capital desk will reach out within one business day to begin your assessment.</p>
+            <h3>One more step: pick your time.</h3>
+            <p>Your request is in. Lock in your 20-minute consultation below and it's on the calendar.</p>
+            <div class="booking-embed">
+              <iframe id="bookingFrame" title="Book your consultation" data-src="https://api.leadconnectorhq.com/widget/booking/61pGOoZnGZbpwjsnQWbr"></iframe>
+            </div>
+            <p class="alt">Calendar not loading? <a href="https://api.leadconnectorhq.com/widget/booking/61pGOoZnGZbpwjsnQWbr" target="_blank" rel="noopener">Open the booking page</a>. Either way, the desk will reach out within one business day.</p>
           </div>
         </div>
       </div>
@@ -1159,7 +1180,10 @@ section.block { padding: clamp(72px, 9vw, 120px) 0; }
       });
       if (response.ok) {
         form.style.display = 'none';
+        const frame = document.getElementById('bookingFrame');
+        if (frame && !frame.src) frame.src = frame.dataset.src;
         success.classList.add('show');
+        success.scrollIntoView({ behavior: 'smooth', block: 'start' });
       } else {
         throw new Error(await response.text());
       }
