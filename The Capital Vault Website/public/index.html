@@ -445,7 +445,7 @@
   @media (max-width: 1024px) {
     .hero-grid { grid-template-columns: 1fr; gap: 56px; }
     .hero-visual { max-width: 520px; }
-    .case-grid, .faq-grid, .form-grid, .founder-grid { grid-template-columns: 1fr; gap: 48px; }
+    .case-grid, .faq-grid, .form-grid, .founder-grid { grid-template-columns: 1fr; gap: 32px; }
     .why-grid, .steps { grid-template-columns: 1fr; gap: 22px; }
     .fund-row { grid-template-columns: 1fr 1fr; gap: 28px 40px; }
     .fund-actions { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: flex-start; }
@@ -464,19 +464,19 @@
     .wrap { padding: 0 24px; }
   }
   @media (max-width: 720px) {
-    html { font-size: 15px; }
-    .wrap { padding: 0 20px; }
+    html { font-size: 14px; }
+    .wrap { padding: 0 16px; }
     .nav-links { display: none; }
     .hamburger { display: block; }
-    .hero { padding: 80px 0 40px; }
-    .hero h1 { font-size: clamp(32px, 7vw, 48px); margin: 20px 0 16px; }
-    .hero p.lede { font-size: 15px; line-height: 1.6; }
-    .btn { font-size: 12px; padding: 16px 28px; }
-    .btn-gold, .btn-ghost, .btn-dark { min-height: 48px; }
-    section.band { padding: 40px 0; }
+    .hero { padding: 60px 0 30px; }
+    .hero h1 { font-size: clamp(28px, 6.5vw, 44px); margin: 12px 0 10px; line-height: 1.2; }
+    .hero p.lede { font-size: 13px; line-height: 1.5; }
+    .btn { font-size: 11px; padding: 14px 24px; }
+    .btn-gold, .btn-ghost, .btn-dark { min-height: 44px; }
+    section.band { padding: 32px 0; }
     .section-head { max-width: 100%; }
-    .section-head h2 { font-size: clamp(28px, 6vw, 42px); margin-top: 16px; }
-    .section-head p { font-size: 15px; margin-top: 16px; }
+    .section-head h2 { font-size: clamp(24px, 5vw, 42px); margin-top: 12px; line-height: 1.2; }
+    .section-head p { font-size: 14px; margin-top: 12px; line-height: 1.5; }
     .kicker { font-size: 11px; }
     .stats-grid { grid-template-columns: 1fr; gap: 0; }
     .stat { padding: 28px 0; border-top: 1px solid var(--hairline-soft); }
@@ -508,30 +508,38 @@
     .case-row { grid-template-columns: 1fr; gap: 8px; }
     .case-visual image-slot, .case-visual img { height: 320px; }
     .why-grid, .steps { grid-template-columns: 1fr; gap: 20px; }
-    .why-card { padding: 28px 22px; }
-    .why-card h3 { font-size: 19px; }
-    .why-card p { font-size: 14px; }
+    .why-card { padding: 18px 16px; }
+    .why-card h3 { font-size: 16px; }
+    .why-card p { font-size: 13px; line-height: 1.5; }
     .why-banner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 32px 24px; }
-    .why-banner h3 { font-size: 20px; }
-    .why-banner p { font-size: 14px; }
+    .why-banner h3 { font-size: 18px; line-height: 1.3; }
+    .why-banner p { font-size: 13px; }
     .faq-grid { grid-template-columns: 1fr; gap: 32px; }
-    .faq-q { padding: 24px 0; }
-    .faq-q span.t { font-size: 17px; }
-    .step h3 { font-size: 20px; }
-    .step p { font-size: 14px; }
+    .faq-q { padding: 16px 0; }
+    .faq-q span.t { font-size: 16px; }
+    .step { padding: 24px 18px !important; }
+    .step h3 { font-size: 17px; }
+    .step p { font-size: 13px; }
+    .cta { padding: clamp(40px, 8vw, 120px) 0 !important; }
     .cta h2 { font-size: clamp(28px, 6vw, 48px); }
     .cta p { font-size: 15px; }
     .form-aside h2 { font-size: clamp(26px, 5.5vw, 36px); }
     .form-aside p { font-size: 15px; }
   }
   @media (max-width: 720px) {
-    section[style*="padding: 100px"] { padding: 40px 0 !important; }
-    section[style*="padding: 80px"] { padding: 40px 0 !important; }
-    section[style*="padding: 96px"] { padding: 40px 0 !important; }
-    .section-head { margin-bottom: 40px !important; }
-    .why-banner { padding: 24px 20px !important; }
-    .lead-form { padding: 16px !important; }
-    .fund-list article { padding: 20px 0 !important; }
+    section[style*="padding: 100px"] { padding: 30px 0 !important; }
+    section[style*="padding: 80px"] { padding: 30px 0 !important; }
+    section[style*="padding: 96px"] { padding: 30px 0 !important; }
+    .section-head { margin-bottom: 20px !important; }
+    .why-banner { padding: 20px 20px !important; }
+    .lead-form { padding: 20px !important; }
+    .form-aside { text-align: center; }
+    .form-points { justify-items: center; }
+    .form-point { justify-content: center; }
+    .fund-list article { padding: 16px 0 !important; }
+    .form-grid { gap: 24px !important; }
+    .band.band-cream { background: var(--panel-2); }
+    footer { padding: 40px 0 24px !important; }
   }
 </style>
 </head>
@@ -706,7 +714,7 @@
   </section>
 
   <!-- LEAD FORM (MOVED UP) -->
-  <section class="band band-cream" id="start" style="padding: 80px 0;">
+  <section class="band band-cream" id="start" style="padding: clamp(40px, 10vw, 80px) 0;">
     <div class="wrap">
       <div class="form-grid">
         <div class="form-aside reveal">
@@ -766,7 +774,7 @@
   </section>
 
   <!-- CASE STUDIES - QUICK WINS -->
-  <section class="band band-cream" id="results" style="padding: 80px 0;">
+  <section class="band band-cream" id="results" style="padding: clamp(40px, 10vw, 80px) 0;">
     <div class="wrap">
       <div class="reveal" style="text-align: center; margin-bottom: 60px;">
         <span class="kicker ink">Real Results</span>
@@ -880,7 +888,7 @@
   </section>
 
   <!-- FUNDING OPTIONS -->
-  <section class="band" id="funding" style="padding: 80px 0;">
+  <section class="band" id="funding" style="padding: clamp(40px, 10vw, 80px) 0;">
     <div class="wrap">
       <div class="section-head fund-head reveal">
         <div>
@@ -996,7 +1004,7 @@
   </section>
 
   <!-- HOW WE WORK -->
-  <section class="band band-cream" id="work" style="padding: clamp(40px, 10vw, 100px) 0;">
+  <section class="band band-cream" id="work" style="padding: clamp(40px, 8vw, 100px) 0;">
     <div class="wrap">
       <div class="section-head reveal" style="margin-bottom: clamp(30px, 8vw, 70px);">
         <span class="kicker ink">How It Works</span>
@@ -1033,7 +1041,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="band" id="faq" style="padding: 80px 0;">
+  <section class="band" id="faq" style="padding: clamp(40px, 10vw, 80px) 0;">
     <div class="wrap">
       <div class="faq-grid">
         <div class="faq-aside reveal">
