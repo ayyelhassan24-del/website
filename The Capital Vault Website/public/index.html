@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Capital Vault | Strategic Funding for Proven Operators</title>
+<meta name="description" content="The Capital Vault makes 500+ institutional lenders compete for your business. Non-dilutive capital, optimal rates, and approval certainty traditional banking can't match." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600&family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --black: #0a0a0a;
+    --black-deep: #060606;
+    --panel: #141210;
+    --panel-2: #1b1813;
+    --gold: #d4af37;
+    --gold-soft: #cbb069;
+    --gold-deep: #a87f2a;
+    --cream: #f7f4ed;
+    --cream-2: #efe9dc;
+    --ink: #16130d;
+    --ink-soft: #4a443a;
+    --text: #e9e5dc;
+    --muted: #9a948a;
+    --muted-dim: #6f6a62;
+    --hairline: rgba(212, 175, 55, 0.20);
+    --hairline-soft: rgba(212, 175, 55, 0.12);
+    --hairline-ink: rgba(22, 19, 13, 0.14);
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: 'Sora', sans-serif;
+    background: var(--black);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    letter-spacing: -0.3px;
+  }
+  ::selection { background: var(--gold); color: var(--black); }
+
+  h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 800; letter-spacing: -0.035em; line-height: 1.08; }
+  h1 { font-size: clamp(52px, 7vw, 96px); font-weight: 900; }
+  h2 { font-size: clamp(38px, 5vw, 64px); font-weight: 850; }
+
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 40px; }
+  .gold { color: var(--gold); }
+  .serif-i { font-style: italic; font-weight: 500; }
+
+  /* Eyebrow / kicker */
+  .kicker {
+    font-family: 'Sora', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+    white-space: nowrap;
+  }
+  .kicker::before {
+    content: "";
+    width: 34px;
+    height: 1px;
+    background: var(--gold);
+    opacity: 0.6;
+    flex-shrink: 0;
+  }
+  .kicker.center { justify-content: center; }
+  .kicker.ink { color: var(--gold-deep); }
+
+  /* Buttons */
+  .btn {
+    font-family: 'Sora', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 18px 36px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 0.35s var(--ease);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .btn-gold { background: var(--gold); color: var(--black); box-shadow: 0 8px 24px rgba(212,175,55,0.22); }
+  .btn-gold:hover { background: #e0bd49; transform: translateY(-4px); box-shadow: 0 20px 48px rgba(212,175,55,0.32); }
+  .btn-gold:active { transform: translateY(-1px); }
+  .btn-ghost { background: transparent; color: var(--text); border-color: rgba(233,229,220,0.32); }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); background: rgba(212,175,55,0.06); }
+  .btn-ghost:active { background: rgba(212,175,55,0.12); }
+  .btn-ghost.ink { color: var(--ink); border-color: rgba(22,19,13,0.32); }
+  .btn-ghost.ink:hover { border-color: var(--gold-deep); color: var(--gold-deep); background: rgba(168,127,42,0.08); }
+  .btn-dark { background: var(--black); color: var(--cream); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+  .btn-dark:hover { background: #1a1a1a; transform: translateY(-3px); box-shadow: 0 16px 40px rgba(0,0,0,0.4); }
+  .btn-dark:active { transform: translateY(-1px); }
+  .btn .arrow { transition: transform 0.4s var(--ease); }
+  .btn:hover .arrow { transform: translateX(4px); }
+
+  /* Reveal: content is visible by default (end-state is the base style so it
+     always renders in print/export/headless). Motion is a pure enhancement
+     applied only once JS confirms a live animation clock. */
+  .reveal { opacity: 1; transform: none; }
+  html.anim-on .reveal { opacity: 0; transform: translateY(26px); }
+  html.anim-on .reveal.in { opacity: 1; transform: none; transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
+  html.anim-on .reveal.d1 { transition-delay: 0.08s; }
+  html.anim-on .reveal.d2 { transition-delay: 0.16s; }
+  html.anim-on .reveal.d3 { transition-delay: 0.24s; }
+  html.anim-on .reveal.d4 { transition-delay: 0.32s; }
+  @media (prefers-reduced-motion: reduce) {
+    html.anim-on .reveal { opacity: 1; transform: none; }
+  }
+
+  /* ===== HEADER ===== */
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    transition: background 0.4s var(--ease), border-color 0.4s var(--ease), backdrop-filter 0.4s var(--ease);
+    border-bottom: 1px solid transparent;
+  }
+  header.scrolled {
+    background: rgba(8,8,8,0.82);
+    backdrop-filter: blur(14px);
+    border-bottom-color: var(--hairline-soft);
+  }
+  .nav { height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; }
+  .brand { display: flex; align-items: center; gap: 16px; }
+  .brand-mark {
+    width: 38px; height: 38px; position: relative; flex-shrink: 0;
+    border: 2px solid var(--gold); transform: rotate(45deg);
+    display: grid; place-items: center;
+  }
+  .brand-mark::after { content: ""; width: 12px; height: 12px; background: var(--gold); }
+  .brand-logo {
+    width: 60px; height: 60px; flex-shrink: 0;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.32))
+            drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+    transition: all 0.35s var(--ease);
+  }
+  .brand:hover .brand-logo {
+    transform: scale(1.12) translateY(-3px);
+    filter: drop-shadow(0 16px 32px rgba(212, 175, 55, 0.4))
+            drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
+  }
+
+  @media (max-width: 1024px) {
+    .brand-logo {
+      width: 56px; height: 56px;
+      filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.3))
+              drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .brand-logo {
+      width: 50px; height: 50px;
+      filter: drop-shadow(0 8px 16px rgba(212, 175, 55, 0.28))
+              drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    }
+  }
+  .brand-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: -0.01em;
+    background: linear-gradient(135deg, var(--cream) 0%, var(--text) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+  }
+  .brand:hover .brand-name { letter-spacing: 0em; }
+  .brand-name span {
+    color: var(--gold);
+    -webkit-text-fill-color: var(--gold);
+  }
+  .nav-links { display: flex; align-items: center; gap: 38px; }
+  .nav-link { font-size: 12.5px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); transition: color 0.3s; position: relative; white-space: nowrap; }
+  .nav-link::after { content:""; position:absolute; left:0; bottom:-6px; height:1px; width:0; background: var(--gold); transition: width 0.35s var(--ease); }
+  .nav-link:hover { color: var(--text); }
+  .nav-link:hover::after { width: 100%; }
+  .hamburger { display: none; background: none; border: none; color: var(--gold); cursor: pointer; width: 30px; height: 22px; position: relative; }
+  .hamburger span { position: absolute; left: 0; height: 1.5px; width: 100%; background: var(--gold); transition: all 0.35s var(--ease); }
+  .hamburger span:nth-child(1) { top: 2px; }
+  .hamburger span:nth-child(2) { top: 10px; }
+  .hamburger span:nth-child(3) { top: 18px; }
+  body.menu-open .hamburger span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+  body.menu-open .hamburger span:nth-child(2) { opacity: 0; }
+  body.menu-open .hamburger span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+
+  .mobile-menu {
+    position: fixed; inset: 84px 0 0 0; z-index: 99;
+    background: var(--black-deep);
+    display: flex; flex-direction: column; justify-content: center; gap: 8px;
+    padding: 0 40px;
+    transform: translateY(-12px); opacity: 0; pointer-events: none;
+    transition: all 0.4s var(--ease);
+  }
+  body.menu-open .mobile-menu { transform: none; opacity: 1; pointer-events: auto; }
+  .mobile-menu a { font-family: 'Playfair Display', serif; font-size: 34px; padding: 14px 0; border-bottom: 1px solid var(--hairline-soft); }
+  .mobile-menu .btn { margin-top: 28px; justify-content: center; }
+
+  /* ===== HERO (full-bleed photo) ===== */
+  .hero { position: relative; min-height: 94vh; display: flex; align-items: center; padding: 150px 0 96px; overflow: hidden; }
+  .hero-bg { position: absolute; inset: 0; z-index: 0; }
+  .hero-bg image-slot { width: 100%; height: 100%; display: block; border: none; }
+  .hero-scrim { position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    background:
+      linear-gradient(90deg, rgba(8,8,8,0.95) 0%, rgba(8,8,8,0.82) 38%, rgba(8,8,8,0.42) 66%, rgba(8,8,8,0.30) 100%),
+      linear-gradient(0deg, rgba(8,8,8,0.85) 0%, transparent 32%); }
+  .hero-glow { position: absolute; top: -120px; right: -160px; width: 620px; height: 620px; border-radius: 50%; z-index: 1;
+    background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 62%); pointer-events: none; }
+  .hero-inner { position: relative; z-index: 2; max-width: 740px; }
+  .hero h1 { font-weight: 900; margin: 32px 0 28px; color: var(--cream); line-height: 1.1; letter-spacing: -0.04em; }
+  .hero h1 em { font-style: italic; font-weight: 600; color: var(--gold); }
+  .hero p.lede { font-size: 18px; color: rgba(233,229,220,0.92); max-width: 580px; line-height: 1.72; font-weight: 400; letter-spacing: -0.005em; }
+  .hero-cta { display: flex; gap: 16px; margin-top: 40px; flex-wrap: wrap; }
+  .hero-trust { margin-top: 44px; display: flex; align-items: center; gap: 22px; color: rgba(233,229,220,0.6); font-size: 13px; flex-wrap: wrap; }
+  .hero-trust .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
+
+  /* Badge pill */
+  .badge-pill { display: inline-flex; align-items: center; gap: 12px; padding: 9px 20px 9px 14px;
+    border: 1px solid var(--hairline); border-radius: 9999px; background: rgba(212,175,55,0.10);
+    color: var(--gold); font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600; backdrop-filter: blur(6px); }
+  .badge-pill .spark { width: 9px; height: 9px; background: var(--gold); transform: rotate(45deg); flex-shrink: 0; }
+
+  /* shared image-slot placeholder look */
+  image-slot {
+    background:
+      repeating-linear-gradient(135deg, rgba(212,175,55,0.055) 0 2px, transparent 2px 15px),
+      var(--panel);
+    border: 1px solid var(--hairline-soft);
+  }
+  .hero-bg image-slot {
+    background:
+      repeating-linear-gradient(135deg, rgba(212,175,55,0.05) 0 2px, transparent 2px 16px),
+      #0c0b09;
+  }
+  .band-cream image-slot {
+    background:
+      repeating-linear-gradient(135deg, rgba(168,127,42,0.10) 0 2px, transparent 2px 15px),
+      #e9e2d3;
+    border: 1px solid rgba(168,127,42,0.22);
+  }
+
+  /* ===== STATS ===== */
+  .stats { padding: 30px 0 0; }
+  .stats-inner { border-top: 1px solid var(--hairline-soft); border-bottom: 1px solid var(--hairline-soft); padding: 64px 0; }
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .stat { padding: 0 36px; position: relative; }
+  .stat + .stat::before { content: ""; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; background: var(--hairline-soft); }
+  .stat .num { font-family: 'Playfair Display', serif; font-size: clamp(38px, 4vw, 56px); font-weight: 900; color: var(--cream); line-height: 1; letter-spacing: -0.02em; }
+  .stat .num .gold { color: var(--gold); font-weight: 900; }
+  .stat .lbl { font-size: 13px; color: var(--muted); margin-top: 14px; letter-spacing: 0.06em; font-weight: 500; }
+
+  /* ===== Section scaffolding ===== */
+  section.band { padding: 130px 0; }
+  .band-cream { background: var(--cream); color: var(--ink); }
+  .band-cream h2, .band-cream h3 { color: var(--ink); }
+  .section-head { max-width: 720px; }
+  .section-head.center { margin: 0 auto; text-align: center; }
+  .section-head h2 { font-weight: 800; margin-top: 24px; }
+  .section-head h2 em { font-style: italic; font-weight: 500; color: var(--gold); }
+  .band-cream .section-head h2 em { color: var(--gold-deep); }
+  .section-head p { margin-top: 22px; font-size: 17px; color: var(--muted); font-weight: 400; line-height: 1.75; }
+  .band-cream .section-head p { color: var(--ink-soft); }
+
+  /* ===== FUNDING OPTIONS ===== */
+  .fund-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .fund-speed { display: flex; align-items: center; gap: 26px; margin-top: 40px; padding: 24px 30px;
+    border: 1px solid var(--hairline); border-radius: 2px;
+    background: linear-gradient(90deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02) 60%, transparent); }
+  .fund-speed .fs-badge { font-family: 'Playfair Display', serif; font-size: 46px; font-weight: 700; color: var(--gold); line-height: 0.9; flex-shrink: 0; }
+  .fund-speed .fs-badge span { font-family: 'Sora', sans-serif; font-size: 15px; font-weight: 500; letter-spacing: 0.04em; margin-left: 3px; }
+  .fund-speed .fs-copy h4 { font-family: 'Sora', sans-serif; font-size: 16px; font-weight: 600; letter-spacing: 0.02em; color: var(--cream); margin-bottom: 5px; }
+  .fund-speed .fs-copy p { font-size: 14.5px; color: var(--muted); font-weight: 300; line-height: 1.55; }
+  .fund-list { margin-top: 40px; border-top: 1px solid var(--hairline-soft); }
+  .fund-row {
+    display: grid; grid-template-columns: 1.8fr 1.8fr 1fr; gap: 48px; align-items: center;
+    padding: 40px 0; border-bottom: 1px solid var(--hairline-soft); transition: background 0.35s var(--ease);
+  }
+  .fund-row:hover { background: linear-gradient(90deg, rgba(212,175,55,0.08), transparent 70%); }
+  .fund-main h3 { font-size: 20px; font-weight: 700; color: var(--cream); margin-bottom: 12px; line-height: 1.3; }
+  .fund-main h3 .tag { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--black); background: var(--gold); padding: 5px 12px; border-radius: 9999px; margin-left: 10px; vertical-align: middle; }
+  .fund-main p { font-size: 15px; color: var(--muted); font-weight: 400; line-height: 1.62; max-width: 480px; }
+  .fund-specs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .spec .sk { display: block; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; font-weight: 700; }
+  .spec .sv { display: block; font-size: 16px; color: var(--text); font-weight: 500; line-height: 1.4; }
+  .fund-actions { display: flex; flex-direction: column; align-items: stretch; gap: 12px; min-width: 150px; }
+  .fund-actions .btn { justify-content: center; padding: 13px 24px; }
+  .fund-actions .learn { font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); text-align: center; transition: color 0.3s; }
+  .fund-actions .learn:hover { color: var(--gold); }
+  .fund-foot { margin-top: 44px; display: flex; align-items: center; gap: 16px; color: var(--muted); font-size: 15px; font-weight: 300; flex-wrap: wrap; }
+  .fund-foot .gold { font-weight: 400; }
+
+  /* ===== CASE STUDY ===== */
+  .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 76px; align-items: center; margin-top: 8px; }
+  .case-rows { margin: 38px 0 40px; }
+  .case-row { padding: 24px 0; border-top: 1px solid var(--hairline-ink); display: grid; grid-template-columns: 132px 1fr; gap: 24px; align-items: start; }
+  .case-row:last-child { border-bottom: 1px solid var(--hairline-ink); }
+  .case-row .rk { font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold-deep); padding-top: 4px; }
+  .case-row .rv { font-size: 16.5px; color: var(--ink-soft); line-height: 1.55; }
+  .case-row .rv strong { color: var(--ink); font-weight: 600; }
+  .case-result { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--ink); }
+  .case-result span { color: var(--gold-deep); }
+  .case-visual { position: relative; }
+  .case-visual image-slot { width: 100%; height: 520px; }
+  .case-tag { position: absolute; top: 26px; left: 26px; z-index: 3; background: rgba(10,10,10,0.72); backdrop-filter: blur(8px); color: var(--cream); border: 1px solid var(--hairline); padding: 9px 16px; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; }
+  .case-quote { position: absolute; bottom: 0; left: 0; right: 0; background: rgba(10,10,10,0.78); backdrop-filter: blur(10px); border-top: 1px solid var(--hairline); padding: 24px 28px; }
+  .case-quote .cq { font-family: 'Playfair Display', serif; font-style: italic; font-size: 19px; color: var(--cream); line-height: 1.4; }
+  .case-quote .cqa { font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-top: 12px; }
+
+  /* ===== WHY BANKS ===== */
+  .why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 66px; }
+  .why-card { border: 1px solid var(--hairline-soft); padding: 40px 34px; background: linear-gradient(135deg, rgba(212,175,55,0.04), rgba(255,255,255,0.008)); transition: border-color 0.4s var(--ease), transform 0.4s var(--ease), box-shadow 0.4s var(--ease); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+  .why-card:hover { border-color: var(--hairline); transform: translateY(-8px); box-shadow: 0 12px 32px rgba(212,175,55,0.16); }
+  .why-idx { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--gold); display: flex; align-items: center; gap: 14px; margin-bottom: 26px; }
+  .why-idx .line { flex: 1; height: 1px; background: var(--hairline-soft); }
+  .why-card h3 { font-size: 23px; font-weight: 700; line-height: 1.2; margin-bottom: 14px; }
+  .why-card p { font-size: 15.5px; color: var(--muted); font-weight: 300; line-height: 1.6; }
+  .why-banner { margin-top: 30px; border: 1px solid var(--hairline); padding: 52px 48px; display: flex; align-items: center; gap: 40px; background: var(--panel); }
+  .why-banner > div { flex: 1; }
+  .why-banner .btn { flex-shrink: 0; }
+  .why-banner p { font-size: 17px; color: var(--muted); font-weight: 300; }
+  .why-banner h3 { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 700; color: var(--cream); margin-top: 6px; }
+  .why-banner h3 span { color: var(--gold); }
+
+  /* ===== FOUNDER STORY ===== */
+  .band.band-founder { background: var(--black); }
+  .founder-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 72px; align-items: center; margin-top: 8px; }
+  .founder-image { position: relative; }
+  .founder-image image-slot { width: 100%; height: 700px; border-radius: 2px; display: block; }
+  .founder-label { position: absolute; bottom: 28px; left: 28px; background: rgba(10,10,10,0.72); backdrop-filter: blur(8px); color: var(--cream); border: 1px solid var(--hairline); padding: 14px 20px; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 2px; }
+  .founder-content .founder-kicker { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); display: inline-flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+  .founder-content .founder-kicker::before { content: ""; width: 34px; height: 1px; background: var(--gold); opacity: 0.6; }
+  .founder-content h2 { font-size: clamp(36px, 4.6vw, 56px); font-weight: 800; margin-top: 0; margin-bottom: 28px; line-height: 1.15; }
+  .founder-content h2 em { font-style: normal; color: var(--gold); }
+  .founder-content > p:first-of-type { margin-top: 0; }
+  .founder-content p { font-size: 15.5px; color: var(--text); line-height: 1.72; margin-bottom: 18px; font-weight: 300; }
+  .founder-content p strong { color: var(--cream); font-weight: 500; }
+  .founder-content p em { font-style: italic; }
+  .founder-content ul { margin: 28px 0; padding-left: 0; list-style: none; }
+  .founder-content li { font-size: 15px; color: var(--text); line-height: 1.6; margin-bottom: 14px; padding-left: 32px; position: relative; font-weight: 300; }
+  .founder-content li::before { content: ""; position: absolute; left: 4px; top: 6px; width: 10px; height: 10px; border: 2px solid var(--gold); border-radius: 50%; }
+  .founder-content > p:last-of-type { margin-bottom: 32px; }
+  .founder-content .btn { align-self: flex-start; }
+
+  /* ===== HOW WE WORK ===== */
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 70px; position: relative; }
+  .step { position: relative; }
+  .step-num { font-family: 'Playfair Display', serif; font-size: 18px; color: var(--gold-deep); letter-spacing: 0.1em; }
+  .step-rule { height: 1px; background: var(--hairline-ink); margin: 20px 0 26px; position: relative; }
+  .step-rule::after { content:""; position: absolute; left: 0; top: 0; width: 46px; height: 1px; background: var(--gold-deep); }
+  .step h3 { font-size: 28px; font-weight: 700; color: var(--ink); margin-bottom: 14px; }
+  .step p { font-size: 16px; color: var(--ink-soft); font-weight: 300; line-height: 1.6; }
+  .step .step-meta { margin-top: 22px; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600; }
+
+  /* ===== FAQ ===== */
+  .faq-grid { display: grid; grid-template-columns: 0.7fr 1.3fr; gap: 72px; align-items: start; }
+  .faq-list { border-top: 1px solid var(--hairline-soft); }
+  .faq-item { border-bottom: 1px solid var(--hairline-soft); }
+  .faq-q { width: 100%; background: none; border: none; cursor: pointer; text-align: left; padding: 30px 0; display: flex; align-items: center; justify-content: space-between; gap: 28px; color: var(--text); }
+  .faq-q span.t { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 600; transition: color 0.3s; }
+  .faq-q:hover span.t { color: var(--gold); }
+  .faq-sign { position: relative; width: 18px; height: 18px; flex-shrink: 0; }
+  .faq-sign::before, .faq-sign::after { content:""; position: absolute; background: var(--gold); transition: transform 0.4s var(--ease); }
+  .faq-sign::before { left: 0; top: 8.5px; width: 18px; height: 1.5px; }
+  .faq-sign::after { left: 8.5px; top: 0; width: 1.5px; height: 18px; }
+  .faq-item.open .faq-sign::after { transform: scaleY(0); }
+  .faq-a { overflow: hidden; max-height: 0; transition: max-height 0.5s var(--ease); }
+  .faq-a-inner { padding: 0 60px 32px 0; color: var(--muted); font-size: 16px; font-weight: 300; line-height: 1.65; }
+
+  /* ===== LEAD FORM ===== */
+  .form-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 72px; align-items: start; }
+  .form-aside h2 { font-size: clamp(34px, 4vw, 52px); font-weight: 800; margin-top: 22px; color: var(--ink); }
+  .form-aside h2 em { font-style: italic; font-weight: 500; color: var(--gold-deep); }
+  .form-aside p { margin-top: 20px; font-size: 17px; color: var(--ink-soft); font-weight: 300; }
+  .form-points { margin-top: 34px; display: grid; gap: 16px; }
+  .form-point { display: flex; align-items: center; gap: 14px; font-size: 15px; color: var(--ink); }
+  .form-point .tick { width: 20px; height: 20px; border: 1px solid var(--gold-deep); border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; }
+  .form-point .tick::after { content:""; width: 6px; height: 10px; border: solid var(--gold-deep); border-width: 0 1.5px 1.5px 0; transform: rotate(45deg) translate(-1px,-1px); }
+  .lead-form { background: var(--black); padding: 44px; border-radius: 2px; }
+  .lead-form .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+  .field label { display: block; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); margin-bottom: 9px; }
+  .field input, .field select, .field textarea {
+    width: 100%; background: rgba(212,175,55,0.03); border: 1px solid rgba(233,229,220,0.18);
+    color: var(--text); font-family: 'Sora', sans-serif; font-size: 15px; padding: 14px 16px; border-radius: 3px;
+    transition: border-color 0.35s var(--ease), background 0.35s var(--ease), box-shadow 0.35s var(--ease); outline: none;
+  }
+  .field textarea { resize: vertical; min-height: 96px; }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); background: rgba(212,175,55,0.06); box-shadow: 0 0 0 3px rgba(212,175,55,0.08); }
+  .field select { appearance: none; cursor: pointer; color: var(--muted); background-image: linear-gradient(45deg, transparent 50%, var(--gold) 50%), linear-gradient(135deg, var(--gold) 50%, transparent 50%); background-position: calc(100% - 20px) 20px, calc(100% - 14px) 20px; background-size: 6px 6px, 6px 6px; background-repeat: no-repeat; }
+  .field select option { background: var(--black); color: var(--text); }
+  .field.full { margin-bottom: 22px; }
+  .lead-form .btn { width: 100%; justify-content: center; }
+  .form-note { text-align: center; font-size: 12.5px; color: var(--muted-dim); margin-top: 16px; }
+  .form-success { display: none; text-align: center; padding: 40px 20px; }
+  .form-success.show { display: block; }
+  .form-success .fs-mark { width: 56px; height: 56px; border: 1px solid var(--gold); border-radius: 50%; display: grid; place-items: center; margin: 0 auto 24px; }
+  .form-success .fs-mark::after { content:""; width: 13px; height: 24px; border: solid var(--gold); border-width: 0 2px 2px 0; transform: rotate(45deg) translate(-1px,-2px); }
+  .form-success h3 { font-family: 'Playfair Display', serif; font-size: 30px; color: var(--cream); margin-bottom: 12px; }
+  .form-success p { color: var(--muted); font-weight: 300; }
+
+  /* ===== CTA ===== */
+  .cta { background: var(--gold); color: var(--black); padding: 120px 0; position: relative; overflow: hidden; text-align: center; }
+  .cta::before, .cta::after { content:""; position: absolute; border: 1px solid rgba(10,10,10,0.12); border-radius: 50%; }
+  .cta::before { width: 520px; height: 520px; top: -260px; left: -120px; }
+  .cta::after { width: 420px; height: 420px; bottom: -260px; right: -80px; }
+  .cta .kicker { color: rgba(10,10,10,0.66); }
+  .cta .kicker::before { background: rgba(10,10,10,0.5); }
+  .cta h2 { font-size: clamp(38px, 5vw, 68px); font-weight: 800; color: var(--black); max-width: 14ch; margin: 26px auto 24px; position: relative; }
+  .cta p { font-size: 19px; color: rgba(10,10,10,0.74); max-width: 560px; margin: 0 auto 40px; font-weight: 300; position: relative; }
+  .cta .btn-dark { position: relative; }
+
+  /* ===== FOOTER ===== */
+  footer { background: var(--black-deep); padding: 90px 0 40px; }
+  .foot-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 64px; border-bottom: 1px solid var(--hairline-soft); }
+  .foot-brand .brand { margin-bottom: 24px; }
+  .foot-brand .brand-logo {
+    filter: drop-shadow(0 8px 16px rgba(212, 175, 55, 0.28))
+            drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  }
+  .foot-brand p { color: var(--muted); font-size: 15px; font-weight: 300; max-width: 320px; }
+  .foot-col h4 { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+  .foot-col a, .foot-col li { display: block; color: var(--muted); font-size: 14.5px; padding: 7px 0; font-weight: 300; transition: color 0.3s; list-style: none; }
+  .foot-col a:hover { color: var(--text); }
+  .foot-bottom { padding-top: 32px; display: flex; align-items: center; justify-content: space-between; gap: 20px; color: var(--muted-dim); font-size: 12.5px; }
+  .foot-bottom .disc { max-width: 720px; line-height: 1.55; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 1024px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 56px; }
+    .hero-visual { max-width: 520px; }
+    .case-grid, .faq-grid, .form-grid, .founder-grid { grid-template-columns: 1fr; gap: 48px; }
+    .why-grid, .steps { grid-template-columns: 1fr; gap: 22px; }
+    .fund-row { grid-template-columns: 1fr 1fr; gap: 28px 40px; }
+    .fund-actions { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: flex-start; }
+    .fund-actions .btn { flex: 0 0 auto; }
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 40px 0; }
+    .stat:nth-child(3)::before, .stat:nth-child(odd)::before { display: none; }
+    .why-banner { flex-direction: column; align-items: flex-start; }
+  }
+  @media (max-width: 768px) {
+    .nav { height: 72px; padding: 0 24px; }
+    .brand-name { font-size: 18px; }
+    .brand-logo { width: 44px; height: 44px; }
+    .hero h1 { font-size: clamp(38px, 8vw, 56px); margin: 24px 0 20px; }
+    .hero p.lede { font-size: 16px; }
+    section.band { padding: 80px 0; }
+    .wrap { padding: 0 24px; }
+  }
+  @media (max-width: 720px) {
+    html { font-size: 15px; }
+    .wrap { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hamburger { display: block; }
+    .hero { padding: 120px 0 60px; }
+    .hero h1 { font-size: clamp(32px, 7vw, 48px); margin: 20px 0 16px; }
+    .hero p.lede { font-size: 15px; line-height: 1.6; }
+    .btn { font-size: 12px; padding: 16px 28px; }
+    .btn-gold, .btn-ghost, .btn-dark { min-height: 48px; }
+    section.band { padding: 60px 0; }
+    .section-head { max-width: 100%; }
+    .section-head h2 { font-size: clamp(28px, 6vw, 42px); margin-top: 16px; }
+    .section-head p { font-size: 15px; margin-top: 16px; }
+    .kicker { font-size: 11px; }
+    .stats-grid { grid-template-columns: 1fr; gap: 0; }
+    .stat { padding: 28px 0; border-top: 1px solid var(--hairline-soft); }
+    .stat .num { font-size: clamp(28px, 5vw, 38px); }
+    .stat .lbl { font-size: 12px; margin-top: 10px; }
+    .stat + .stat::before { display: none; }
+    .stat:first-child { border-top: none; }
+    .founder-content h2 { font-size: clamp(26px, 5.5vw, 36px); }
+    .founder-image { margin-bottom: 24px; }
+    .founder-label { padding: 10px 14px; font-size: 10px; }
+    .lead-form .frow { grid-template-columns: 1fr; gap: 14px; margin-bottom: 14px; }
+    .lead-form { padding: 20px; }
+    .field label { font-size: 10px; margin-bottom: 7px; }
+    .field input, .field select, .field textarea { font-size: 15px; padding: 12px 14px; }
+    #quizForm > div { padding: 18px !important; }
+    #quizForm > div label { font-size: 13px !important; }
+    #quizForm > div select, #quizForm > div input { padding: 10px !important; font-size: 14px !important; }
+    .fund-row { grid-template-columns: 1fr; gap: 18px; padding: 28px 0; }
+    .fund-main h3 { font-size: 17px; margin-bottom: 10px; }
+    .fund-main p { font-size: 14px; }
+    .fund-specs { grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+    .spec .sk { font-size: 10px; }
+    .spec .sv { font-size: 14px; }
+    .fund-speed { gap: 16px; padding: 18px 20px; }
+    .fund-speed .fs-badge { font-size: 32px; }
+    .fund-actions { flex-direction: column; align-items: stretch; }
+    .fund-actions .btn { width: 100%; }
+    .case-grid { gap: 32px; }
+    .case-row { grid-template-columns: 1fr; gap: 8px; }
+    .case-visual image-slot, .case-visual img { height: 320px; }
+    .why-grid, .steps { grid-template-columns: 1fr; gap: 20px; }
+    .why-card { padding: 28px 22px; }
+    .why-card h3 { font-size: 19px; }
+    .why-card p { font-size: 14px; }
+    .why-banner { flex-direction: column; align-items: flex-start; gap: 20px; padding: 32px 24px; }
+    .why-banner h3 { font-size: 20px; }
+    .why-banner p { font-size: 14px; }
+    .faq-grid { grid-template-columns: 1fr; gap: 32px; }
+    .faq-q { padding: 24px 0; }
+    .faq-q span.t { font-size: 17px; }
+    .step h3 { font-size: 20px; }
+    .step p { font-size: 14px; }
+    .cta h2 { font-size: clamp(28px, 6vw, 48px); }
+    .cta p { font-size: 15px; }
+    .form-aside h2 { font-size: clamp(26px, 5.5vw, 36px); }
+    .form-aside p { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header id="header">
+    <div class="wrap nav">
+      <a href="#top" class="brand" aria-label="The Capital Vault home">
+        <img src="uploads/capital-vault-logo.png" alt="Capital Vault" class="brand-logo" />
+        <span class="brand-name">The Capital <span>Vault</span></span>
+      </a>
+      <nav class="nav-links">
+        <a class="nav-link" href="#approach">The Desk</a>
+        <a class="nav-link" href="#funding">Capital Menu</a>
+        <a class="nav-link" href="#work">Process</a>
+        <a class="nav-link" href="#results">Results</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+        <a class="btn btn-gold" href="#start">Request Consultation</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#approach">The Desk</a>
+    <a href="#funding">Capital Menu</a>
+    <a href="#work">Process</a>
+    <a href="#results">Results</a>
+    <a href="#faq">FAQ</a>
+    <a class="btn btn-gold" href="#start">Request Consultation</a>
+  </div>
+
+  <!-- HERO WITH FOUNDER IMAGERY -->
+  <section class="hero" id="top">
+    <div class="hero-bg">
+      <image-slot id="hero-bg" shape="rect" placeholder="Drop a full-bleed hero photo (business owner / operator at work)" fit="cover"></image-slot>
+    </div>
+    <div class="hero-scrim"></div>
+    <div class="hero-glow"></div>
+
+    <!-- Founder imagery overlay (right side) - desktop only -->
+    <div style="position: absolute; right: -80px; bottom: -40px; width: 520px; height: 580px; z-index: 1; pointer-events: none; opacity: 0.75; display: none;">
+      <img src="uploads/abu-elhassan-founder.jpg" alt="Abu Elhassan - Founder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;">
+    </div>
+    <style>
+      @media (min-width: 1200px) {
+        .hero > div:nth-child(3) { display: block !important; }
+      }
+    </style>
+
+    <div class="wrap">
+      <div class="hero-inner">
+        <span class="badge-pill reveal"><span class="spark"></span> 500+ Lenders. Funding as fast as 24 hours.</span>
+        <h1 class="reveal d1">Make the lenders <em>compete for you.</em></h1>
+        <p class="lede reveal d2">When your capital strategy is engineered by an operator who's been there, you win differently. <strong style="color:var(--cream); font-weight:600;">500+ institutional and private lenders</strong> competing for your business means non-dilutive capital at the best rates available, with approval certainty traditional banking can't match.</p>
+        <div class="hero-cta reveal d3">
+          <a href="#start" class="btn btn-gold">Request a Strategic Capital Consultation <span class="arrow">&rarr;</span></a>
+          <a href="#quiz" class="btn btn-ghost">Take the Readiness Quiz</a>
+        </div>
+        <div class="hero-trust reveal d4">
+          <span>⚡ Rate lock window closing</span><span class="dot"></span>
+          <span>100% equity kept</span><span class="dot"></span>
+          <span>20-minute assessment</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENCY BANNER -->
+  <section style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02)); padding: 36px 0; border-top: 1px solid var(--hairline-soft); border-bottom: 1px solid var(--hairline-soft);">
+    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <div style="flex: 1; min-width: 240px;">
+        <div style="font-family: 'Playfair Display', serif; font-size: clamp(16px, 4vw, 22px); font-weight: 700; color: var(--cream); margin-bottom: 6px;">⚡ Rate Environment Alert</div>
+        <p style="color: var(--muted); font-size: 14px; margin: 0; line-height: 1.5;">Rates at 90-day high. Lock in now for sub-10% APR. Window narrows fast.</p>
+      </div>
+      <a href="#start" class="btn btn-gold" style="flex-shrink: 0; font-size: 12px; padding: 14px 24px;">Lock Rate <span class="arrow">&rarr;</span></a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats" id="approach">
+    <div class="wrap">
+      <div class="stats-inner">
+        <div class="stats-grid">
+          <div class="stat reveal">
+            <div class="num"><span data-count="600">600</span><span class="gold">+</span></div>
+            <div class="lbl">Businesses funded</div>
+          </div>
+          <div class="stat reveal d1">
+            <div class="num gold"><span data-prefix="$" data-count="80" data-suffix="M+">$80M+</span></div>
+            <div class="lbl">Capital procured</div>
+          </div>
+          <div class="stat reveal d2">
+            <div class="num"><span data-count="500">500</span><span class="gold">+</span></div>
+            <div class="lbl">Institutional lender partners</div>
+          </div>
+          <div class="stat reveal d3">
+            <div class="num">24<span style="font-size: 0.5em; font-weight: 600; vertical-align: super;">hrs</span></div>
+            <div class="lbl">Funding as fast as</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAPITAL READINESS QUIZ -->
+  <section style="background: var(--panel); padding: 96px 0; border-top: 1px solid var(--hairline-soft);" id="quiz">
+    <div class="wrap">
+      <div style="max-width: 640px; margin: 0 auto; text-align: center;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 800; color: var(--cream); margin-bottom: 16px;">Your Capital Readiness Score</div>
+        <p style="color: var(--muted); font-size: 17px; margin-bottom: 40px; line-height: 1.6;">Answer 5 quick questions. Learn what capital you qualify for, what rates you can expect, and how fast we can deploy.</p>
+
+        <form id="quizForm" style="display: grid; gap: 20px;">
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">1. What's your annual revenue?</label>
+            <select name="revenue" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px;">
+              <option value="">Select range</option>
+              <option value="100k">$50K – $250K</option>
+              <option value="500k">$250K – $500K</option>
+              <option value="1m">$500K – $1M</option>
+              <option value="2m">$1M – $2M</option>
+              <option value="5m">$2M+</option>
+            </select>
+          </div>
+
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">2. How long in business?</label>
+            <select name="yearsInBusiness" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px;">
+              <option value="">Select</option>
+              <option value="0-1">Less than 1 year</option>
+              <option value="1-2">1 – 2 years</option>
+              <option value="2-5">2 – 5 years</option>
+              <option value="5plus">5+ years</option>
+            </select>
+          </div>
+
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">3. What's your credit score range?</label>
+            <select name="creditScore" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px;">
+              <option value="">Select</option>
+              <option value="below600">Below 600</option>
+              <option value="600-650">600 – 650</option>
+              <option value="650-700">650 – 700</option>
+              <option value="700plus">700+</option>
+            </select>
+          </div>
+
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">4. Capital needed?</label>
+            <select name="capitalNeeded" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px;">
+              <option value="">Select range</option>
+              <option value="50k">$25K – $100K</option>
+              <option value="250k">$100K – $250K</option>
+              <option value="500k">$250K – $500K</option>
+              <option value="1m">$500K – $1M</option>
+              <option value="5mplus">$1M+</option>
+            </select>
+          </div>
+
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">5. Email for your results?</label>
+            <input type="email" name="email" placeholder="your@company.com" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px; font-family: 'Sora', sans-serif;">
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 12px;">See My Capital Readiness Score <span class="arrow">&rarr;</span></button>
+        </form>
+
+        <p style="color: var(--muted-dim); font-size: 13px; margin-top: 20px;">Takes 90 seconds. Results emailed instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD FORM (MOVED UP) -->
+  <section class="band band-cream" id="start" style="padding: 80px 0;">
+    <div class="wrap">
+      <div class="form-grid">
+        <div class="form-aside reveal">
+          <span class="kicker ink">Strategic Capital Consultation</span>
+          <h2>Request your strategic <em>consultation.</em></h2>
+          <p>A 20-minute assessment with our capital desk. No sales pitch, just a clear map of the capital you qualify for and the exact rates we can secure across 500+ lenders.</p>
+          <div class="form-points">
+            <div class="form-point"><span class="tick"></span> Real clarity: a precise read on your funding options</div>
+            <div class="form-point"><span class="tick"></span> No obligation: 100% confidential and non-dilutive</div>
+            <div class="form-point"><span class="tick"></span> Zero upfront fees: we only win when you win</div>
+          </div>
+        </div>
+        <div>
+          <form class="lead-form" id="leadForm" novalidate>
+            <div class="frow">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Operator" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              </div>
+            </div>
+            <div class="frow">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="989-614-4359" required />
+              </div>
+              <div class="field">
+                <label for="revenue">Annual Revenue</label>
+                <select id="revenue" name="revenue" required>
+                  <option value="">Select range</option>
+                  <option>$50K – $100K</option>
+                  <option>$100K – $250K</option>
+                  <option>$250K – $500K</option>
+                  <option>$500K – $1M</option>
+                  <option>$1M+</option>
+                </select>
+              </div>
+            </div>
+            <div class="field full">
+              <label for="message">What do you need capital for?</label>
+              <textarea id="message" name="message" placeholder="Tell us about the business and what you're funding…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold">Request My Consultation <span class="arrow">&rarr;</span></button>
+            <p class="form-note">A confidential, non-dilutive assessment. No obligation, no upfront fees.</p>
+          </form>
+          <div class="form-success lead-form" id="formSuccess">
+            <div class="fs-mark"></div>
+            <h3>Your consultation is reserved.</h3>
+            <p>Thank you. A member of the capital desk will be in touch within one business day to begin your assessment.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CASE STUDIES - QUICK WINS -->
+  <section class="band band-cream" id="results" style="padding: 80px 0;">
+    <div class="wrap">
+      <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+        <span class="kicker ink">Real Results</span>
+        <h2 style="font-family:'Playfair Display',serif; font-size:clamp(34px,4.4vw,54px); font-weight:800; margin-top:22px;">Funded when <em style="font-style:italic; color:var(--gold-deep);">banks said no.</em></h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+        <!-- Case 1 -->
+        <div class="reveal" style="background: rgba(22,19,13,0.4); padding: 32px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22); display: flex; flex-direction: column;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold-deep); margin-bottom: 12px;">$1.3M</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 19px; color: var(--ink); margin-bottom: 14px; font-weight: 700;">Regional HVAC Operator</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 16px; flex: 1;">Declined by 3 banks (620 credit score). Leveraged cash flow strength to secure $1.3M in 59 days.</p>
+          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">"Found the yes when everyone said no."</div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="reveal d1" style="background: rgba(22,19,13,0.4); padding: 32px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22); display: flex; flex-direction: column;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold-deep); margin-bottom: 12px;">$520K</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 19px; color: var(--ink); margin-bottom: 14px; font-weight: 700;">SaaS Founder, Series A</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 16px; flex: 1;">Raised capital while keeping 100% equity. Funded in 14 days for expansion headcount.</p>
+          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">"Growth without giving up control."</div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="reveal d2" style="background: rgba(22,19,13,0.4); padding: 32px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22); display: flex; flex-direction: column;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold-deep); margin-bottom: 12px;">$890K</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 19px; color: var(--ink); margin-bottom: 14px; font-weight: 700;">E-Commerce Operator</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 16px; flex: 1;">Seasonal cash flow. Structured a 6-month revenue-based facility for inventory. Deployed in 24 hours.</p>
+          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">"Capital in 24 hours, not 24 weeks."</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="#start" class="btn btn-dark reveal d3">See All Case Studies <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THE VAULT WINS -->
+  <section class="band" style="padding: 100px 0;">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom: 70px;">
+        <span class="kicker">Why The Capital Vault</span>
+        <h2>Why operators choose <em>the Vault.</em></h2>
+        <p>Traditional banking runs on a one-size-fits-all model that penalizes growth. We rebuilt the entire process to put the power back in the operator's hands.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal" style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));">
+          <div style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px;">🔑</div>
+          <div class="why-idx" style="margin-bottom: 20px;">01<span class="line"></span></div>
+          <h3>We master the system</h3>
+          <p>We leverage traditional banks AND 500+ institutional lenders. You're never limited by one institution's rigid criteria or outdated underwriting.</p>
+        </div>
+        <div class="why-card reveal d1" style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));">
+          <div style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px;">⚡</div>
+          <div class="why-idx" style="margin-bottom: 20px;">02<span class="line"></span></div>
+          <h3>We engineer competition</h3>
+          <p>500+ lenders bidding for your business means you win the rates. We force the market to work for you, not against you.</p>
+        </div>
+        <div class="why-card reveal d2" style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));">
+          <div style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px;">✓</div>
+          <div class="why-idx" style="margin-bottom: 20px;">03<span class="line"></span></div>
+          <h3>We ensure approval</h3>
+          <p>Our desk matches you with lenders ready to fund your industry and stage. Approval certainty, not rejection theater.</p>
+        </div>
+      </div>
+      <div class="why-banner reveal" style="margin-top: 60px;">
+        <div>
+          <p style="font-weight: 500;">The Capital Vault puts the operator first.</p>
+          <h3>We engineer the <span>competition</span>. <br />You keep 100% of your equity.</h3>
+        </div>
+        <a href="#start" class="btn btn-gold">Start Your Capital Strategy <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER STORY -->
+  <section class="band band-founder" style="padding: 80px 0;">
+    <div class="wrap">
+      <div class="founder-grid">
+        <div class="founder-image reveal">
+          <img src="uploads/abu-elhassan-founder.jpg" alt="Abu Elhassan - Founder & CEO Capital Vault" style="width: 100%; height: 700px; object-fit: cover; display: block; border-radius: 2px;">
+          <div class="founder-label">Abu Elhassan<br />Founder & CEO Capital Vault</div>
+        </div>
+        <div class="founder-content reveal">
+          <span class="founder-kicker">A Word From Our Founder</span>
+          <h2>Abu Elhassan | <em>Founder</em></h2>
+
+          <p>Dear Business Owner,</p>
+
+          <p>I know what it feels like to have a vision for something bigger but not have the capital to bring it to life.</p>
+
+          <p>I came to this country as an immigrant with humble beginnings. <strong>No financial safety net, no connections, and certainly no rich uncle to fund my dreams.</strong> What I did have was a relentless drive to create something of my own: a business, a legacy, a future on my own terms.</p>
+
+          <p>But here's the truth… <strong>without access to capital, even the best ideas stay stuck in your head.</strong></p>
+
+          <p>I quickly realized that the difference between those who scale and those who struggle isn't just hard work. <strong>It's having the right funding strategy.</strong></p>
+
+          <ul>
+            <li>I started and scaled multiple businesses without the fear of running out of money</li>
+            <li>I structured my financial profile to access six-figure funding at 0% interest</li>
+            <li>I developed a proven framework for leveraging business credit to build real wealth</li>
+          </ul>
+
+          <p><em>And now?</em> <strong>I help entrepreneurs like you do the same.</strong></p>
+
+          <a href="#start" class="btn btn-gold">Book Your Free Strategy Call <span class="arrow">&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNDING OPTIONS -->
+  <section class="band" id="funding" style="padding: 80px 0;">
+    <div class="wrap">
+      <div class="section-head fund-head reveal">
+        <div>
+          <span class="kicker">The Capital Menu</span>
+          <h2 style="font-size:clamp(36px,4.6vw,60px); font-weight:800; margin-top:22px;">The capital allocation <em class="serif-i gold">menu.</em></h2>
+        </div>
+        <p style="max-width:380px; margin:0;">One diagnostic. Access 500+ lenders and every non-dilutive instrument, engineered for your business—not forced into a bank's box.</p>
+      </div>
+      <div class="fund-speed reveal">
+        <div class="fs-badge">24<span>hrs</span></div>
+        <div class="fs-copy">
+          <h4>Funding as fast as 24 hours</h4>
+          <p>Revenue-based lending can fund next-day, and most other programs deploy in a matter of days, not months.</p>
+        </div>
+      </div>
+      <div class="fund-list">
+        <article class="fund-row reveal">
+          <div class="fund-main">
+            <h3>Business Line of Credit <span class="tag">Most flexible</span></h3>
+            <p>Flexible, revolving credit. Draw what you need and pay interest only on what you use.</p>
+          </div>
+          <div class="fund-specs">
+            <div class="spec"><span class="sk">Amount</span><span class="sv">Up to $10M</span></div>
+            <div class="spec"><span class="sk">Speed</span><span class="sv">1&ndash;3 days</span></div>
+            <div class="spec"><span class="sk">Rate</span><span class="sv">From 8% APR</span></div>
+          </div>
+          <div class="fund-actions">
+            <a href="#start" class="btn btn-gold">Apply</a>
+            <a href="#start" class="learn">Learn more</a>
+          </div>
+        </article>
+        <article class="fund-row reveal">
+          <div class="fund-main">
+            <h3>Revenue-Based Financing <span class="tag">Funds in 24 hrs</span></h3>
+            <p>Leverage your future receipts for immediate liquidity. No collateral, no minimum time in business.</p>
+          </div>
+          <div class="fund-specs">
+            <div class="spec"><span class="sk">Amount</span><span class="sv">Up to $5M</span></div>
+            <div class="spec"><span class="sk">Speed</span><span class="sv">As fast as 24 hrs</span></div>
+            <div class="spec"><span class="sk">Rate</span><span class="sv">Factor-rate based</span></div>
+          </div>
+          <div class="fund-actions">
+            <a href="#start" class="btn btn-gold">Apply</a>
+            <a href="#start" class="learn">Learn more</a>
+          </div>
+        </article>
+        <article class="fund-row reveal">
+          <div class="fund-main">
+            <h3>SBA Loan Programs</h3>
+            <p>Government-backed stability for long-term growth, including 7(a), 504, and SBA Express.</p>
+          </div>
+          <div class="fund-specs">
+            <div class="spec"><span class="sk">Amount</span><span class="sv">Up to $5M</span></div>
+            <div class="spec"><span class="sk">Speed</span><span class="sv">1&ndash;3 months</span></div>
+            <div class="spec"><span class="sk">Rate</span><span class="sv">Prime +</span></div>
+          </div>
+          <div class="fund-actions">
+            <a href="#start" class="btn btn-gold">Apply</a>
+            <a href="#start" class="learn">Learn more</a>
+          </div>
+        </article>
+        <article class="fund-row reveal">
+          <div class="fund-main">
+            <h3>Term Loans</h3>
+            <p>A lump sum repaid over a fixed term. Predictable payments for planned, deliberate expansion.</p>
+          </div>
+          <div class="fund-specs">
+            <div class="spec"><span class="sk">Amount</span><span class="sv">Up to $2M</span></div>
+            <div class="spec"><span class="sk">Speed</span><span class="sv">3&ndash;10 days</span></div>
+            <div class="spec"><span class="sk">Rate</span><span class="sv">From 9% APR</span></div>
+          </div>
+          <div class="fund-actions">
+            <a href="#start" class="btn btn-gold">Apply</a>
+            <a href="#start" class="learn">Learn more</a>
+          </div>
+        </article>
+        <article class="fund-row reveal">
+          <div class="fund-main">
+            <h3>Equipment Financing</h3>
+            <p>Finance machinery, vehicles, or technology. The equipment itself secures the loan, so approval is faster.</p>
+          </div>
+          <div class="fund-specs">
+            <div class="spec"><span class="sk">Amount</span><span class="sv">Up to $5M</span></div>
+            <div class="spec"><span class="sk">Speed</span><span class="sv">2&ndash;7 days</span></div>
+            <div class="spec"><span class="sk">Rate</span><span class="sv">From 7% APR</span></div>
+          </div>
+          <div class="fund-actions">
+            <a href="#start" class="btn btn-gold">Apply</a>
+            <a href="#start" class="learn">Learn more</a>
+          </div>
+        </article>
+        <article class="fund-row reveal">
+          <div class="fund-main">
+            <h3>0% Interest Credit Lines <span class="tag">Most popular</span></h3>
+            <p>Stacked business credit with introductory 0% periods: lean, low-cost capital when timing is everything.</p>
+          </div>
+          <div class="fund-specs">
+            <div class="spec"><span class="sk">Amount</span><span class="sv">Up to $150K</span></div>
+            <div class="spec"><span class="sk">Speed</span><span class="sv">7&ndash;14 days</span></div>
+            <div class="spec"><span class="sk">Rate</span><span class="sv">0% intro APR</span></div>
+          </div>
+          <div class="fund-actions">
+            <a href="#start" class="btn btn-gold">Apply</a>
+            <a href="#start" class="learn">Learn more</a>
+          </div>
+        </article>
+      </div>
+      <div class="fund-foot reveal">
+        <span>Not sure which instrument fits? <span class="gold">Our desk engineers the structure for you.</span></span>
+        <a href="#start" class="btn btn-ghost" style="margin-left:auto;">Get Your Capital Match <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="band band-cream" id="work" style="padding: 100px 0;">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom: 70px;">
+        <span class="kicker ink">How It Works</span>
+        <h2>Simple. Strategic. <em>Successful.</em></h2>
+        <p>The speed of modern fintech with the sophistication of a seasoned capital advisory. Three deliberate steps from consultation to deployed capital.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal" style="background: rgba(168,127,42,0.08); padding: 40px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px;">📞</div>
+          <div class="step-num">01</div>
+          <div class="step-rule"></div>
+          <h3>Consultation</h3>
+          <p>A 20-minute strategic assessment of your revenue, growth, and capital needs. We map every instrument you qualify for, no fluff.</p>
+          <div class="step-meta">20-minute assessment</div>
+        </div>
+        <div class="step reveal d1" style="background: rgba(168,127,42,0.08); padding: 40px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px;">⚙️</div>
+          <div class="step-num">02</div>
+          <div class="step-rule"></div>
+          <h3>Structuring</h3>
+          <p>We engineer your file and position it across our 500+ lender network, forcing lenders to compete and maximize your offers.</p>
+          <div class="step-meta">500+ lenders, one file</div>
+        </div>
+        <div class="step reveal d2" style="background: rgba(168,127,42,0.08); padding: 40px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px;">💰</div>
+          <div class="step-num">03</div>
+          <div class="step-rule"></div>
+          <h3>Deployment</h3>
+          <p>Capital lands in your account at great rates. You keep 100% equity.</p>
+          <div class="step-meta">Funding as little as 24 hours</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="band" id="faq" style="padding: 80px 0;">
+    <div class="wrap">
+      <div class="faq-grid">
+        <div class="faq-aside reveal">
+          <span class="kicker">Answers</span>
+          <h2 style="font-size:clamp(34px,4.2vw,52px); font-weight:800; margin-top:22px;">Common <em class="serif-i gold">questions.</em></h2>
+          <p style="margin-top:20px; color:var(--muted); font-weight:300; font-size:17px;">Everything you need before your diagnostic. <a href="#start" class="gold" style="border-bottom:1px solid var(--hairline)">Or just ask the desk.</a></p>
+        </div>
+        <div class="faq-list" id="faqList">
+          <div class="faq-item">
+            <button class="faq-q"><span class="t">How quickly can I get capital?</span><span class="faq-sign"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">It depends on the funding product. Revenue-based financing funds in 24 hours; term loans typically deploy in 5–20 days. On the diagnostic call we'll give you a realistic timeline for your situation.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q"><span class="t">What if my credit isn't perfect?</span><span class="faq-sign"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Credit is one factor, not the deciding one. We have access to lenders who weight cash flow, revenue trajectory, and business fundamentals far more heavily than a single score.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q"><span class="t">Will I give up equity?</span><span class="faq-sign"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">No. We structure debt-based solutions exclusively. You keep 100% ownership of your business and 100% of the upside. We never take a piece.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q"><span class="t">How much can I qualify for?</span><span class="faq-sign"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">That depends on your revenue, cash flow, and what you're funding. Clients typically access anywhere from $50K to several million. The diagnostic gives you a precise range.</div></div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q"><span class="t">What's the cost?</span><span class="faq-sign"></span></button>
+            <div class="faq-a"><div class="faq-a-inner">Our fee is built into your funding terms, so you pay nothing upfront. We're only successful when you're funded, which keeps our incentives fully aligned with yours.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <span class="kicker center reveal">Power Your Growth</span>
+      <h2 class="reveal d1">Ready to power your <em style="font-style:italic; font-weight:500;">growth?</em></h2>
+      <p class="reveal d2">Request a strategic capital consultation: a 20-minute assessment with our desk. No sales pitch, just a clear map of the capital you qualify for and the exact rates we can secure across 500+ lenders.</p>
+      <a href="#start" class="btn btn-dark reveal d3">Request Your Consultation <span class="arrow">&rarr;</span></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-top">
+        <div class="foot-brand">
+          <div class="brand">
+            <img src="uploads/capital-vault-logo.png" alt="Capital Vault" class="brand-logo" style="margin-bottom: 8px;" />
+            <span class="brand-name">The Capital <span>Vault</span></span>
+          </div>
+          <p>A premier capital advisory. Connecting established operators with optimal funding across 500+ institutional lenders. Structured for speed. Engineered for results.</p>
+        </div>
+        <div class="foot-col">
+          <h4>Navigate</h4>
+          <a href="#approach">Approach</a>
+          <a href="#work">How We Work</a>
+          <a href="#results">Results</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h4>Contact</h4>
+          <a href="tel:+19896144359">989-614-4359</a>
+          <a href="mailto:support@thecapitalvault.com">support@thecapitalvault.com</a>
+          <a href="https://maps.google.com/?q=24+Greenway+Plaza+Ste+1800+Houston+TX+77046" target="_blank" rel="noopener">24 Greenway Plaza, Ste 1800<br />Houston, TX 77046</a>
+          <a href="#start">Schedule a Consultation</a>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Disclosures</a>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>&copy; 2026 The Capital Vault. All rights reserved.</span>
+        <span class="disc">The Capital Vault is a capital advisory service and not a direct lender or bank. Funding availability, amounts, and terms are determined by third-party lenders and subject to approval.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="image-slot.js"></script>
+  <script>
+    // Sticky header state
+    const header = document.getElementById('header');
+    const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+
+    // Mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const closeMenu = () => document.body.classList.remove('menu-open');
+    hamburger.addEventListener('click', () => document.body.classList.toggle('menu-open'));
+    document.querySelectorAll('#mobileMenu a').forEach(a => a.addEventListener('click', closeMenu));
+
+    // Reveal + counters. Content is visible by default; we only opt into the
+    // hidden→reveal motion once a real animation frame fires (i.e. a live
+    // clock). In print/export/headless contexts rAF may never run, so we
+    // simply leave everything in its visible end-state.
+    const fmt = (n) => Math.round(n).toLocaleString();
+    const reveals = Array.from(document.querySelectorAll('.reveal'));
+    const counters = Array.from(document.querySelectorAll('[data-count]'));
+
+    const runCounter = (el) => {
+      if (el.dataset.counted) return;
+      el.dataset.counted = '1';
+      const target = parseFloat(el.dataset.count);
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const dur = 1400; const start = performance.now();
+      el.textContent = prefix + '0' + suffix;
+      const tick = (now) => {
+        const p = Math.min((now - start) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = prefix + fmt(target * eased) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    };
+
+    const checkReveal = () => {
+      const vh = window.innerHeight;
+      for (let i = reveals.length - 1; i >= 0; i--) {
+        const r = reveals[i].getBoundingClientRect();
+        if (r.top < vh * 0.92 && r.bottom > 0) { reveals[i].classList.add('in'); reveals.splice(i, 1); }
+      }
+    };
+    const checkCounters = () => {
+      const vh = window.innerHeight;
+      for (let i = counters.length - 1; i >= 0; i--) {
+        const r = counters[i].getBoundingClientRect();
+        if (r.top < vh * 0.85 && r.bottom > 0) { runCounter(counters[i]); counters.splice(i, 1); }
+      }
+    };
+
+    // Only enable the hidden-initial state if we have a live animation clock,
+    // so content is never trapped invisible where rAF is frozen.
+    requestAnimationFrame(() => {
+      document.documentElement.classList.add('anim-on');
+      checkReveal();
+      checkCounters();
+      window.addEventListener('scroll', () => { checkReveal(); checkCounters(); }, { passive: true });
+      window.addEventListener('resize', checkReveal, { passive: true });
+    });
+
+    // GHL Integration
+    const leadForm = document.getElementById('leadForm');
+    const formSuccess = document.getElementById('formSuccess');
+
+    if (leadForm) {
+      leadForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        const formData = {
+          firstName: document.getElementById('name').value.split(' ')[0],
+          lastName: document.getElementById('name').value.split(' ').slice(1).join(' ') || '',
+          email: document.getElementById('email').value,
+          phone: document.getElementById('phone').value,
+          revenue: document.getElementById('revenue').value,
+          message: document.getElementById('message').value,
+        };
+
+        try {
+          const response = await fetch('/api/submit-lead', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+          });
+
+          if (response.ok) {
+            leadForm.style.display = 'none';
+            formSuccess.classList.add('show');
+          } else {
+            const error = await response.json();
+            console.error('Server error:', error);
+            alert('Error submitting form. Please try again.');
+          }
+        } catch (err) {
+          console.error('Form submission error:', err);
+          alert('Error submitting form. Please try again.');
+        }
+      });
+    }
+
+    // FAQ accordion
+    document.querySelectorAll('#faqList .faq-item').forEach(item => {
+      const q = item.querySelector('.faq-q');
+      const a = item.querySelector('.faq-a');
+      q.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('#faqList .faq-item').forEach(other => {
+          other.classList.remove('open');
+          other.querySelector('.faq-a').style.maxHeight = null;
+        });
+        if (!isOpen) { item.classList.add('open'); a.style.maxHeight = a.scrollHeight + 'px'; }
+      });
+    });
+
+    // Lead form
+    const form = document.getElementById('leadForm');
+    const success = document.getElementById('formSuccess');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      let ok = true;
+      form.querySelectorAll('[required]').forEach(f => {
+        const valid = f.value.trim() !== '' && (f.type !== 'email' || /.+@.+\..+/.test(f.value));
+        f.style.borderColor = valid ? '' : 'var(--gold-deep)';
+        if (!valid) ok = false;
+      });
+      if (!ok) return;
+      form.style.display = 'none';
+      success.classList.add('show');
+      success.scrollIntoView ? null : null; // avoid scrollIntoView per guidance
+    });
+  </script>
+</body>
+</html>

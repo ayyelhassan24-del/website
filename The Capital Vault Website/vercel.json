@@ -1,8 +1,8 @@
 {
   "version": 2,
   "buildCommand": "echo 'Static site'",
-  "outputDirectory": ".",
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
