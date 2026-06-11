@@ -1,4 +1,8 @@
 {
   "buildCommand": "echo 'Static site - no build needed'",
-  "outputDirectory": "."
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/api/:path*", "destination": "/api/:path*" }
+  ]
 }
