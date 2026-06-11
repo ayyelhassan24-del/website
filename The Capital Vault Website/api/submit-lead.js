@@ -5,48 +5,40 @@ export default async function handler(req, res) {
 
   const { firstName, lastName, email, phone, revenue, message } = req.body;
 
-  const GHL_API_TOKEN = process.env.GHL_API_TOKEN;
-  const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
-
-  if (!GHL_API_TOKEN || !GHL_LOCATION_ID) {
-    return res.status(500).json({ error: 'GHL credentials not configured. Please add GHL_API_TOKEN and GHL_LOCATION_ID to environment.' });
-  }
+  const ghlData = {
+    firstName,
+    lastName,
+    email,
+    phone,
+    locationId: 'rDTLsvkHq9OuSN0o4j2Y',
+    source: 'Website - Capital Vault',
+    tags: ['capital-vault-lead', 'website-form'],
+    customFields: {
+      annualRevenue: revenue,
+      capitalNeeded: message,
+    }
+  };
 
   try {
     const response = await fetch('https://rest.gohighlevel.com/v1/contacts/', {
       method: 'POST',
       headers: {
-        'Authorization': `Bearer ${GHL_API_TOKEN}`,
         'Content-Type': 'application/json',
+        'Authorization': 'Bearer pit-cc259dd7-7a18-4c6a-8c41-c7d2a89c10a0'
       },
-      body: JSON.stringify({
-        firstName,
-        lastName,
-        email,
-        phone,
-        locationId: GHL_LOCATION_ID,
-        customFields: {
-          annual_revenue: revenue,
-          capital_needs: message,
-        }
-      }),
+      body: JSON.stringify(ghlData),
     });
 
-    if (response.ok) {
-      return res.status(200).json({ success: true });
-    } else {
-      let errorMsg = 'Failed to create contact';
-      try {
-        const errorData = await response.json();
-        errorMsg = errorData.message || errorData.error || JSON.stringify(errorData);
-      } catch (e) {
-        errorMsg = await response.text();
-      }
-      console.error('GHL Error:', response.status, errorMsg);
-      return res.status(response.status).json({ error: errorMsg });
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error('GHL API error:', data);
+      return res.status(response.status).json({ error: data });
     }
-  } catch (err) {
-    console.error('GHL API error:', err);
-    return res.status(500).json({ error: 'Server error: ' + err.message });
+
+    return res.status(200).json({ success: true, contact: data });
+  } catch (error) {
+    console.error('Submit lead error:', error);
+    return res.status(500).json({ error: error.message });
   }
 }
