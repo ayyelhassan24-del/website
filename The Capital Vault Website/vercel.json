@@ -1,9 +1,20 @@
 {
   "buildCommand": "exit 0",
   "outputDirectory": "public",
+  "headers": [
+    {
+      "source": "/index.html",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600"
+        }
+      ]
+    }
+  ],
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!uploads/|.*\\.\\w+$).*)",
       "destination": "/index.html"
     }
   ]
