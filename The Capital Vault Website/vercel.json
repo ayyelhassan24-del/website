@@ -1,8 +1,10 @@
 {
-  "buildCommand": "echo 'Static site - no build needed'",
+  "version": 2,
+  "public": true,
+  "buildCommand": "echo 'Static site'",
   "outputDirectory": ".",
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" },
-    { "source": "/api/:path*", "destination": "/api/:path*" }
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
