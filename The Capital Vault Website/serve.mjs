@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 const PORT = 3000;
 
 const server = http.createServer((req, res) => {
-  let filePath = path.join(__dirname, req.url === '/' ? 'The Capital Vault.html' : req.url);
+  let filePath = path.join(__dirname, req.url === '/' ? 'index.html' : req.url);
 
   const ext = path.extname(filePath);
 

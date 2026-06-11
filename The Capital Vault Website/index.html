@@ -479,9 +479,12 @@
     .founder-image { margin-bottom: 24px; }
     .founder-label { padding: 10px 14px; font-size: 10px; }
     .lead-form .frow { grid-template-columns: 1fr; gap: 14px; margin-bottom: 14px; }
-    .lead-form { padding: 24px; }
+    .lead-form { padding: 20px; }
     .field label { font-size: 10px; margin-bottom: 7px; }
     .field input, .field select, .field textarea { font-size: 15px; padding: 12px 14px; }
+    #quizForm > div { padding: 18px !important; }
+    #quizForm > div label { font-size: 13px !important; }
+    #quizForm > div select, #quizForm > div input { padding: 10px !important; font-size: 14px !important; }
     .fund-row { grid-template-columns: 1fr; gap: 18px; padding: 28px 0; }
     .fund-main h3 { font-size: 17px; margin-bottom: 10px; }
     .fund-main p { font-size: 14px; }
@@ -544,28 +547,50 @@
     <a class="btn btn-gold" href="#start">Request Consultation</a>
   </div>
 
-  <!-- HERO -->
+  <!-- HERO WITH FOUNDER IMAGERY -->
   <section class="hero" id="top">
     <div class="hero-bg">
       <image-slot id="hero-bg" shape="rect" placeholder="Drop a full-bleed hero photo (business owner / operator at work)" fit="cover"></image-slot>
     </div>
     <div class="hero-scrim"></div>
     <div class="hero-glow"></div>
+
+    <!-- Founder imagery overlay (right side) - desktop only -->
+    <div style="position: absolute; right: -80px; bottom: -40px; width: 520px; height: 580px; z-index: 1; pointer-events: none; opacity: 0.75; display: none;">
+      <img src="uploads/abu-elhassan-founder.jpg" alt="Abu Elhassan - Founder" style="width: 100%; height: 100%; object-fit: cover; border-radius: 2px;">
+    </div>
+    <style>
+      @media (min-width: 1200px) {
+        .hero > div:nth-child(3) { display: block !important; }
+      }
+    </style>
+
     <div class="wrap">
       <div class="hero-inner">
-        <span class="badge-pill reveal"><span class="spark"></span> Strategic Funding for Proven Operators</span>
+        <span class="badge-pill reveal"><span class="spark"></span> 500+ Lenders. Zero Dilution. 5-23 Days.</span>
         <h1 class="reveal d1">Make the lenders <em>compete for you.</em></h1>
-        <p class="lede reveal d2">The Capital Vault connects established enterprises with <strong style="color:var(--cream); font-weight:600;">500+ institutional and private lenders</strong>, then engineers a competitive environment where they bid for your business. The result: the most favorable non-dilutive rates on the market, with the approval certainty traditional banking can't match.</p>
+        <p class="lede reveal d2">When your capital strategy is engineered by an operator who's been there, you win differently. <strong style="color:var(--cream); font-weight:600;">500+ institutional and private lenders</strong> competing for your business means non-dilutive capital at the best rates available, with approval certainty traditional banking can't match.</p>
         <div class="hero-cta reveal d3">
           <a href="#start" class="btn btn-gold">Request a Strategic Capital Consultation <span class="arrow">&rarr;</span></a>
-          <a href="#funding" class="btn btn-ghost">View the Capital Menu</a>
+          <a href="#quiz" class="btn btn-ghost">Take the Readiness Quiz</a>
         </div>
         <div class="hero-trust reveal d4">
-          <span>500+ lender network</span><span class="dot"></span>
-          <span>100% non-dilutive</span><span class="dot"></span>
-          <span>Funded in 5&ndash;23 days</span>
+          <span>⚡ Rate lock window closing</span><span class="dot"></span>
+          <span>100% equity kept</span><span class="dot"></span>
+          <span>20-minute assessment</span>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- URGENCY BANNER -->
+  <section style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02)); padding: 36px 0; border-top: 1px solid var(--hairline-soft); border-bottom: 1px solid var(--hairline-soft);">
+    <div class="wrap" style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <div style="flex: 1; min-width: 240px;">
+        <div style="font-family: 'Playfair Display', serif; font-size: clamp(16px, 4vw, 22px); font-weight: 700; color: var(--cream); margin-bottom: 6px;">⚡ Rate Environment Alert</div>
+        <p style="color: var(--muted); font-size: 14px; margin: 0; line-height: 1.5;">Rates at 90-day high. Lock in now for sub-10% APR. Window narrows fast.</p>
+      </div>
+      <a href="#start" class="btn btn-gold" style="flex-shrink: 0; font-size: 12px; padding: 14px 24px;">Lock Rate <span class="arrow">&rarr;</span></a>
     </div>
   </section>
 
@@ -595,70 +620,205 @@
     </div>
   </section>
 
-  <!-- CASE STUDY -->
-  <section class="band band-cream" id="results">
+  <!-- CAPITAL READINESS QUIZ -->
+  <section style="background: var(--panel); padding: 96px 0; border-top: 1px solid var(--hairline-soft);" id="quiz">
     <div class="wrap">
-      <div class="case-grid">
-        <div class="case-copy">
-          <span class="kicker ink reveal">The Liquidity Breakthrough · Case No. 014</span>
-          <h2 class="reveal d1" style="font-family:'Playfair Display',serif; font-size:clamp(34px,4.4vw,54px); font-weight:800; margin-top:22px; letter-spacing:-0.02em;">Three bank declines. <em class="serif-i gold" style="color:var(--gold-deep)">$1.3M deployed.</em></h2>
-          <div class="case-rows reveal d2">
-            <div class="case-row">
-              <div class="rk">The Situation</div>
-              <div class="rv">A regional HVAC operator with <strong>$5M+ in revenue</strong>, declined by three traditional banks over a 620 credit score and no collateral.</div>
-            </div>
-            <div class="case-row">
-              <div class="rk">The Solution</div>
-              <div class="rv">We leveraged our <strong>500+ lender network</strong> to find partners who weigh cash flow and trajectory over credit score, then secured multiple competing offers.</div>
-            </div>
-            <div class="case-row">
-              <div class="rk">The Result</div>
-              <div class="rv"><span class="case-result">$1.3M <span>deployed in 59 days.</span></span><br />He expanded into two new territories that year, keeping 100% ownership and control.</div>
-            </div>
+      <div style="max-width: 640px; margin: 0 auto; text-align: center;">
+        <div style="font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 800; color: var(--cream); margin-bottom: 16px;">Your Capital Readiness Score</div>
+        <p style="color: var(--muted); font-size: 17px; margin-bottom: 40px; line-height: 1.6;">Answer 5 quick questions. Learn what capital you qualify for, what rates you can expect, and how fast we can deploy.</p>
+
+        <form id="quizForm" style="display: grid; gap: 20px;">
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">1. What's your annual revenue?</label>
+            <select name="revenue" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px;">
+              <option value="">Select range</option>
+              <option value="100k">$50K – $250K</option>
+              <option value="500k">$250K – $500K</option>
+              <option value="1m">$500K – $1M</option>
+              <option value="2m">$1M – $2M</option>
+              <option value="5m">$2M+</option>
+            </select>
           </div>
-          <a href="#start" class="btn btn-dark reveal d3">See More Breakthroughs <span class="arrow">&rarr;</span></a>
+
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">2. How long in business?</label>
+            <select name="yearsInBusiness" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px;">
+              <option value="">Select</option>
+              <option value="0-1">Less than 1 year</option>
+              <option value="1-2">1 – 2 years</option>
+              <option value="2-5">2 – 5 years</option>
+              <option value="5plus">5+ years</option>
+            </select>
+          </div>
+
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">3. What's your credit score range?</label>
+            <select name="creditScore" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px;">
+              <option value="">Select</option>
+              <option value="below600">Below 600</option>
+              <option value="600-650">600 – 650</option>
+              <option value="650-700">650 – 700</option>
+              <option value="700plus">700+</option>
+            </select>
+          </div>
+
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">4. Capital needed?</label>
+            <select name="capitalNeeded" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px;">
+              <option value="">Select range</option>
+              <option value="50k">$25K – $100K</option>
+              <option value="250k">$100K – $250K</option>
+              <option value="500k">$250K – $500K</option>
+              <option value="1m">$500K – $1M</option>
+              <option value="5mplus">$1M+</option>
+            </select>
+          </div>
+
+          <div style="text-align: left; background: rgba(212,175,55,0.06); padding: 24px; border-radius: 2px; border: 1px solid var(--hairline-soft);">
+            <label style="display: block; font-weight: 600; color: var(--cream); margin-bottom: 12px;">5. Email for your results?</label>
+            <input type="email" name="email" placeholder="your@company.com" required style="width: 100%; background: transparent; border: 1px solid var(--hairline); color: var(--text); padding: 12px; border-radius: 2px; font-family: 'Sora', sans-serif;">
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width: 100%; justify-content: center; margin-top: 12px;">See My Capital Readiness Score <span class="arrow">&rarr;</span></button>
+        </form>
+
+        <p style="color: var(--muted-dim); font-size: 13px; margin-top: 20px;">Takes 90 seconds. Results emailed instantly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD FORM (MOVED UP) -->
+  <section class="band band-cream" id="start" style="padding: 80px 0;">
+    <div class="wrap">
+      <div class="form-grid">
+        <div class="form-aside reveal">
+          <span class="kicker ink">Strategic Capital Consultation</span>
+          <h2>Request your strategic <em>consultation.</em></h2>
+          <p>A 20-minute assessment with our capital desk. No sales pitch, just a clear map of the capital you qualify for and the exact rates we can secure across 500+ lenders.</p>
+          <div class="form-points">
+            <div class="form-point"><span class="tick"></span> Real clarity: a precise read on your funding options</div>
+            <div class="form-point"><span class="tick"></span> No obligation: 100% confidential and non-dilutive</div>
+            <div class="form-point"><span class="tick"></span> Zero upfront fees: we only win when you win</div>
+          </div>
         </div>
-        <div class="case-visual reveal d2">
-          <div class="case-tag">Funded in 59 days</div>
-          <img src="uploads/call-on-the-double-van.png" alt="Call on the Double - Heating & Cooling" style="width: 100%; height: 520px; object-fit: cover; display: block;">
-          <div class="case-quote">
-            <div class="cq">"Everyone said no. The Vault found the yes, and the structure to make it work."</div>
-            <div class="cqa">Operator, Regional HVAC</div>
+        <div>
+          <form class="lead-form" id="leadForm" novalidate>
+            <div class="frow">
+              <div class="field">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Operator" required />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+              </div>
+            </div>
+            <div class="frow">
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="989-614-4359" required />
+              </div>
+              <div class="field">
+                <label for="revenue">Annual Revenue</label>
+                <select id="revenue" name="revenue" required>
+                  <option value="">Select range</option>
+                  <option>$50K – $100K</option>
+                  <option>$100K – $250K</option>
+                  <option>$250K – $500K</option>
+                  <option>$500K – $1M</option>
+                  <option>$1M+</option>
+                </select>
+              </div>
+            </div>
+            <div class="field full">
+              <label for="message">What do you need capital for?</label>
+              <textarea id="message" name="message" placeholder="Tell us about the business and what you're funding…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold">Request My Consultation <span class="arrow">&rarr;</span></button>
+            <p class="form-note">A confidential, non-dilutive assessment. No obligation, no upfront fees.</p>
+          </form>
+          <div class="form-success lead-form" id="formSuccess">
+            <div class="fs-mark"></div>
+            <h3>Your consultation is reserved.</h3>
+            <p>Thank you. A member of the capital desk will be in touch within one business day to begin your assessment.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY BANKS SAY NO -->
-  <section class="band">
+  <!-- CASE STUDIES - QUICK WINS -->
+  <section class="band band-cream" id="results" style="padding: 80px 0;">
     <div class="wrap">
-      <div class="section-head reveal">
+      <div class="reveal" style="text-align: center; margin-bottom: 60px;">
+        <span class="kicker ink">Real Results</span>
+        <h2 style="font-family:'Playfair Display',serif; font-size:clamp(34px,4.4vw,54px); font-weight:800; margin-top:22px;">Funded when <em style="font-style:italic; color:var(--gold-deep);">banks said no.</em></h2>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 32px;">
+        <!-- Case 1 -->
+        <div class="reveal" style="background: rgba(22,19,13,0.4); padding: 32px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22); display: flex; flex-direction: column;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold-deep); margin-bottom: 12px;">$1.3M</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 19px; color: var(--ink); margin-bottom: 14px; font-weight: 700;">Regional HVAC Operator</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 16px; flex: 1;">Declined by 3 banks (620 credit score). Leveraged cash flow strength to secure $1.3M in 59 days.</p>
+          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">"Found the yes when everyone said no."</div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="reveal d1" style="background: rgba(22,19,13,0.4); padding: 32px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22); display: flex; flex-direction: column;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold-deep); margin-bottom: 12px;">$520K</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 19px; color: var(--ink); margin-bottom: 14px; font-weight: 700;">SaaS Founder, Series A</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 16px; flex: 1;">Raised capital without dilution. Funded in 14 days for expansion headcount. Kept 100% equity.</p>
+          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">"Growth without giving up control."</div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="reveal d2" style="background: rgba(22,19,13,0.4); padding: 32px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22); display: flex; flex-direction: column;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--gold-deep); margin-bottom: 12px;">$890K</div>
+          <h3 style="font-family: 'Playfair Display', serif; font-size: 19px; color: var(--ink); margin-bottom: 14px; font-weight: 700;">E-Commerce Operator</h3>
+          <p style="color: var(--ink-soft); font-size: 14px; margin-bottom: 16px; flex: 1;">Seasonal cash flow. Structured a 6-month revenue-based facility for inventory. Deployed in 24 hours.</p>
+          <div style="font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-deep); font-weight: 600;">"Capital in 24 hours, not 24 weeks."</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="#start" class="btn btn-dark reveal d3">See All Case Studies <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY THE VAULT WINS -->
+  <section class="band" style="padding: 100px 0;">
+    <div class="wrap">
+      <div class="section-head reveal" style="margin-bottom: 70px;">
         <span class="kicker">Why The Capital Vault</span>
         <h2>Why operators choose <em>the Vault.</em></h2>
-        <p>Traditional banking runs on a one-size-fits-all model that penalizes growth. We rebuilt the process to put the power back in the operator's hands.</p>
+        <p>Traditional banking runs on a one-size-fits-all model that penalizes growth. We rebuilt the entire process to put the power back in the operator's hands.</p>
       </div>
       <div class="why-grid">
-        <div class="why-card reveal">
-          <div class="why-idx">01<span class="line"></span></div>
+        <div class="why-card reveal" style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));">
+          <div style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px;">🔑</div>
+          <div class="why-idx" style="margin-bottom: 20px;">01<span class="line"></span></div>
           <h3>We master the system</h3>
-          <p>We still use the traditional banks, then expand your reach to 500+ lenders, so you're never limited by one institution's rigid criteria.</p>
+          <p>We leverage traditional banks AND 500+ institutional lenders. You're never limited by one institution's rigid criteria or outdated underwriting.</p>
         </div>
-        <div class="why-card reveal d1">
-          <div class="why-idx">02<span class="line"></span></div>
+        <div class="why-card reveal d1" style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));">
+          <div style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px;">⚡</div>
+          <div class="why-idx" style="margin-bottom: 20px;">02<span class="line"></span></div>
           <h3>We engineer competition</h3>
-          <p>When 500+ lenders compete for your business, you win. We force the market to work for you and secure the lowest rates available anywhere.</p>
+          <p>500+ lenders bidding for your business means you win the rates. We force the market to work for you, not against you.</p>
         </div>
-        <div class="why-card reveal d2">
-          <div class="why-idx">03<span class="line"></span></div>
+        <div class="why-card reveal d2" style="background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));">
+          <div style="font-family: 'Playfair Display', serif; font-size: 48px; margin-bottom: 20px;">✓</div>
+          <div class="why-idx" style="margin-bottom: 20px;">03<span class="line"></span></div>
           <h3>We ensure approval</h3>
-          <p>Our desk evaluates your enterprise's intrinsic value, matching you with the specific lenders in our network ready to fund your industry and your stage.</p>
+          <p>Our desk matches you with lenders ready to fund your industry and stage. Approval certainty, not rejection theater.</p>
         </div>
       </div>
-      <div class="why-banner reveal">
+      <div class="why-banner reveal" style="margin-top: 60px;">
         <div>
-          <p>The Capital Vault puts the operator first.</p>
-          <h3>We engineer the <span>competition</span>. You keep the leverage and 100% of your equity.</h3>
+          <p style="font-weight: 500;">The Capital Vault puts the operator first.</p>
+          <h3>We engineer the <span>competition</span>. <br />You keep 100% of your equity.</h3>
         </div>
         <a href="#start" class="btn btn-gold">Start Your Capital Strategy <span class="arrow">&rarr;</span></a>
       </div>
@@ -666,7 +826,7 @@
   </section>
 
   <!-- FOUNDER STORY -->
-  <section class="band band-founder">
+  <section class="band band-founder" style="padding: 80px 0;">
     <div class="wrap">
       <div class="founder-grid">
         <div class="founder-image reveal">
@@ -702,14 +862,14 @@
   </section>
 
   <!-- FUNDING OPTIONS -->
-  <section class="band" id="funding">
+  <section class="band" id="funding" style="padding: 80px 0;">
     <div class="wrap">
       <div class="section-head fund-head reveal">
         <div>
           <span class="kicker">The Capital Menu</span>
           <h2 style="font-size:clamp(36px,4.6vw,60px); font-weight:800; margin-top:22px;">The capital allocation <em class="serif-i gold">menu.</em></h2>
         </div>
-        <p style="max-width:380px; margin:0;">One diagnostic. Access to 500+ institutional lenders and every non-dilutive instrument, engineered to the structure your business is built for, not forced into a bank's box.</p>
+        <p style="max-width:380px; margin:0;">One diagnostic. Access 500+ lenders and every non-dilutive instrument, engineered for your business—not forced into a bank's box.</p>
       </div>
       <div class="fund-speed reveal">
         <div class="fs-badge">24<span>hrs</span></div>
@@ -818,33 +978,36 @@
   </section>
 
   <!-- HOW WE WORK -->
-  <section class="band band-cream" id="work">
+  <section class="band band-cream" id="work" style="padding: 100px 0;">
     <div class="wrap">
-      <div class="section-head reveal">
+      <div class="section-head reveal" style="margin-bottom: 70px;">
         <span class="kicker ink">How It Works</span>
         <h2>Simple. Strategic. <em>Successful.</em></h2>
         <p>The speed of modern fintech with the sophistication of a seasoned capital advisory. Three deliberate steps from consultation to deployed capital.</p>
       </div>
       <div class="steps">
-        <div class="step reveal">
+        <div class="step reveal" style="background: rgba(168,127,42,0.08); padding: 40px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px;">📞</div>
           <div class="step-num">01</div>
           <div class="step-rule"></div>
           <h3>Consultation</h3>
-          <p>A 20-minute strategic assessment of your revenue, growth, and capital needs. We map every instrument you qualify for.</p>
+          <p>A 20-minute strategic assessment of your revenue, growth, and capital needs. We map every instrument you qualify for, no fluff.</p>
           <div class="step-meta">20-minute assessment</div>
         </div>
-        <div class="step reveal d1">
+        <div class="step reveal d1" style="background: rgba(168,127,42,0.08); padding: 40px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px;">⚙️</div>
           <div class="step-num">02</div>
           <div class="step-rule"></div>
           <h3>Structuring</h3>
-          <p>We engineer your file and position it across our 500+ lender network, forcing lenders to compete to maximize your offers.</p>
+          <p>We engineer your file and position it across our 500+ lender network, forcing lenders to compete and maximize your offers.</p>
           <div class="step-meta">500+ lenders, one file</div>
         </div>
-        <div class="step reveal d2">
+        <div class="step reveal d2" style="background: rgba(168,127,42,0.08); padding: 40px; border-radius: 2px; border: 1px solid rgba(168,127,42,0.22);">
+          <div style="font-family: 'Playfair Display', serif; font-size: 42px; margin-bottom: 16px;">💰</div>
           <div class="step-num">03</div>
           <div class="step-rule"></div>
           <h3>Deployment</h3>
-          <p>You receive the capital you need at the best possible rates. You keep 100% of your equity. No dilution, no strings.</p>
+          <p>Capital lands in your account at the best possible rates. You keep 100% equity, no dilution, no strings attached.</p>
           <div class="step-meta">Funded in 5&ndash;23 days</div>
         </div>
       </div>
@@ -852,13 +1015,13 @@
   </section>
 
   <!-- FAQ -->
-  <section class="band" id="faq">
+  <section class="band" id="faq" style="padding: 80px 0;">
     <div class="wrap">
       <div class="faq-grid">
         <div class="faq-aside reveal">
           <span class="kicker">Answers</span>
           <h2 style="font-size:clamp(34px,4.2vw,52px); font-weight:800; margin-top:22px;">Common <em class="serif-i gold">questions.</em></h2>
-          <p style="margin-top:20px; color:var(--muted); font-weight:300; font-size:17px;">Everything you need to know before your diagnostic. Still unsure? <a href="#start" class="gold" style="border-bottom:1px solid var(--hairline)">Just ask the desk.</a></p>
+          <p style="margin-top:20px; color:var(--muted); font-weight:300; font-size:17px;">Everything you need before your diagnostic. <a href="#start" class="gold" style="border-bottom:1px solid var(--hairline)">Or just ask the desk.</a></p>
         </div>
         <div class="faq-list" id="faqList">
           <div class="faq-item">
@@ -880,66 +1043,6 @@
           <div class="faq-item">
             <button class="faq-q"><span class="t">What's the cost?</span><span class="faq-sign"></span></button>
             <div class="faq-a"><div class="faq-a-inner">Our fee is built into your funding terms, so you pay nothing upfront. We're only successful when you're funded, which keeps our incentives fully aligned with yours.</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEAD FORM -->
-  <section class="band band-cream" id="start">
-    <div class="wrap">
-      <div class="form-grid">
-        <div class="form-aside reveal">
-          <span class="kicker ink">Strategic Capital Consultation</span>
-          <h2>Request your strategic <em>consultation.</em></h2>
-          <p>A 20-minute assessment with our capital desk. No sales pitch, just a clear map of the capital you qualify for and the exact rates we can secure across 500+ lenders.</p>
-          <div class="form-points">
-            <div class="form-point"><span class="tick"></span> Real clarity: a precise read on your funding options</div>
-            <div class="form-point"><span class="tick"></span> No obligation: 100% confidential and non-dilutive</div>
-            <div class="form-point"><span class="tick"></span> Zero upfront fees: we only win when you win</div>
-          </div>
-        </div>
-        <div>
-          <form class="lead-form" id="leadForm" novalidate>
-            <div class="frow">
-              <div class="field">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" placeholder="Jane Operator" required />
-              </div>
-              <div class="field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="jane@company.com" required />
-              </div>
-            </div>
-            <div class="frow">
-              <div class="field">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" placeholder="989-614-4359" required />
-              </div>
-              <div class="field">
-                <label for="revenue">Annual Revenue</label>
-                <select id="revenue" name="revenue" required>
-                  <option value="">Select range</option>
-                  <option>$50K – $100K</option>
-                  <option>$100K – $250K</option>
-                  <option>$250K – $500K</option>
-                  <option>$500K – $1M</option>
-                  <option>$1M+</option>
-                </select>
-              </div>
-            </div>
-            <div class="field full">
-              <label for="message">What do you need capital for?</label>
-              <textarea id="message" name="message" placeholder="Tell us about the business and what you're funding…"></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold">Request My Consultation <span class="arrow">&rarr;</span></button>
-            <p class="form-note">A confidential, non-dilutive assessment. No obligation, no upfront fees.</p>
-          </form>
-          <div class="form-success lead-form" id="formSuccess">
-            <div class="fs-mark"></div>
-            <h3>Your consultation is reserved.</h3>
-            <p>Thank you. A member of the capital desk will be in touch within one business day to begin your assessment.</p>
           </div>
         </div>
       </div>
