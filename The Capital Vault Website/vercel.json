@@ -1,17 +1,4 @@
 {
-  "version": 2,
-  "public": true,
-  "buildCommand": "echo 'Building static site'",
-  "outputDirectory": "public",
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "routes": [
-    { "src": "/api/(.*)", "dest": "/api/$1" },
-    { "src": "/uploads/(.*)", "dest": "/uploads/$1" },
-    { "src": "/(.*\\.[a-z]+)$", "dest": "/$1" },
-    { "src": "/(.*)", "dest": "/index.html" }
-  ]
+  "buildCommand": "exit 0",
+  "outputDirectory": "public"
 }
