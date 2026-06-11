@@ -1209,20 +1209,40 @@
         };
 
         try {
-          const response = await fetch('/api/submit-lead', {
+          const ghlData = {
+            firstName: formData.firstName,
+            lastName: formData.lastName,
+            email: formData.email,
+            phone: formData.phone,
+            locationId: 'rDTLsvkHq9OuSN0o4j2Y',
+            source: 'Website - Capital Vault',
+            tags: ['capital-vault-lead', 'website-form'],
+            customFields: {
+              annualRevenue: formData.revenue,
+              capitalNeeded: formData.message,
+            }
+          };
+
+          const response = await fetch('https://rest.gohighlevel.com/v1/contacts/', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
+              'Authorization': 'Bearer pit-cc259dd7-7a18-4c6a-8c41-c7d2a89c10a0'
             },
-            body: JSON.stringify(formData),
+            body: JSON.stringify(ghlData),
           });
 
           if (response.ok) {
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('phone').value = '';
+            document.getElementById('revenue').value = '';
+            document.getElementById('message').value = '';
             leadForm.style.display = 'none';
             formSuccess.classList.add('show');
           } else {
-            const error = await response.json();
-            console.error('Server error:', error);
+            const error = await response.text();
+            console.error('GHL error:', error);
             alert('Error submitting form. Please try again.');
           }
         } catch (err) {
