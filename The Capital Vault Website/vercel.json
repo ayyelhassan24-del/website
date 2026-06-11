@@ -1,4 +1,10 @@
 {
   "buildCommand": "exit 0",
-  "outputDirectory": "public"
+  "outputDirectory": "public",
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
 }
