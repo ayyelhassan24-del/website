@@ -468,12 +468,12 @@
     .wrap { padding: 0 20px; }
     .nav-links { display: none; }
     .hamburger { display: block; }
-    .hero { padding: 120px 0 60px; }
+    .hero { padding: 80px 0 40px; }
     .hero h1 { font-size: clamp(32px, 7vw, 48px); margin: 20px 0 16px; }
     .hero p.lede { font-size: 15px; line-height: 1.6; }
     .btn { font-size: 12px; padding: 16px 28px; }
     .btn-gold, .btn-ghost, .btn-dark { min-height: 48px; }
-    section.band { padding: 60px 0; }
+    section.band { padding: 40px 0; }
     .section-head { max-width: 100%; }
     .section-head h2 { font-size: clamp(28px, 6vw, 42px); margin-top: 16px; }
     .section-head p { font-size: 15px; margin-top: 16px; }
@@ -523,6 +523,15 @@
     .cta p { font-size: 15px; }
     .form-aside h2 { font-size: clamp(26px, 5.5vw, 36px); }
     .form-aside p { font-size: 15px; }
+  }
+  @media (max-width: 720px) {
+    section[style*="padding: 100px"] { padding: 40px 0 !important; }
+    section[style*="padding: 80px"] { padding: 40px 0 !important; }
+    section[style*="padding: 96px"] { padding: 40px 0 !important; }
+    .section-head { margin-bottom: 40px !important; }
+    .why-banner { padding: 24px 20px !important; }
+    .lead-form { padding: 16px !important; }
+    .fund-list article { padding: 20px 0 !important; }
   }
 </style>
 </head>
@@ -630,7 +639,7 @@
   </section>
 
   <!-- CAPITAL READINESS QUIZ -->
-  <section style="background: var(--panel); padding: 96px 0; border-top: 1px solid var(--hairline-soft);" id="quiz">
+  <section style="background: var(--panel); padding: clamp(40px, 10vw, 96px) 0; border-top: 1px solid var(--hairline-soft);" id="quiz">
     <div class="wrap">
       <div style="max-width: 640px; margin: 0 auto; text-align: center;">
         <div style="font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 800; color: var(--cream); margin-bottom: 16px;">Your Capital Readiness Score</div>
@@ -797,9 +806,9 @@
   </section>
 
   <!-- WHY THE VAULT WINS -->
-  <section class="band" style="padding: 100px 0;">
+  <section class="band" style="padding: clamp(40px, 10vw, 100px) 0;">
     <div class="wrap">
-      <div class="section-head reveal" style="margin-bottom: 70px;">
+      <div class="section-head reveal" style="margin-bottom: clamp(30px, 8vw, 70px);">
         <span class="kicker">Why The Capital Vault</span>
         <h2>Why operators choose <em>the Vault.</em></h2>
         <p>Traditional banking runs on a one-size-fits-all model that penalizes growth. We rebuilt the entire process to put the power back in the operator's hands.</p>
@@ -835,11 +844,11 @@
   </section>
 
   <!-- FOUNDER STORY -->
-  <section class="band band-founder" style="padding: 80px 0;">
+  <section class="band band-founder" style="padding: clamp(40px, 10vw, 80px) 0;">
     <div class="wrap">
       <div class="founder-grid">
         <div class="founder-image reveal">
-          <img src="uploads/abu-elhassan-founder.jpg" alt="Abu Elhassan - Founder & CEO Capital Vault" style="width: 100%; height: 700px; object-fit: cover; display: block; border-radius: 2px;">
+          <img src="uploads/abu-elhassan-founder.jpg" alt="Abu Elhassan - Founder & CEO Capital Vault" style="width: 100%; height: clamp(360px, 80vw, 700px); object-fit: cover; display: block; border-radius: 2px;">
           <div class="founder-label">Abu Elhassan<br />Founder & CEO Capital Vault</div>
         </div>
         <div class="founder-content reveal">
@@ -987,9 +996,9 @@
   </section>
 
   <!-- HOW WE WORK -->
-  <section class="band band-cream" id="work" style="padding: 100px 0;">
+  <section class="band band-cream" id="work" style="padding: clamp(40px, 10vw, 100px) 0;">
     <div class="wrap">
-      <div class="section-head reveal" style="margin-bottom: 70px;">
+      <div class="section-head reveal" style="margin-bottom: clamp(30px, 8vw, 70px);">
         <span class="kicker ink">How It Works</span>
         <h2>Simple. Strategic. <em>Successful.</em></h2>
         <p>The speed of modern fintech with the sophistication of a seasoned capital advisory. Three deliberate steps from consultation to deployed capital.</p>
