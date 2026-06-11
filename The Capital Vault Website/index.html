@@ -145,29 +145,31 @@
   }
   .brand-mark::after { content: ""; width: 12px; height: 12px; background: var(--gold); }
   .brand-logo {
-    width: 56px; height: 56px; flex-shrink: 0;
+    width: 60px; height: 60px; flex-shrink: 0;
     object-fit: contain;
-    filter: drop-shadow(0 8px 16px rgba(212, 175, 55, 0.25))
-            drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
-    transition: all 0.4s var(--ease);
+    filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.32))
+            drop-shadow(0 3px 6px rgba(0, 0, 0, 0.5));
+    transition: all 0.35s var(--ease);
   }
   .brand:hover .brand-logo {
-    transform: scale(1.08) translateY(-2px);
-    filter: drop-shadow(0 12px 24px rgba(212, 175, 55, 0.35))
-            drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
+    transform: scale(1.12) translateY(-3px);
+    filter: drop-shadow(0 16px 32px rgba(212, 175, 55, 0.4))
+            drop-shadow(0 4px 12px rgba(0, 0, 0, 0.6));
   }
 
   @media (max-width: 1024px) {
     .brand-logo {
-      width: 52px; height: 52px;
+      width: 56px; height: 56px;
+      filter: drop-shadow(0 10px 20px rgba(212, 175, 55, 0.3))
+              drop-shadow(0 3px 6px rgba(0, 0, 0, 0.45));
     }
   }
 
   @media (max-width: 768px) {
     .brand-logo {
-      width: 48px; height: 48px;
-      filter: drop-shadow(0 6px 12px rgba(212, 175, 55, 0.2))
-              drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+      width: 50px; height: 50px;
+      filter: drop-shadow(0 8px 16px rgba(212, 175, 55, 0.28))
+              drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
     }
   }
   .brand-name {
@@ -427,8 +429,12 @@
   /* ===== FOOTER ===== */
   footer { background: var(--black-deep); padding: 90px 0 40px; }
   .foot-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; padding-bottom: 64px; border-bottom: 1px solid var(--hairline-soft); }
-  .foot-brand .brand { margin-bottom: 22px; }
-  .foot-brand p { color: var(--muted); font-size: 15px; font-weight: 300; max-width: 300px; }
+  .foot-brand .brand { margin-bottom: 24px; }
+  .foot-brand .brand-logo {
+    filter: drop-shadow(0 8px 16px rgba(212, 175, 55, 0.28))
+            drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+  }
+  .foot-brand p { color: var(--muted); font-size: 15px; font-weight: 300; max-width: 320px; }
   .foot-col h4 { font-family: 'Sora', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
   .foot-col a, .foot-col li { display: block; color: var(--muted); font-size: 14.5px; padding: 7px 0; font-weight: 300; transition: color 0.3s; list-style: none; }
   .foot-col a:hover { color: var(--text); }
