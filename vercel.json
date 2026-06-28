@@ -1,5 +1,11 @@
 {
   "framework": null,
   "buildCommand": "",
-  "outputDirectory": "The Capital Vault Website/public"
+  "outputDirectory": "The Capital Vault Website/public",
+  "rewrites": [
+    { "source": "/FBads", "destination": "https://capital-vault.vercel.app/FBads" },
+    { "source": "/_next/:path*", "destination": "https://capital-vault.vercel.app/_next/:path*" },
+    { "source": "/assets/:path*", "destination": "https://capital-vault.vercel.app/assets/:path*" },
+    { "source": "/icon.png", "destination": "https://capital-vault.vercel.app/icon.png" }
+  ]
 }
