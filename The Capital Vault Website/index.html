@@ -971,55 +971,10 @@ section.block { padding: clamp(72px, 9vw, 120px) 0; }
       </div>
       <div class="reveal d1">
         <div class="lead-card">
-          <form id="leadForm" novalidate>
-            <div class="form-error" id="formError">Something went wrong sending your request. Please try again, or call us at 989-614-4359.</div>
-            <div class="frow">
-              <div class="field">
-                <label for="name">Full name</label>
-                <input type="text" id="name" name="name" autocomplete="name" placeholder="Dana Whitfield" required />
-                <span class="err">Please enter your name.</span>
-              </div>
-              <div class="field">
-                <label for="email">Work email</label>
-                <input type="email" id="email" name="email" autocomplete="email" placeholder="dana@yourcompany.com" required />
-                <span class="err">Please enter a valid email.</span>
-              </div>
-            </div>
-            <div class="frow">
-              <div class="field">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(713) 555-0147" required />
-                <span class="err">Please enter your phone number.</span>
-              </div>
-              <div class="field">
-                <label for="revenue">Annual revenue</label>
-                <select id="revenue" name="revenue" required>
-                  <option value="">Select range</option>
-                  <option>$50K - $100K</option>
-                  <option>$100K - $250K</option>
-                  <option>$250K - $500K</option>
-                  <option>$500K - $1M</option>
-                  <option>$1M+</option>
-                </select>
-                <span class="err">Please select a range.</span>
-              </div>
-            </div>
-            <div class="field">
-              <label for="message">What do you need capital for?</label>
-              <textarea id="message" name="message" placeholder="Tell us about the business and what you're funding."></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold" id="submitBtn">Submit request <span class="arr">&rarr;</span></button>
-            <p class="form-note">Confidential and non-dilutive. No obligation.</p>
-          </form>
-          <div class="form-success" id="formSuccess">
-            <div class="mark" aria-hidden="true"></div>
-            <h3>One more step: pick your time.</h3>
-            <p>Your request is in. Lock in your 20-minute consultation below and it's on the calendar.</p>
-            <div class="booking-embed">
-              <iframe id="bookingFrame" title="Book your consultation" data-src="https://api.leadconnectorhq.com/widget/booking/61pGOoZnGZbpwjsnQWbr"></iframe>
-            </div>
-            <p class="alt">Calendar not loading? <a href="https://api.leadconnectorhq.com/widget/booking/61pGOoZnGZbpwjsnQWbr" target="_blank" rel="noopener">Open the booking page</a>. Either way, the desk will reach out within one business day.</p>
-          </div>
+          <!-- iClosed inline widget -->
+          <div class="iclosed-widget" data-url="https://app.iclosed.io/e/thecapitalvault/consult-for-home-page" title="Consult for Home Page" style="width:100%;min-height:620px;"></div>
+          <script type="text/javascript" src="https://app.iclosed.io/assets/widget.js" async></script>
+          <p class="form-note">Confidential and non-dilutive. No obligation.</p>
         </div>
       </div>
     </div>
@@ -1058,10 +1013,12 @@ section.block { padding: clamp(72px, 9vw, 120px) 0; }
           <a href="tel:+19896144359">989-614-4359</a>
           <a href="mailto:support@thecapitalvault.com">support@thecapitalvault.com</a>
           <a href="https://maps.google.com/?q=24+Greenway+Plaza+Ste+1800+Houston+TX+77046" target="_blank" rel="noopener">24 Greenway Plaza, Ste 1800, Houston, TX 77046</a>
+          <a href="/privacy.html" style="margin-top:12px;">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
         </div>
       </div>
       <div class="foot-bottom">
-        <span>&copy; 2026 The Capital Vault. All rights reserved.</span>
+        <span>&copy; 2026 The Capital Vault. All rights reserved. &nbsp;&middot;&nbsp; <a href="/privacy.html" style="color:inherit;text-decoration:underline;">Privacy</a> &nbsp;&middot;&nbsp; <a href="/terms.html" style="color:inherit;text-decoration:underline;">Terms</a></span>
         <span>The Capital Vault is a capital advisory service and not a direct lender or bank. Funding availability, amounts, and terms are determined by third-party lenders and subject to approval.</span>
       </div>
     </footer>
@@ -1141,59 +1098,7 @@ section.block { padding: clamp(72px, 9vw, 120px) 0; }
     });
   });
 
-  // Lead form -> GHL via /api/submit-lead
-  const form = document.getElementById('leadForm');
-  const success = document.getElementById('formSuccess');
-  const formError = document.getElementById('formError');
-  const submitBtn = document.getElementById('submitBtn');
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    formError.classList.remove('show');
-
-    let ok = true;
-    form.querySelectorAll('[required]').forEach(f => {
-      const valid = f.value.trim() !== '' && (f.type !== 'email' || /.+@.+\..+/.test(f.value));
-      f.closest('.field').classList.toggle('invalid', !valid);
-      if (!valid) ok = false;
-    });
-    if (!ok) return;
-
-    const nameVal = document.getElementById('name').value.trim();
-    const payload = {
-      firstName: nameVal.split(' ')[0],
-      lastName: nameVal.split(' ').slice(1).join(' ') || '',
-      email: document.getElementById('email').value,
-      phone: document.getElementById('phone').value,
-      revenue: document.getElementById('revenue').value,
-      message: document.getElementById('message').value,
-    };
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-
-    try {
-      const response = await fetch('/api/submit-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      if (response.ok) {
-        form.style.display = 'none';
-        const frame = document.getElementById('bookingFrame');
-        if (frame && !frame.src) frame.src = frame.dataset.src;
-        success.classList.add('show');
-        success.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        throw new Error(await response.text());
-      }
-    } catch (err) {
-      console.error('Form submission error:', err);
-      formError.classList.add('show');
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = 'Submit request <span class="arr">&rarr;</span>';
-    }
-  });
+  // Lead capture + booking now handled by the iClosed inline widget in #start.
 })();
 </script>
 </body>
